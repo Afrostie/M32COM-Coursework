@@ -64,6 +64,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Orders.xml" />
+    <Content Include="App_Data\Products.xml" />
+    <Content Include="App_Data\Users.xml" />
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
     <Content Include="Database.xsc">
@@ -104,7 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
