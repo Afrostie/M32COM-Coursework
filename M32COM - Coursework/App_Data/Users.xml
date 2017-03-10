@@ -1,4 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Users xlmns="http://tempuri.org/Database.xsd">
-
-</Users>
+<?xml version="1.0" standalone="yes"?>
+<Database xmlns="http://tempuri.org/Database.xsd">
+  <User>
+    <UserID>0</UserID>
+    <UserName>afrostie</UserName>
+    <Name>Andrew</Name>
+    <Email>frost@gtrost.com</Email>
+    <Password>password</Password>
+    <Address>Test</Address>
+  </User>
+</Database>

@@ -10,7 +10,7 @@
 namespace M32COM___Coursework {
     
     
-    public partial class Default {
+    public partial class Login {
         
         /// <summary>
         /// form1 control.
@@ -20,6 +20,24 @@ namespace M32COM___Coursework {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// UserNameTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UserNameTB;
+        
+        /// <summary>
+        /// PasswordTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PasswordTB;
         
         /// <summary>
         /// Button1 control.

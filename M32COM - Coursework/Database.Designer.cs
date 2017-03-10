@@ -30,6 +30,10 @@ namespace M32COM___Coursework {
         
         private OrderDataTable tableOrder;
         
+        private global::System.Data.DataRelation relationOrder_User;
+        
+        private global::System.Data.DataRelation relationOrder_Product;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,6 +246,8 @@ namespace M32COM___Coursework {
                     this.tableOrder.InitVars();
                 }
             }
+            this.relationOrder_User = this.Relations["Order_User"];
+            this.relationOrder_Product = this.Relations["Order_Product"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -258,21 +264,14 @@ namespace M32COM___Coursework {
             base.Tables.Add(this.tableProduct);
             this.tableOrder = new OrderDataTable();
             base.Tables.Add(this.tableOrder);
-            global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("Order_User", new global::System.Data.DataColumn[] {
-                        this.tableUser.UserIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOrder.UserIDColumn});
-            this.tableOrder.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.Cascade;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("Order_Product", new global::System.Data.DataColumn[] {
-                        this.tableProduct.ProductIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOrder.ProductIDColumn});
-            this.tableOrder.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.Cascade;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            this.relationOrder_User = new global::System.Data.DataRelation("Order_User", new global::System.Data.DataColumn[] {
+                        this.tableOrder.UserIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableUser.UserIDColumn}, false);
+            this.Relations.Add(this.relationOrder_User);
+            this.relationOrder_Product = new global::System.Data.DataRelation("Order_Product", new global::System.Data.DataColumn[] {
+                        this.tableOrder.ProductIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableProduct.ProductIDColumn}, false);
+            this.Relations.Add(this.relationOrder_Product);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1386,6 +1385,17 @@ namespace M32COM___Coursework {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public OrderRow OrderRow {
+                get {
+                    return ((OrderRow)(this.GetParentRow(this.Table.ParentRelations["Order_User"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Order_User"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNameNull() {
                 return this.IsNull(this.tableUser.NameColumn);
             }
@@ -1513,6 +1523,17 @@ namespace M32COM___Coursework {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public OrderRow OrderRow {
+                get {
+                    return ((OrderRow)(this.GetParentRow(this.Table.ParentRelations["Order_Product"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Order_Product"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProductIDNull() {
                 return this.IsNull(this.tableProduct.ProductIDColumn);
             }
@@ -1633,6 +1654,28 @@ namespace M32COM___Coursework {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetQuantityNull() {
                 this[this.tableOrder.QuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public UserRow[] GetUserRows() {
+                if ((this.Table.ChildRelations["Order_User"] == null)) {
+                    return new UserRow[0];
+                }
+                else {
+                    return ((UserRow[])(base.GetChildRows(this.Table.ChildRelations["Order_User"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ProductRow[] GetProductRows() {
+                if ((this.Table.ChildRelations["Order_Product"] == null)) {
+                    return new ProductRow[0];
+                }
+                else {
+                    return ((ProductRow[])(base.GetChildRows(this.Table.ChildRelations["Order_Product"])));
+                }
             }
         }
         

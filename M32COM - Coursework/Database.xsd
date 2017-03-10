@@ -64,13 +64,11 @@
       <xs:selector xpath=".//mstns:Order" />
       <xs:field xpath="mstns:OrderID" />
     </xs:unique>
-    <xs:keyref name="Order_User" refer="Constraint1" msdata:ConstraintOnly="true" msdata:AcceptRejectRule="Cascade">
-      <xs:selector xpath=".//mstns:Order" />
-      <xs:field xpath="mstns:UserID" />
-    </xs:keyref>
-    <xs:keyref name="Order_Product" refer="Product_Constraint1" msdata:ConstraintOnly="true" msdata:AcceptRejectRule="Cascade">
-      <xs:selector xpath=".//mstns:Order" />
-      <xs:field xpath="mstns:ProductID" />
-    </xs:keyref>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Order_User" msdata:parent="Order" msdata:child="User" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserChildTable="User" msprop:Generator_ChildPropName="GetUserRows" msprop:Generator_UserRelationName="Order_User" msprop:Generator_RelationVarName="relationOrder_User" msprop:Generator_UserParentTable="Order" msprop:Generator_ParentPropName="OrderRow" />
+      <msdata:Relationship name="Order_Product" msdata:parent="Order" msdata:child="Product" msdata:parentkey="ProductID" msdata:childkey="ProductID" msprop:Generator_UserChildTable="Product" msprop:Generator_ChildPropName="GetProductRows" msprop:Generator_UserRelationName="Order_Product" msprop:Generator_RelationVarName="relationOrder_Product" msprop:Generator_UserParentTable="Order" msprop:Generator_ParentPropName="OrderRow" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>
