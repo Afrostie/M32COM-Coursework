@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using M32COM___Coursework.App_Code;
@@ -28,9 +29,10 @@ namespace M32COM___Coursework
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             //Try and login the User
-            if(util.LoginUser(UserNameTB.Text, PasswordTB.Text))
-                //If User and Password are correct, move to another page
+            if (util.LoginUser(UserNameTB.Text, PasswordTB.Text))
+               // If User and Password are correct, move to another page
                 Response.Redirect("Default.aspx");
             //Otherwise tell the user to register
             else
