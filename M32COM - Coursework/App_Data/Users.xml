@@ -1,11 +1,19 @@
 <?xml version="1.0" standalone="yes"?>
 <Database xmlns="http://tempuri.org/Database.xsd">
   <User>
-    <UserID>1</UserID>
-    <UserName>afrostie2</UserName>
+    <UserID>0</UserID>
+    <UserName>afrostie3</UserName>
     <Name>Andrew</Name>
-    <Email>Test@test.com</Email>
-    <Password>5BAA61E4C9B93F3F0682250B6CF8331B7EE68FD8</Password>
+    <Email>test@test.com</Email>
+    <Password>YqfpuGNWk4m1sUW4+hsmDYK/r1iehaNIFS4tDgANTT4=</Password>
+    <Address>Address</Address>
+  </User>
+  <User>
+    <UserID>1</UserID>
+    <UserName>afrostie3</UserName>
+    <Name>Andrew</Name>
+    <Email>test@test.com</Email>
+    <Password>XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=</Password>
     <Address>Address</Address>
   </User>
 </Database>

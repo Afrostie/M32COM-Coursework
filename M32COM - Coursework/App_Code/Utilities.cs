@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web.SessionState;
 using System.Web;
 using System.Web.Security;
@@ -31,7 +33,7 @@ namespace M32COM___Coursework.App_Code
         public bool LoginUser(string userName, string password)
         {
             //Hash the password passed in
-            var hashedPass = HashPassword(password);
+            string hashedPass = HashPassword(password);
 
             //LINQ query to find any users with same name
             var query = from a in userDb.User.AsEnumerable()
@@ -39,15 +41,11 @@ namespace M32COM___Coursework.App_Code
                 select a;
 
             //For all returned results, check username and password match
-            foreach (Database.UserRow user in query)
+            if (query.Any(user => user["UserName"].ToString() == userName && user["Password"].ToString() == hashedPass))
             {
-                if (user["UserName"].ToString() == userName && user["Password"].ToString() == hashedPass)
-                {
-                    //Login the user
-                    Session["LoggedIn"] = true;
-                    Session["CurrentUser"] = userName;
-                    return true;
-                }
+                Session["LoggedIn"] = true;
+                Session["CurrentUser"] = userName;
+                return true;
             }
             return false;
         }
@@ -79,8 +77,14 @@ namespace M32COM___Coursework.App_Code
         //Hashes the given password
         private string HashPassword(string password)
         {
-            //A really bad Hashing Algorithm, should be replaced at some point
-            return FormsAuthentication.HashPasswordForStoringInConfigFile(password, "SHA1");
+            if (password == null)
+                return null;
+            //Create a SHA256 hash
+            HashAlgorithm hashedPassword =  HashAlgorithm.Create("SHA256");
+            //Hash the password
+            hashedPassword.ComputeHash(Encoding.UTF8.GetBytes(password));
+            //Return hashed password as a string
+            return Convert.ToBase64String(hashedPassword.Hash);
         }
 
         //Checks whether the user exists or not
