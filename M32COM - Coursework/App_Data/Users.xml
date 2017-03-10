@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<Database xmlns="http://tempuri.org/Database.xsd">
+  <User>
+    <UserID>1</UserID>
+    <UserName>afrostie2</UserName>
+    <Name>Andrew</Name>
+    <Email>Test@test.com</Email>
+    <Password>5BAA61E4C9B93F3F0682250B6CF8331B7EE68FD8</Password>
+    <Address>Address</Address>
+  </User>
+</Database>

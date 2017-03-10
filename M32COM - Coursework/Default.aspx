@@ -10,6 +10,8 @@
     <form id="form1" runat="server">  
         <div>
             <h1>M32COM Group Coursework Test Page!!</h1>
+            <br/>
+            <asp:Button ID="Button1" runat="server" Text="Log Out" OnClick="Button1_Click" />
         </div>
     </form>
 </body>
