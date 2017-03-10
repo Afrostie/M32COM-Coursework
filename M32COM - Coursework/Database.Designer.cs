@@ -375,6 +375,8 @@ namespace M32COM___Coursework {
             
             private global::System.Data.DataColumn columnAddress;
             
+            private global::System.Data.DataColumn columnSalt;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public UserDataTable() {
@@ -458,6 +460,14 @@ namespace M32COM___Coursework {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SaltColumn {
+                get {
+                    return this.columnSalt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -493,7 +503,7 @@ namespace M32COM___Coursework {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public UserRow AddUserRow(string UserName, string Name, string Email, string Password, string Address) {
+            public UserRow AddUserRow(string UserName, string Name, string Email, string Password, string Address, string Salt) {
                 UserRow rowUserRow = ((UserRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -501,7 +511,8 @@ namespace M32COM___Coursework {
                         Name,
                         Email,
                         Password,
-                        Address};
+                        Address,
+                        Salt};
                 rowUserRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUserRow);
                 return rowUserRow;
@@ -537,6 +548,7 @@ namespace M32COM___Coursework {
                 this.columnEmail = base.Columns["Email"];
                 this.columnPassword = base.Columns["Password"];
                 this.columnAddress = base.Columns["Address"];
+                this.columnSalt = base.Columns["Salt"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -554,6 +566,8 @@ namespace M32COM___Coursework {
                 base.Columns.Add(this.columnPassword);
                 this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAddress);
+                this.columnSalt = new global::System.Data.DataColumn("Salt", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSalt);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserID}, true));
                 this.columnUserID.AutoIncrement = true;
@@ -1385,6 +1399,22 @@ namespace M32COM___Coursework {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Salt {
+                get {
+                    try {
+                        return ((string)(this[this.tableUser.SaltColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Salt\' in table \'User\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUser.SaltColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public OrderRow OrderRow {
                 get {
                     return ((OrderRow)(this.GetParentRow(this.Table.ParentRelations["Order_User"])));
@@ -1440,6 +1470,18 @@ namespace M32COM___Coursework {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAddressNull() {
                 this[this.tableUser.AddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSaltNull() {
+                return this.IsNull(this.tableUser.SaltColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSaltNull() {
+                this[this.tableUser.SaltColumn] = global::System.Convert.DBNull;
             }
         }
         

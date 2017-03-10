@@ -5,15 +5,8 @@
     <UserName>afrostie3</UserName>
     <Name>Andrew</Name>
     <Email>test@test.com</Email>
-    <Password>YqfpuGNWk4m1sUW4+hsmDYK/r1iehaNIFS4tDgANTT4=</Password>
+    <Password>WFZ/MzGegQrKV2MSTtiNSP3PoH8F8MnYKzBputchmZQ=</Password>
     <Address>Address</Address>
-  </User>
-  <User>
-    <UserID>1</UserID>
-    <UserName>afrostie3</UserName>
-    <Name>Andrew</Name>
-    <Email>test@test.com</Email>
-    <Password>XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg=</Password>
-    <Address>Address</Address>
+    <Salt>OjR0oitdmHvHClZlPwM5q1e1irRhKN2VptWTbdcQGdY=</Salt>
   </User>
 </Database>
