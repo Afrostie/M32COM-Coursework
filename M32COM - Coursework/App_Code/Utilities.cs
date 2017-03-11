@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.SessionState;
 using System.Web;
-using System.Web.Security;
-using System.Web.Security.Cryptography;
+
 
 namespace M32COM___Coursework.App_Code
 {
@@ -18,21 +15,23 @@ namespace M32COM___Coursework.App_Code
         private HttpSessionState Session;
         private HttpServerUtility Server;
         private Database userDb;
-        private string USER_PATH = "~/App_Data/Users.xml";
+        private const string UserPath = "~/App_Data/Users.xml";
 
         public Utilities()
         {
             //Setup the Session context
             Session = HttpContext.Current.Session;
-            Server = HttpContext.Current.Server;
+             Server = HttpContext.Current.Server;
             //Read the Users XML file
             userDb = new Database();
-            userDb.ReadXml(Server.MapPath(USER_PATH));
+            userDb.ReadXml(Server.MapPath(UserPath));
         }
 
         //Login the current user if they exist
         public bool LoginUser(string userName, string password)
         {
+            if (password == null) return false;
+
             //LINQ query to find any users with same name
             var query = userDb.User.AsEnumerable().Where(a => a.Field<string>("UserName") == userName);
 
@@ -56,14 +55,7 @@ namespace M32COM___Coursework.App_Code
         //Checks whether a user is currently logged into this session
         public bool IsLoggedIn()
         {
-            try
-            {
-                return (bool) Session["LoggedIn"];
-            }
-            catch
-            {
-                return false;
-            }
+             return (bool) Session["LoggedIn"];
         }
 
         //Helper function, returns users username
@@ -75,12 +67,13 @@ namespace M32COM___Coursework.App_Code
         //Hashes the given password
         private string HashPassword(string password)
         {
-            if (password == null)
-                return null;
             //Create a SHA256 hash
             HashAlgorithm hashedPassword = HashAlgorithm.Create("SHA256");
+
             //Hash the password
+            if (hashedPassword == null) return null;
             hashedPassword.ComputeHash(Encoding.UTF8.GetBytes(password));
+
             //Return hashed password as a string
             return Convert.ToBase64String(hashedPassword.Hash);
         }
@@ -96,13 +89,24 @@ namespace M32COM___Coursework.App_Code
         }
 
         //Generates some salt to add to the password before encryption
-        public string GenerateSalt()
+        private static string GenerateSalt()
         {
-            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+            var rng = new RNGCryptoServiceProvider();
             byte[] salt = new byte[32];
             rng.GetBytes(salt);
 
             return Convert.ToBase64String(salt);
+        }
+
+        public bool RegisterUser(string userName, string password, string name, string email, string address)
+        {
+            string salt = GenerateSalt();
+            string hashedPass = HashPassword(password.Trim() + salt);
+
+            userDb.User.AddUserRow(userName.Trim(), name.Trim(), email.Trim(), hashedPass, address.Trim(), salt);
+            userDb.User.WriteXml(Server.MapPath(UserPath));
+
+            return true;
         }
     }
 }

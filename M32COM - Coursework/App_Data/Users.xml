@@ -9,4 +9,13 @@
     <Address>Address</Address>
     <Salt>OjR0oitdmHvHClZlPwM5q1e1irRhKN2VptWTbdcQGdY=</Salt>
   </User>
+  <User>
+    <UserID>1</UserID>
+    <UserName>afrostie</UserName>
+    <Name>Andrew Frost</Name>
+    <Email>test@test.com</Email>
+    <Password>5B4vvbewr99xbtFL9Yiz4n+NSnoksjzdLBE06ZPLRj0=</Password>
+    <Address>Test Address</Address>
+    <Salt>3dgmlF7nkmWoLTy5g5aJvt965tgIbtku++xirPsN3Rg=</Salt>
+  </User>
 </Database>
