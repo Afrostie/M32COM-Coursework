@@ -18,7 +18,7 @@ namespace M32COM___Coursework
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            var currentCart = new List<int>();
+            var currentCart = new Dictionary<int ,int>();
             //Set no user to be currently logged in
             Session["LoggedIn"] = false;
             Session["CurrentUser"] = null;
