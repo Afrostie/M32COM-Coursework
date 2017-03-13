@@ -95,7 +95,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\Utilities.cs" />
+    <Compile Include="App_Code\CartUtilities.cs" />
+    <Compile Include="App_Code\UserUtilities.cs" />
     <Compile Include="Database.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

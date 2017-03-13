@@ -9,7 +9,7 @@ using System.Web;
 
 namespace M32COM___Coursework.App_Code
 {
-    public class Utilities
+    public class UserUtilities
     {
         //Session and server stuff
         private HttpSessionState Session;
@@ -17,7 +17,7 @@ namespace M32COM___Coursework.App_Code
         private Database userDb;
         private const string UserPath = "~/App_Data/Users.xml";
 
-        public Utilities()
+        public UserUtilities()
         {
             //Setup the Session context
             Session = HttpContext.Current.Session;

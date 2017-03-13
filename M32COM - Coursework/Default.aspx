@@ -13,7 +13,9 @@
             <br/>
             <asp:Button ID="Button1" runat="server" Text="Log Out" OnClick="Button1_Click" />
             <br />
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Label">Current Cart: </asp:Label>
+            <asp:Label ID="CartLabel" runat="server" Text="Label"></asp:Label>
+            <br />
             <asp:Button ID="Button2" runat="server" Text="Add 1 to Cart" OnClick="Button2_Click" />
         </div>
     </form>
