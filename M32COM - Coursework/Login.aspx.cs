@@ -34,6 +34,8 @@ namespace M32COM___Coursework
 
         protected void Register_Click(object sender, EventArgs e)
         {
+            if(util.UserExists(TextBox1.Text))
+                Response.Write("User Exists");
             util.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text);
         }
     }

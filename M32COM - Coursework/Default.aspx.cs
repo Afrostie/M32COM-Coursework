@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using M32COM___Coursework.App_Code;
 
 namespace M32COM___Coursework
@@ -16,7 +11,7 @@ namespace M32COM___Coursework
         {
             util = new Utilities();
             //If the user is logged in, let them into page
-            if(util.IsLoggedIn())
+            if (util.IsLoggedIn())
                 Response.Write("Successfully Logged In");
             //Otherwise redirect back to login page
             else
@@ -28,6 +23,11 @@ namespace M32COM___Coursework
             //When Logout button is clicked, logout and go back to login page
             util.Logout();
             Response.Redirect("Login.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

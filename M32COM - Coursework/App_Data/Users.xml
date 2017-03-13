@@ -18,4 +18,22 @@
     <Address>Test Address</Address>
     <Salt>3dgmlF7nkmWoLTy5g5aJvt965tgIbtku++xirPsN3Rg=</Salt>
   </User>
+  <User>
+    <UserID>2</UserID>
+    <UserName>afrostie</UserName>
+    <Name>Andrew</Name>
+    <Email>test@test.com</Email>
+    <Password>KlVOtslz71QdWA2Ot5qrvuQpWH2gG/V2jjFG5bR4GBk=</Password>
+    <Address>Test</Address>
+    <Salt>ZrLXiaj7QsOqC2Eyok9rrYzqr+51Au/cARrLGiktYl8=</Salt>
+  </User>
+  <User>
+    <UserID>3</UserID>
+    <UserName>afrostie2</UserName>
+    <Name>Andrew</Name>
+    <Email>test@Test.com</Email>
+    <Password>SFXre6EiAs8Wx0IRcy5UrDVxefuql48Oqvoc/2PEil0=</Password>
+    <Address>Address</Address>
+    <Salt>WPPmbb/K54BZ58cN4SB2bk5Ro8HCRSXOO/MMJEBi0V4=</Salt>
+  </User>
 </Database>

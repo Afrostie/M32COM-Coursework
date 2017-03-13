@@ -18,9 +18,11 @@ namespace M32COM___Coursework
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            var currentCart = new List<float>();
             //Set no user to be currently logged in
             Session["LoggedIn"] = false;
             Session["CurrentUser"] = null;
+            Session["Cart"] = currentCart;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace M32COM___Coursework
 
         protected void Session_End(object sender, EventArgs e)
         {
-
+            Session.Abandon();
         }
 
         protected void Application_End(object sender, EventArgs e)

@@ -27,9 +27,17 @@ namespace M32COM___Coursework.App_Code
             userDb.ReadXml(Server.MapPath(UserPath));
         }
 
-        //Login the current user if they exist
+        /// <summary>
+        /// Login a user given Username and password
+        /// </summary>
+        /// <param name="userName">UserName</param>
+        /// <param name="password">Unhashed Password</param>
+        /// <returns>True if sucessful, false if not</returns>
         public bool LoginUser(string userName, string password)
         {
+            //Check if the User Exists before continuing
+            if (!UserExists(userName)) return false;
+
             if (password == null) return false;
 
             //LINQ query to find any users with same name
@@ -45,30 +53,42 @@ namespace M32COM___Coursework.App_Code
             return false;
         }
 
-        //Logout the current user
+        /// <summary>
+        /// Logout the current sessions user
+        /// </summary>
         public void Logout()
         {
             Session["LoggedIn"] = false;
             Session["CurrentUser"] = null;
         }
 
-        //Checks whether a user is currently logged into this session
+        /// <summary>
+        /// Check if someone is currently logged in
+        /// </summary>
+        /// <returns>True is user is logged in</returns>
         public bool IsLoggedIn()
         {
              return (bool) Session["LoggedIn"];
         }
 
-        //Helper function, returns users username
+        /// <summary>
+        /// Get Current User
+        /// </summary>
+        /// <returns>Current UserName</returns>
         private string GetUser()
         {
             return (string) Session["CurrentUser"];
         }
 
-        //Hashes the given password
-        private string HashPassword(string password)
+        /// <summary>
+        /// Hash password with SHA256
+        /// </summary>
+        /// <param name="password">Unhashed password with salt</param>
+        /// <returns>String with Hashed Password</returns>
+        private static string HashPassword(string password)
         {
             //Create a SHA256 hash
-            HashAlgorithm hashedPassword = HashAlgorithm.Create("SHA256");
+            var hashedPassword = HashAlgorithm.Create("SHA256");
 
             //Hash the password
             if (hashedPassword == null) return null;
@@ -77,32 +97,51 @@ namespace M32COM___Coursework.App_Code
             //Return hashed password as a string
             return Convert.ToBase64String(hashedPassword.Hash);
         }
-
-        //Checks whether the user exists or not
+        
+        /// <summary>
+        /// Check if User Exists
+        /// </summary>
+        /// <param name="userName">UserName</param>
+        /// <returns>True if user exists</returns>
         public bool UserExists(string userName)
         {
-            var query = from a in userDb.User.AsEnumerable()
-                where a.Field<string>("UserName") == userName
-                select a;
+            var query = userDb.User.AsEnumerable().Where(a => a.Field<string>("UserName") == userName);
 
             return query.Any();
         }
 
-        //Generates some salt to add to the password before encryption
+        /// <summary>
+        /// Generates some salt to add to the password before encryption
+        /// </summary>
+        /// <returns>String containing salt</returns>
         private static string GenerateSalt()
         {
             var rng = new RNGCryptoServiceProvider();
-            byte[] salt = new byte[32];
+            var salt = new byte[32];
             rng.GetBytes(salt);
 
             return Convert.ToBase64String(salt);
         }
 
+        /// <summary>
+        /// Register user with given Details
+        /// </summary>
+        /// <param name="userName">UserName</param>
+        /// <param name="password">Password</param>
+        /// <param name="name">Full Name</param>
+        /// <param name="email">Email Address</param>
+        /// <param name="address">Full Address</param>
+        /// <returns>Returns true if sucessfull, false if user exists</returns>
         public bool RegisterUser(string userName, string password, string name, string email, string address)
         {
-            string salt = GenerateSalt();
-            string hashedPass = HashPassword(password.Trim() + salt);
+            //Checks if the user already exists
+            if (UserExists(userName))
+                return false;
 
+            //Generate salt and hashed password
+            var salt = GenerateSalt();
+            var hashedPass = HashPassword(password.Trim() + salt);
+            //Add user data to the database and write the xml file
             userDb.User.AddUserRow(userName.Trim(), name.Trim(), email.Trim(), hashedPass, address.Trim(), salt);
             userDb.User.WriteXml(Server.MapPath(UserPath));
 

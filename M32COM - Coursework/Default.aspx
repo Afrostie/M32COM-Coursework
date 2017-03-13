@@ -12,6 +12,9 @@
             <h1>M32COM Group Coursework Test Page!!</h1>
             <br/>
             <asp:Button ID="Button1" runat="server" Text="Log Out" OnClick="Button1_Click" />
+            <br />
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <asp:Button ID="Button2" runat="server" Text="Add 1 to Cart" OnClick="Button2_Click" />
         </div>
     </form>
 </body>
