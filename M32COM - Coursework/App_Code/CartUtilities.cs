@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Web;
 using System.Web.SessionState;
 
@@ -55,9 +53,7 @@ namespace M32COM___Coursework.App_Code
         {
             var tmp = (Dictionary<int, int>)Session["Cart"];
 
-            tmp.Remove(id);
-
-            return false;
+            return tmp.Remove(id);
         }
     }
 }

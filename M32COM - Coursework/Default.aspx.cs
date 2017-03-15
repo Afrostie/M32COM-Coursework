@@ -20,18 +20,14 @@ namespace M32COM___Coursework
                 Response.Redirect("Login.aspx");
 
             var test = (Dictionary<int, int>) Session["Cart"];
-            string hello = "";
+            var hello = "";
 
-            if (!IsPostBack)
+            if (IsPostBack) return;
+            foreach (var tmp in test)
             {
-                foreach (var tmp in test)
-                {
-                    hello = hello + tmp.Key + " ";
-                }
-                CartLabel.Text = hello;
-
+                hello = hello + tmp.Key + " ";
             }
-
+            CartLabel.Text = hello;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -43,9 +39,9 @@ namespace M32COM___Coursework
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            cartUtil.AddItemToCart(5, 1);
-            cartUtil.AddItemToCart(5, 1);
-            cartUtil.AddItemToCart(2, 1);
+            cartUtil.AddNewItemToCart(5, 1);
+            cartUtil.AddNewItemToCart(5, 1);
+            cartUtil.AddNewItemToCart(2, 1);
         }
     }
 }
