@@ -24,7 +24,7 @@ namespace M32COM___Coursework.App_Code
         //Add Product To Database
         public bool AddProduct(string name, double price, string description, int stock)
         {
-            if (!ProductExists(name))
+            if (ProductExists(name))
                 return false;
 
             productDB.Product.AddProductRow(name, price, description, stock);

@@ -1,4 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Products xlmns="http://tempuri.org/Database.xsd">
-
-</Products>
+<?xml version="1.0" standalone="yes"?>
+<Database xmlns="http://tempuri.org/Database.xsd">
+  <Product>
+    <ProductID>0</ProductID>
+    <Name>Cake 1</Name>
+    <Price>10.99</Price>
+    <Description>Fancy Cake</Description>
+    <Stock>10</Stock>
+  </Product>
+  <Product>
+    <ProductID>1</ProductID>
+    <Name>Cake 2</Name>
+    <Price>5.99</Price>
+    <Description>Another Cake</Description>
+    <Stock>20</Stock>
+  </Product>
+  <Product>
+    <ProductID>2</ProductID>
+    <Name>Cake 3</Name>
+    <Price>15.99</Price>
+    <Description>Cake!!!</Description>
+    <Stock>20</Stock>
+  </Product>
+</Database>

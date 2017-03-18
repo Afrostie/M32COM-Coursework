@@ -97,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\CartUtilities.cs" />
-    <Content Include="App_Code\ProductUtilities.cs" />
+    <Compile Include="App_Code\ProductUtilities.cs" />
     <Content Include="App_Code\OrderUtilities.cs" />
     <Compile Include="App_Code\UserUtilities.cs" />
     <Compile Include="Database.Designer.cs">

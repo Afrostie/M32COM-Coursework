@@ -24,11 +24,6 @@ namespace M32COM___Coursework
             var hello = "";
 
             if (IsPostBack) return;
-            foreach (var tmp in test)
-            {
-                hello = hello + tmp.Key + " ";
-            }
-            CartLabel.Text = hello;
         }
 
         protected void Button1_Click(object sender, EventArgs e)

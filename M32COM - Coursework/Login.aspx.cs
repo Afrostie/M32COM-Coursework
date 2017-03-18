@@ -6,9 +6,6 @@ namespace M32COM___Coursework
 {
     public partial class Login : Page
     {
-        //Location of the Users document
-        private const string UserPath = "App_Data/Users.xml";
-        private Database userDb;
         //Object instances
         private UserUtilities userUtil;
 
@@ -16,9 +13,6 @@ namespace M32COM___Coursework
         {
             //Create the instance of UserUtilities class
             userUtil = new UserUtilities();
-            //Load and read the User XML data
-            userDb = new Database();
-            userDb.ReadXml(Server.MapPath(UserPath));
         }
 
         protected void Button1_Click(object sender, EventArgs e)
