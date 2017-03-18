@@ -73,6 +73,7 @@ namespace M32COM___Coursework.App_Code
             return (double)row["Price"];
         }
 
+        //Gets ProductID from name
         public int GetID(string name)
         {
             var query = productDB.Product.AsEnumerable().Where(a => a.Field<string>("Name") == name);
@@ -88,9 +89,12 @@ namespace M32COM___Coursework.App_Code
         }
 
         //Update stock of item from ID (overload with name)
-        public void UpdateStock(int id)
+        public void UpdateStock(int productID, int quantity)
         {
+            var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == productID);
+            query.First().Stock += quantity;
 
+            productDB.WriteXml(Server.MapPath(ProductFile));
         }
 
         //Check if product exists

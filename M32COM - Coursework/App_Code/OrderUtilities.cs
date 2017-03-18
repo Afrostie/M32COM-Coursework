@@ -15,6 +15,7 @@ namespace M32COM___Coursework.App_Code
         private HttpServerUtility Server;
 
         private UserUtilities userUtil;
+        private ProductUtilities productUtil;
 
         public OrderUtilities()
         {
@@ -22,6 +23,7 @@ namespace M32COM___Coursework.App_Code
             Server = HttpContext.Current.Server;
 
             userUtil = new UserUtilities();
+            productUtil = new ProductUtilities();
 
             orderDB = new Database();
             orderDB.ReadXml(Server.MapPath(OrderPath));
@@ -33,6 +35,8 @@ namespace M32COM___Coursework.App_Code
             orderDB.Order.AddOrderRow(userUtil.GetUserID(), productID, quantity);
 
             orderDB.WriteXml(Server.MapPath(OrderPath));
+
+            productUtil.UpdateStock(productID, quantity * -1);
         }
 
         //Remove Order
