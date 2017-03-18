@@ -72,6 +72,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="Orders.aspx" />
     <Content Include="packages.config" />
     <Content Include="Database.xsc">
       <DependentUpon>Database.xsd</DependentUpon>
@@ -98,7 +99,7 @@
   <ItemGroup>
     <Compile Include="App_Code\CartUtilities.cs" />
     <Compile Include="App_Code\ProductUtilities.cs" />
-    <Content Include="App_Code\OrderUtilities.cs" />
+    <Compile Include="App_Code\OrderUtilities.cs" />
     <Compile Include="App_Code\UserUtilities.cs" />
     <Compile Include="Database.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,6 +122,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>

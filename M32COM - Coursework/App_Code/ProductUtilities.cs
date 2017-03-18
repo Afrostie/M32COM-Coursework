@@ -46,7 +46,10 @@ namespace M32COM___Coursework.App_Code
         //Get price from ID (overload with name)
         public double GetPrice(int id)
         {
-            var row = productDB.Product.Rows.Find(id);
+            // var row = productDB.Product.Rows.Find(id);
+            var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == id);
+
+            var row = query.First();
 
             if (row["Price"] == null)
             {
@@ -68,6 +71,20 @@ namespace M32COM___Coursework.App_Code
             }
 
             return (double)row["Price"];
+        }
+
+        public int GetID(string name)
+        {
+            var query = productDB.Product.AsEnumerable().Where(a => a.Field<string>("Name") == name);
+
+            var row = query.First();
+
+            if (row["ProductID"] == null)
+            {
+                return 0;
+            }
+
+            return (int)row["ProductID"];
         }
 
         //Update stock of item from ID (overload with name)
