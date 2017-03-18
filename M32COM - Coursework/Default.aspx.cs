@@ -14,7 +14,8 @@ namespace M32COM___Coursework
             userUtil = new UserUtilities();
             //If the user is logged in, let them into page
             if (userUtil.IsLoggedIn())
-                Response.Write("Successfully Logged In");
+                Response.Write("Successfully Logged In as " + userUtil.GetUserName() + " with ID " + userUtil.GetUserID() + " with role " +
+            userUtil.GetUserRole());
             //Otherwise redirect back to login page
             else
                 Response.Redirect("Login.aspx");

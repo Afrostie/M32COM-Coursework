@@ -26,6 +26,11 @@
         <br/>
         <asp:TextBox ID="TextBox5" runat="server">Address</asp:TextBox>
         <br/>
+        <asp:DropDownList ID="DropDownList1" runat="server">
+            <asp:ListItem>User</asp:ListItem>
+            <asp:ListItem>Admin</asp:ListItem>
+        </asp:DropDownList>
+        <br/>
         <asp:Button ID="Register" runat="server" Text="Register" OnClick="Register_Click" style="height: 26px"/>
     </div>
 </form>

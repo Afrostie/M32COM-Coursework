@@ -14,7 +14,7 @@ namespace M32COM___Coursework
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Create hte instance of UserUtilities class
+            //Create the instance of UserUtilities class
             userUtil = new UserUtilities();
             //Load and read the User XML data
             userDb = new Database();
@@ -36,7 +36,7 @@ namespace M32COM___Coursework
         {
             if(userUtil.UserExists(TextBox1.Text))
                 Response.Write("User Exists");
-            userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text);
+            userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, DropDownList1.SelectedValue);
         }
     }
 }

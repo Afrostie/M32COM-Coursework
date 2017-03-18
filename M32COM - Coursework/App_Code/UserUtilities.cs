@@ -36,7 +36,7 @@ namespace M32COM___Coursework.App_Code
         public bool LoginUser(string userName, string password)
         {
             //Check if the User Exists before continuing
-            if (!UserExists(userName)) return false;
+            if (!UserExists(userName.Trim())) return false;
 
             if (password == null) return false;
 
@@ -46,8 +46,11 @@ namespace M32COM___Coursework.App_Code
             //For all returned results, check for password match
             if (query.Any(user => user["Password"].ToString() == HashPassword(password + user["Salt"])))
             {
+                var row = query.First();
                 Session["LoggedIn"] = true;
                 Session["CurrentUser"] = userName;
+                Session["CurrentID"] = row["UserID"];
+                Session["CurrentRole"] = row["Role"];
                 return true;
             }
             return false;
@@ -60,6 +63,8 @@ namespace M32COM___Coursework.App_Code
         {
             Session["LoggedIn"] = false;
             Session["CurrentUser"] = null;
+            Session["CurrentID"] = null;
+            Session["CurrentRole"] = null;
         }
 
         /// <summary>
@@ -72,12 +77,30 @@ namespace M32COM___Coursework.App_Code
         }
 
         /// <summary>
-        /// Get Current User
+        /// Get Current UserName
         /// </summary>
         /// <returns>Current UserName</returns>
-        private string GetUser()
+        public string GetUserName()
         {
             return (string) Session["CurrentUser"];
+        }
+
+        /// <summary>
+        /// Get Current UserID
+        /// </summary>
+        /// <returns>Current CurrentID</returns>
+        public int GetUserID()
+        {
+            return (int)Session["CurrentID"];
+        }
+
+        /// <summary>
+        /// Get Current Role
+        /// </summary>
+        /// <returns>Current CurrentRole</returns>
+        public string GetUserRole()
+        {
+            return (string)Session["CurrentRole"];
         }
 
         /// <summary>
@@ -131,8 +154,9 @@ namespace M32COM___Coursework.App_Code
         /// <param name="name">Full Name</param>
         /// <param name="email">Email Address</param>
         /// <param name="address">Full Address</param>
+        /// <param name="role">Role: User/Admin</param>
         /// <returns>Returns true if sucessfull, false if user exists</returns>
-        public bool RegisterUser(string userName, string password, string name, string email, string address)
+        public bool RegisterUser(string userName, string password, string name, string email, string address, string role)
         {
             //Checks if the user already exists
             if (UserExists(userName))
@@ -142,7 +166,7 @@ namespace M32COM___Coursework.App_Code
             var salt = GenerateSalt();
             var hashedPass = HashPassword(password.Trim() + salt);
             //Add user data to the database and write the xml file
-            userDb.User.AddUserRow(userName.Trim(), name.Trim(), email.Trim(), hashedPass, address.Trim(), salt);
+            userDb.User.AddUserRow(userName.Trim(), name.Trim(), email.Trim(), hashedPass, address.Trim(), salt, role.Trim());
             userDb.User.WriteXml(Server.MapPath(UserPath));
 
             return true;

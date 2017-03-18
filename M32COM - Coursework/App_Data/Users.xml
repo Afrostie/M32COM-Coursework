@@ -8,32 +8,36 @@
     <Password>WFZ/MzGegQrKV2MSTtiNSP3PoH8F8MnYKzBputchmZQ=</Password>
     <Address>Address</Address>
     <Salt>OjR0oitdmHvHClZlPwM5q1e1irRhKN2VptWTbdcQGdY=</Salt>
-  </User>
-  <User>
-    <UserID>1</UserID>
-    <UserName>afrostie</UserName>
-    <Name>Andrew Frost</Name>
-    <Email>test@test.com</Email>
-    <Password>5B4vvbewr99xbtFL9Yiz4n+NSnoksjzdLBE06ZPLRj0=</Password>
-    <Address>Test Address</Address>
-    <Salt>3dgmlF7nkmWoLTy5g5aJvt965tgIbtku++xirPsN3Rg=</Salt>
+    <Role>User</Role>
   </User>
   <User>
     <UserID>2</UserID>
-    <UserName>afrostie</UserName>
-    <Name>Andrew</Name>
-    <Email>test@test.com</Email>
-    <Password>KlVOtslz71QdWA2Ot5qrvuQpWH2gG/V2jjFG5bR4GBk=</Password>
-    <Address>Test</Address>
-    <Salt>ZrLXiaj7QsOqC2Eyok9rrYzqr+51Au/cARrLGiktYl8=</Salt>
-  </User>
-  <User>
-    <UserID>3</UserID>
     <UserName>afrostie2</UserName>
     <Name>Andrew</Name>
     <Email>test@Test.com</Email>
     <Password>SFXre6EiAs8Wx0IRcy5UrDVxefuql48Oqvoc/2PEil0=</Password>
     <Address>Address</Address>
     <Salt>WPPmbb/K54BZ58cN4SB2bk5Ro8HCRSXOO/MMJEBi0V4=</Salt>
+    <Role>User</Role>
+  </User>
+  <User>
+    <UserID>3</UserID>
+    <UserName>admin</UserName>
+    <Name>Admin</Name>
+    <Email>admin@test.com</Email>
+    <Password>qN40VoAtCIus+70cLLJnd5EL4IRIhMJ6/PNB1n1ztLA=</Password>
+    <Address>Address</Address>
+    <Salt>HU1tyuIaJ7cju9mnDpz172UPs3/+JPauUsdT3q/MXSQ=</Salt>
+    <Role>Admin</Role>
+  </User>
+  <User>
+    <UserID>4</UserID>
+    <UserName>afrostie</UserName>
+    <Name>Andrew</Name>
+    <Email>test@t.com</Email>
+    <Password>IJZzJELwNrihaJKfrhxUoZoSxW1xfTEEDiUZXFFCmEE=</Password>
+    <Address>asdasd</Address>
+    <Salt>1bT27dtAo8cR0TpUL0eiNq10CmWHsV5OuBWnr5F6sSQ=</Salt>
+    <Role>User</Role>
   </User>
 </Database>

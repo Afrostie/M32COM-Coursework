@@ -22,6 +22,8 @@ namespace M32COM___Coursework
             //Set no user to be currently logged in
             Session["LoggedIn"] = false;
             Session["CurrentUser"] = null;
+            Session["CurrentID"] = null;
+            Session["CurrentRole"] = null;
             Session["Cart"] = currentCart;
         }
 
