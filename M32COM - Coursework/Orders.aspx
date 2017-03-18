@@ -42,6 +42,8 @@
             <br/>
             <br/>
             <asp:Button ID="Button4" runat="server" Text="Order Cart" OnClick="Button4_Click" />
+            <br />
+            <asp:Button ID="Button5" runat="server" Text="Clear Cart" OnClick="Button5_Click"/>
         </div>
     </form>
 </body>

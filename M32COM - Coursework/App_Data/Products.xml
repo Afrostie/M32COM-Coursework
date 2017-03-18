@@ -12,13 +12,13 @@
     <Name>Cake 2</Name>
     <Price>5.99</Price>
     <Description>Another Cake</Description>
-    <Stock>18</Stock>
+    <Stock>9</Stock>
   </Product>
   <Product>
     <ProductID>2</ProductID>
     <Name>Cake 3</Name>
     <Price>15.99</Price>
     <Description>Cake!!!</Description>
-    <Stock>19</Stock>
+    <Stock>13</Stock>
   </Product>
 </Database>

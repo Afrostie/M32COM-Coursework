@@ -111,14 +111,16 @@ namespace M32COM___Coursework.App_Code
         }
 
         //Adds all items in cart to Orders database
-        public void OrderCart()
+        public bool OrderCart()
         {
             var cart = GetCart();
 
             foreach (var item in cart)
             {
-                orderUtil.AddOrder(item.Key, item.Value);
+                if (!orderUtil.AddOrder(item.Key, item.Value))
+                    return false;
             }
+            return true;
         }
     }
 }

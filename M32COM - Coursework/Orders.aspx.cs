@@ -53,7 +53,17 @@ namespace M32COM___Coursework
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-           cartUtil.OrderCart();
+           if(!cartUtil.OrderCart())
+                Response.Write("Not Enough Stock");
+
+           cartUtil.EmptyCart();
+            Label5.Text = Convert.ToString(cartUtil.GetTotal());
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            cartUtil.EmptyCart();
+            Label5.Text = Convert.ToString(cartUtil.GetTotal());
         }
     }
 }

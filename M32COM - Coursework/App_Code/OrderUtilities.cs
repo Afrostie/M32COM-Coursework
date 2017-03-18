@@ -30,13 +30,16 @@ namespace M32COM___Coursework.App_Code
         }
 
         //Add Order
-        public void AddOrder(int productID, int quantity)
+        public bool AddOrder(int productID, int quantity)
         {
+            if(!productUtil.UpdateStock(productID, quantity * -1))
+                return false;
+
             orderDB.Order.AddOrderRow(userUtil.GetUserID(), productID, quantity);
 
             orderDB.WriteXml(Server.MapPath(OrderPath));
 
-            productUtil.UpdateStock(productID, quantity * -1);
+            return true;
         }
 
         //Remove Order

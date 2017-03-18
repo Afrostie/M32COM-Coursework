@@ -89,12 +89,17 @@ namespace M32COM___Coursework.App_Code
         }
 
         //Update stock of item from ID (overload with name)
-        public void UpdateStock(int productID, int quantity)
+        public bool UpdateStock(int productID, int quantity)
         {
             var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == productID);
-            query.First().Stock += quantity;
+
+
+            if ((query.First().Stock += quantity) < 0)
+                return false;
 
             productDB.WriteXml(Server.MapPath(ProductFile));
+
+            return true;
         }
 
         //Check if product exists
