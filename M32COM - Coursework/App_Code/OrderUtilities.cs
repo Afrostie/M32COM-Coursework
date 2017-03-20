@@ -12,7 +12,6 @@ namespace M32COM___Coursework.App_Code
         private Database orderDB;
         private const string OrderPath = "~/App_Data/Orders.xml";
 
-        private HttpSessionState Session;
         private HttpServerUtility Server;
 
         private UserUtilities userUtil;
@@ -20,7 +19,6 @@ namespace M32COM___Coursework.App_Code
 
         public OrderUtilities()
         {
-            Session = HttpContext.Current.Session;
             Server = HttpContext.Current.Server;
 
             userUtil = new UserUtilities();
@@ -67,6 +65,30 @@ namespace M32COM___Coursework.App_Code
             var query = orderDB.Order.AsEnumerable().Where(a => a.Field<int>("UserID") == userID);
 
             return query;
+        }
+
+        public List<int> GetAllUserID()
+        {
+            var query = orderDB.Order.AsEnumerable().Distinct().ToList();
+
+            
+
+            List<int> list = new List<int>();
+
+            foreach (var row in query)
+            {
+                if (row.UserID != null)
+                    list.Add(row.UserID);
+            }
+
+            List<int> tmp = list.Distinct().ToList();
+
+            return tmp;
+        }
+
+        public Database.OrderDataTable GetTable()
+        {
+            return orderDB.Order;
         }
     }
 }

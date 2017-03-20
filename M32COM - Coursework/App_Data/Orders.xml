@@ -13,93 +13,9 @@
     <Quantity>2</Quantity>
   </Order>
   <Order>
-    <OrderID>2</OrderID>
-    <UserID>4</UserID>
-    <ProductID>2</ProductID>
-    <Quantity>1</Quantity>
-  </Order>
-  <Order>
     <OrderID>3</OrderID>
-    <UserID>4</UserID>
-    <ProductID>0</ProductID>
-    <Quantity>2</Quantity>
-  </Order>
-  <Order>
-    <OrderID>4</OrderID>
-    <UserID>4</UserID>
-    <ProductID>0</ProductID>
-    <Quantity>3</Quantity>
-  </Order>
-  <Order>
-    <OrderID>5</OrderID>
-    <UserID>4</UserID>
+    <UserID>2</UserID>
     <ProductID>1</ProductID>
     <Quantity>2</Quantity>
-  </Order>
-  <Order>
-    <OrderID>6</OrderID>
-    <UserID>4</UserID>
-    <ProductID>2</ProductID>
-    <Quantity>1</Quantity>
-  </Order>
-  <Order>
-    <OrderID>7</OrderID>
-    <UserID>4</UserID>
-    <ProductID>0</ProductID>
-    <Quantity>6</Quantity>
-  </Order>
-  <Order>
-    <OrderID>8</OrderID>
-    <UserID>4</UserID>
-    <ProductID>1</ProductID>
-    <Quantity>3</Quantity>
-  </Order>
-  <Order>
-    <OrderID>9</OrderID>
-    <UserID>4</UserID>
-    <ProductID>1</ProductID>
-    <Quantity>3</Quantity>
-  </Order>
-  <Order>
-    <OrderID>10</OrderID>
-    <UserID>4</UserID>
-    <ProductID>2</ProductID>
-    <Quantity>3</Quantity>
-  </Order>
-  <Order>
-    <OrderID>11</OrderID>
-    <UserID>4</UserID>
-    <ProductID>1</ProductID>
-    <Quantity>3</Quantity>
-  </Order>
-  <Order>
-    <OrderID>12</OrderID>
-    <UserID>4</UserID>
-    <ProductID>2</ProductID>
-    <Quantity>3</Quantity>
-  </Order>
-  <Order>
-    <OrderID>13</OrderID>
-    <UserID>4</UserID>
-    <ProductID>1</ProductID>
-    <Quantity>2</Quantity>
-  </Order>
-  <Order>
-    <OrderID>14</OrderID>
-    <UserID>4</UserID>
-    <ProductID>2</ProductID>
-    <Quantity>1</Quantity>
-  </Order>
-  <Order>
-    <OrderID>15</OrderID>
-    <UserID>4</UserID>
-    <ProductID>1</ProductID>
-    <Quantity>2</Quantity>
-  </Order>
-  <Order>
-    <OrderID>16</OrderID>
-    <UserID>4</UserID>
-    <ProductID>0</ProductID>
-    <Quantity>1</Quantity>
   </Order>
 </Database>

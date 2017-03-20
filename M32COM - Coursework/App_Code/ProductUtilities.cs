@@ -148,5 +148,10 @@ namespace M32COM___Coursework.App_Code
 
             return query.Any();
         }
+
+        public Database.ProductDataTable ReturnTable()
+        {
+            return productDB.Product;
+        }
     }
 }

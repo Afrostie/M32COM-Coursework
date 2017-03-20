@@ -25,6 +25,7 @@ namespace M32COM___Coursework
             Session["CurrentID"] = null;
             Session["CurrentRole"] = null;
             Session["Cart"] = currentCart;
+            Session["DropDownID"] = 4;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
