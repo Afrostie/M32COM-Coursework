@@ -56,6 +56,20 @@ namespace M32COM___Coursework
            if(!cartUtil.OrderCart())
                 Response.Write("Not Enough Stock");
 
+            Panel1.Visible = true;
+
+            string label = "Cart";
+
+            int count = 0;
+            foreach (var row in cartUtil.GetCart())
+            {
+                var tmp = label + count;
+                count++;
+
+                var control = (Label) FindControl(tmp);
+                control.Text = productUtil.GetName(row.Key) + " Quantity: " + row.Value + " at: £" +  productUtil.GetPrice(row.Key) + " Item Total: £"  + (productUtil.GetPrice(row.Key) * row.Value);
+            }
+
            cartUtil.EmptyCart();
             Label5.Text = Convert.ToString(cartUtil.GetTotal());
         }

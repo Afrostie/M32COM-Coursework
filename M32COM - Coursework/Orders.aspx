@@ -29,7 +29,7 @@
 
             <asp:Label ID="Label3" runat="server" Text="Cake 3"></asp:Label>
             <asp:Button ID="Button3" runat="server" Text="Add" OnClick="Button3_Click" />
-            <asp:DropDownList ID="DropDownList3" runat="server">                
+            <asp:DropDownList ID="DropDownList3" runat="server">
                 <asp:ListItem>1</asp:ListItem>
                 <asp:ListItem>2</asp:ListItem>
                 <asp:ListItem>3</asp:ListItem>
@@ -38,12 +38,20 @@
             <br />
             <asp:Label ID="Label4" runat="server" Text="Cart Total: "></asp:Label>
             <asp:Label ID="Label5" runat="server" Text=""></asp:Label>
-            
-            <br/>
-            <br/>
+
+            <br />
+            <br />
             <asp:Button ID="Button4" runat="server" Text="Order Cart" OnClick="Button4_Click" />
             <br />
-            <asp:Button ID="Button5" runat="server" Text="Clear Cart" OnClick="Button5_Click"/>
+            <asp:Button ID="Button5" runat="server" Text="Clear Cart" OnClick="Button5_Click" />
+            <br />
+            <asp:Panel ID="Panel1" runat="server" Visible="False">
+                <asp:Label ID="Cart1L" runat="server" Text="Cart 1: "></asp:Label><asp:Label ID="Cart0" runat="server" Text="Cart 1: "></asp:Label>
+                <br />
+                <asp:Label ID="Cart2L" runat="server" Text="Cart 1: "></asp:Label><asp:Label ID="Cart1" runat="server" Text="Cart 2: "></asp:Label>
+                <br/>
+                <asp:Label ID="Cart3L" runat="server" Text="Cart 1: "></asp:Label><asp:Label ID="Cart2" runat="server" Text="Cart 3: "></asp:Label>
+            </asp:Panel>
         </div>
     </form>
 </body>

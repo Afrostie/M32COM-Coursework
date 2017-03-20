@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.SessionState;
+using System.Data;
 
 namespace M32COM___Coursework.App_Code
 {
@@ -46,6 +47,11 @@ namespace M32COM___Coursework.App_Code
         public void RemoveOrder(int orderID) { }
 
         //Orders for user with ID
-        public void GetOrderCount(int userID) { }
+        public int GetOrderCount(int userID)
+        {
+            var query = orderDB.Product.AsEnumerable().Where(a => a.Field<int>("UserID") == userID);
+
+            return query.Count();
+        }
     }
 }

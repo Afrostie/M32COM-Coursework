@@ -88,6 +88,21 @@ namespace M32COM___Coursework.App_Code
             return (int)row["ProductID"];
         }
 
+        //Gets ProductID from name
+        public string GetName(int productID)
+        {
+            var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == productID);
+
+            var row = query.First();
+
+            if (row["Name"] == null)
+            {
+                return null;
+            }
+
+            return (string)row["Name"];
+        }
+
         //Update stock of item from ID (overload with name)
         public bool UpdateStock(int productID, int quantity)
         {
