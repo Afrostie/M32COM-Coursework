@@ -10,71 +10,71 @@ namespace M32COM___Coursework
 {
     public partial class Orders : System.Web.UI.Page
     {
-        private CartUtilities cartUtil;
-        private ProductUtilities productUtil;
-        private UserUtilities userUtil;
+        private CartUtilities cartUtilities;
+        private ProductUtilities productUtilities;
+        private UserUtilities userUtilities;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            cartUtil = new CartUtilities();
-            productUtil = new ProductUtilities();
-            userUtil = new UserUtilities();
+            cartUtilities = new CartUtilities();
+            productUtilities = new ProductUtilities();
+            userUtilities = new UserUtilities();
 
             if (IsPostBack) return;
 
-            if (!userUtil.IsLoggedIn())
+            if (!userUtilities.IsLoggedIn())
                  Response.Redirect("Login.aspx");
 
-            Label5.Text = cartUtil.GetCartString();
+            Label5.Text = cartUtilities.GetCartString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            cartUtil.AddNewItemToCart(productUtil.GetID(Label1.Text), Convert.ToInt32(DropDownList1.SelectedItem.Text));
+            cartUtilities.AddNewItemToCart(productUtilities.GetID(Label1.Text), Convert.ToInt32(DropDownList1.SelectedItem.Text));
 
             GetCartString();
-            Label5.Text = Convert.ToString(cartUtil.GetTotal());
+            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
 
             Panel1.Visible = true;
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            cartUtil.AddNewItemToCart(productUtil.GetID(Label2.Text), Convert.ToInt32(DropDownList2.SelectedItem.Text));
+            cartUtilities.AddNewItemToCart(productUtilities.GetID(Label2.Text), Convert.ToInt32(DropDownList2.SelectedItem.Text));
 
             GetCartString();
-            Label5.Text = Convert.ToString(cartUtil.GetTotal());
+            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
 
             Panel1.Visible = true;
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            cartUtil.AddNewItemToCart(productUtil.GetID(Label3.Text), Convert.ToInt32(DropDownList3.SelectedItem.Text));
+            cartUtilities.AddNewItemToCart(productUtilities.GetID(Label3.Text), Convert.ToInt32(DropDownList3.SelectedItem.Text));
 
             GetCartString();
-            Label5.Text = Convert.ToString(cartUtil.GetTotal());
+            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
 
             Panel1.Visible = true;
         }
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-           if(!cartUtil.OrderCart())
+           if(!cartUtilities.OrderCart())
                 Response.Write("Not Enough Stock");
 
             Panel1.Visible = true;
 
 
-            cartUtil.EmptyCart();
+            cartUtilities.EmptyCart();
 
-            Label5.Text = Convert.ToString(cartUtil.GetTotal());
+            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
         }
 
         protected void Button5_Click(object sender, EventArgs e)
         {
             Clear();
-            Label5.Text = Convert.ToString(cartUtil.GetTotal());
+            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
         }
 
         private void GetCartString()
@@ -82,13 +82,13 @@ namespace M32COM___Coursework
             const string label = "Cart";
 
             var count = 0;
-            foreach (var row in cartUtil.GetCart())
+            foreach (var row in cartUtilities.GetCart())
             {
                 var tmp = label + count;
                 count++;
 
                 var control = (Label)FindControl(tmp);
-                control.Text = productUtil.GetName(row.Key) + " Quantity: " + row.Value + " at: £" + productUtil.GetPrice(row.Key) + " Item Total: £" + (productUtil.GetPrice(row.Key) * row.Value);
+                control.Text = productUtilities.GetName(row.Key) + " Quantity: " + row.Value + " at: £" + productUtilities.GetPrice(row.Key) + " Item Total: £" + (productUtilities.GetPrice(row.Key) * row.Value);
             }
         }
 
@@ -97,7 +97,7 @@ namespace M32COM___Coursework
         {
             Panel1.Visible = false;
 
-            cartUtil.EmptyCart();
+            cartUtilities.EmptyCart();
 
             Cart0.Text = "";
             Cart1.Text = "";

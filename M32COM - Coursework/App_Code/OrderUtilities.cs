@@ -30,7 +30,11 @@ namespace M32COM___Coursework.App_Code
             orderDB.ReadXml(Server.MapPath(OrderPath));
         }
 
-        //Add Order
+        /// <summary>
+        /// Add Order to the Database
+        /// </summary>
+        /// <param name="productID">Product ID to add</param>
+        /// <param name="quantity">Quantity of product</param>
         public bool AddOrder(int productID, int quantity)
         {
             if(!productUtil.UpdateStock(productID, quantity * -1))
@@ -46,12 +50,23 @@ namespace M32COM___Coursework.App_Code
         //Remove Order
         public void RemoveOrder(int orderID) { }
 
-        //Orders for user with ID
+        /// <summary>
+        /// Returns Number of times a product has been ordered
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <returns></returns>
         public int GetOrderCount(int userID)
         {
-            var query = orderDB.Product.AsEnumerable().Where(a => a.Field<int>("UserID") == userID);
+            var query = orderDB.Order.AsEnumerable().Where(a => a.Field<int>("UserID") == userID);
 
             return query.Count();
+        }
+
+        public EnumerableRowCollection<Database.OrderRow> GetOrdersByCustomer(int userID)
+        {
+            var query = orderDB.Order.AsEnumerable().Where(a => a.Field<int>("UserID") == userID);
+
+            return query;
         }
     }
 }

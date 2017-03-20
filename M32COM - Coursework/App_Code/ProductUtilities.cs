@@ -21,7 +21,13 @@ namespace M32COM___Coursework.App_Code
             productDB.ReadXml(Server.MapPath(ProductFile));
         }
 
-        //Add Product To Database
+        /// <summary>
+        /// Add a Product to Cart
+        /// </summary>
+        /// <param name="name">Name of Product</param>
+        /// <param name="price">Price of Product</param>
+        /// <param name="description">Description of Product</param>
+        /// <param name="stock">Stock Count of Product</param>
         public bool AddProduct(string name, double price, string description, int stock)
         {
             if (ProductExists(name))
@@ -34,20 +40,26 @@ namespace M32COM___Coursework.App_Code
             return true;
         }
 
-        //Remove product from database
-        public void RemoveProduct(int id)
+        /// <summary>
+        /// Remove Product from Database with given ID
+        /// </summary>
+        /// <param name="productID">Product ID to remove</param>
+        public void RemoveProduct(int productID)
         {
-            var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == id);
+            var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == productID);
             
             productDB.Product.RemoveProductRow(query.First());
 
             productDB.Product.WriteXml(Server.MapPath(ProductFile));
         }
-        //Get price from ID (overload with name)
-        public double GetPrice(int id)
+        /// <summary>
+        /// Get Price of Product from ID
+        /// </summary>
+        /// <param name="productID">Product ID</param>
+        public double GetPrice(int productID)
         {
-            // var row = productDB.Product.Rows.Find(id);
-            var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == id);
+            // var row = productDB.Product.Rows.Find(productID);
+            var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == productID);
 
             var row = query.First();
 
@@ -59,6 +71,10 @@ namespace M32COM___Coursework.App_Code
             return (double)row["Price"];
         }
 
+        /// <summary>
+        /// Get Price of Product from Name
+        /// </summary>
+        /// <param name="name">Name of Product</param>
         public double GetPrice(string name)
         {
             var query = productDB.Product.AsEnumerable().Where(a => a.Field<string>("Name") == name);
@@ -73,7 +89,10 @@ namespace M32COM___Coursework.App_Code
             return (double)row["Price"];
         }
 
-        //Gets ProductID from name
+        /// <summary>
+        /// Gets ID of Product from Name
+        /// </summary>
+        /// <param name="name">Name of Product</param>
         public int GetID(string name)
         {
             var query = productDB.Product.AsEnumerable().Where(a => a.Field<string>("Name") == name);
@@ -88,7 +107,10 @@ namespace M32COM___Coursework.App_Code
             return (int)row["ProductID"];
         }
 
-        //Gets ProductID from name
+        /// <summary>
+        /// Get Name of Product from ProductID
+        /// </summary>
+        /// <param name="productID">Product ID</param>
         public string GetName(int productID)
         {
             var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == productID);
@@ -98,7 +120,11 @@ namespace M32COM___Coursework.App_Code
             return (string) row["Name"];
         }
 
-        //Update stock of item from ID (overload with name)
+        /// <summary>
+        /// Changes the Stock Value of the given Product
+        /// </summary>
+        /// <param name="productID">Product ID</param>
+        /// <param name="quantity">Quantity to update (+-)</param>
         public bool UpdateStock(int productID, int quantity)
         {
             var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == productID);
@@ -112,7 +138,10 @@ namespace M32COM___Coursework.App_Code
             return true;
         }
 
-        //Check if product exists
+        /// <summary>
+        /// Checks if product exists already in database
+        /// </summary>
+        /// <param name="name">Name of Product</param>
         private bool ProductExists(string name)
         {
             var query = productDB.Product.AsEnumerable().Where(a => a.Field<string>("Name") == name);

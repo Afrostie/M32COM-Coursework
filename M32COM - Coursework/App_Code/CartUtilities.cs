@@ -18,7 +18,11 @@ namespace M32COM___Coursework.App_Code
             orderUtil = new OrderUtilities();
         }
 
-        //Adds a new product to cart
+        /// <summary>
+        /// Add a new product to the cart
+        /// </summary>
+        /// <param name="productID">Product ID</param>
+        /// <param name="quantity">Product Quantity</param>
         public void AddNewItemToCart(int productID, int quantity)
         {
             var tmp = (Dictionary<int, int>) Session["Cart"];
@@ -31,7 +35,11 @@ namespace M32COM___Coursework.App_Code
             Session["Cart"] = tmp;
         }
 
-        //Change the quantity of the item in the cart
+        /// <summary>
+        /// Update Quantity of Product in Cart
+        /// </summary>
+        /// <param name="productID">Product ID</param>
+        /// <param name="quantity">Quantity</param>
         public void UpdateQuantity(int productID, int quantity)
         {
             var tmp = (Dictionary<int, int>) Session["Cart"];
@@ -41,7 +49,9 @@ namespace M32COM___Coursework.App_Code
             Session["Cart"] = tmp;
         }
 
-        //Clears the cart of any products
+        /// <summary>
+        /// Empties the Cart of all Items
+        /// </summary>
         public void EmptyCart()
         {
             var tmp = (Dictionary<int, int>) Session["Cart"];
@@ -50,14 +60,19 @@ namespace M32COM___Coursework.App_Code
             Session["Cart"] = tmp;
         }
 
-        //Returns the amount of items in the cart
+        /// <summary>
+        /// Gets the amount of items in the cart
+        /// </summary>
         public int GetItemCount()
         {
             var tmp = (Dictionary<int, int>) Session["Cart"];
             return tmp.Count;
         }
 
-        //Returns the quantity of items for a given id in the cart
+        /// <summary>
+        /// Gets Quantity of chosen Product from Cart
+        /// </summary>
+        /// <param name="productID">Product ID</param>
         public int GetQuantity(int productID)
         {
             var tmp = (Dictionary<int, int>) Session["Cart"];
@@ -65,7 +80,10 @@ namespace M32COM___Coursework.App_Code
             return tmp[productID];
         }
 
-        //Removes given product from cart
+        /// <summary>
+        /// Remove specified item from cart
+        /// </summary>
+        /// <param name="productID">Product ID</param>
         public bool RemoveItem(int productID)
         {
             var tmp = (Dictionary<int, int>) Session["Cart"];
@@ -73,7 +91,9 @@ namespace M32COM___Coursework.App_Code
             return tmp.Remove(productID);
         }
 
-        //Returns the entire cart in a Dictionary
+        /// <summary>
+        /// Returns the Entire cart, useful for iterating through
+        /// </summary>
         public Dictionary<int, int> GetCart()
         {
             var tmp = (Dictionary<int, int>) Session["Cart"];
@@ -81,12 +101,14 @@ namespace M32COM___Coursework.App_Code
             return tmp;
         }
 
-        //Debug method, returns ID and quantity of each item in cart in a string
+        /// <summary>
+        /// Useless method to return the Cart as a String
+        /// </summary>
         public string GetCartString()
         {
             var cart = GetCart();
 
-            string total = "";
+            var total = "";
 
             foreach (var item in cart)
             {
@@ -96,7 +118,9 @@ namespace M32COM___Coursework.App_Code
             return total;
         }
 
-        //Get the total price of the cart
+        /// <summary>
+        /// Returns total of Cart
+        /// </summary>
         public double GetTotal()
         {
             var cart = GetCart();
@@ -110,7 +134,9 @@ namespace M32COM___Coursework.App_Code
             return total;
         }
 
-        //Adds all items in cart to Orders database
+        /// <summary>
+        /// Orders all items currently in the cart to the current user
+        /// </summary>
         public bool OrderCart()
         {
             var cart = GetCart();
