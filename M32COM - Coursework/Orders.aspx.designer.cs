@@ -148,13 +148,13 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// Cart1L control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Cart1L;
+        protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
         /// Cart0 control.
@@ -166,15 +166,6 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.Label Cart0;
         
         /// <summary>
-        /// Cart2L control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Cart2L;
-        
-        /// <summary>
         /// Cart1 control.
         /// </summary>
         /// <remarks>
@@ -182,15 +173,6 @@ namespace M32COM___Coursework {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Cart1;
-        
-        /// <summary>
-        /// Cart3L control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Cart3L;
         
         /// <summary>
         /// Cart2 control.

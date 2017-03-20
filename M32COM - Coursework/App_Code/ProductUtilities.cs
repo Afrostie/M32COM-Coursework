@@ -95,12 +95,7 @@ namespace M32COM___Coursework.App_Code
 
             var row = query.First();
 
-            if (row["Name"] == null)
-            {
-                return null;
-            }
-
-            return (string)row["Name"];
+            return (string) row["Name"];
         }
 
         //Update stock of item from ID (overload with name)

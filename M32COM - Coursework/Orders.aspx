@@ -46,11 +46,13 @@
             <asp:Button ID="Button5" runat="server" Text="Clear Cart" OnClick="Button5_Click" />
             <br />
             <asp:Panel ID="Panel1" runat="server" Visible="False">
-                <asp:Label ID="Cart1L" runat="server" Text="Cart 1: "></asp:Label><asp:Label ID="Cart0" runat="server" Text="Cart 1: "></asp:Label>
+                <asp:Label ID="Label6" runat="server" Text="Current Cart Items: "></asp:Label>
                 <br />
-                <asp:Label ID="Cart2L" runat="server" Text="Cart 1: "></asp:Label><asp:Label ID="Cart1" runat="server" Text="Cart 2: "></asp:Label>
+                <asp:Label ID="Cart0" runat="server" Text="Cart 1: "></asp:Label>
+                <br />
+                <asp:Label ID="Cart1" runat="server" Text="Cart 2: "></asp:Label>
                 <br/>
-                <asp:Label ID="Cart3L" runat="server" Text="Cart 1: "></asp:Label><asp:Label ID="Cart2" runat="server" Text="Cart 3: "></asp:Label>
+                <asp:Label ID="Cart2" runat="server" Text="Cart 3: "></asp:Label>
             </asp:Panel>
         </div>
     </form>

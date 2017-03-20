@@ -96,4 +96,10 @@
     <ProductID>1</ProductID>
     <Quantity>2</Quantity>
   </Order>
+  <Order>
+    <OrderID>16</OrderID>
+    <UserID>4</UserID>
+    <ProductID>0</ProductID>
+    <Quantity>1</Quantity>
+  </Order>
 </Database>
