@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="M32COM___Coursework.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> Car Info</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link rel="stylesheet" href="/css/Site.css" type="text/css" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div class="main">
+                    <div class="navbar-header navbar-inverse navbar-fixed-top">
+                        <div class="header-content">
+                            <a class="navbar-brand" runat="server" title="Car Info" href="~/"></a>
+                            <div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a class="nav-audi" runat="server" href="/Brands/Audi.aspx">Home</a></li>
+                                    <li><a runat="server" href="~/cakes">Cakes</a></li>
+                                    <li><a runat="server" href="~/About">About Us</a></li>
+                                    <li><a runat="server" visible="false" href="~/Contact">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1>M32COM Group Coursework Test Page!!</h1>
+                        <br />
+                        <asp:Button ID="Button1" runat="server" Text="Log Out" OnClick="Button1_Click" />
+                        <br />
+                        <asp:Label ID="Label1" runat="server" Text="Label">Current Cart: </asp:Label>
+                        <asp:Label ID="CartLabel" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="CartLabel2" runat="server" Text="Label"></asp:Label>
+                        <br />
+                        <asp:Button ID="Button2" runat="server" Text="Add 1 to Cart" OnClick="Button2_Click" />
+                    </div>
+
+                    <div class="container body-content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <footer class="footer">
+                        <div class="footer-content">
+                            <span class="email-phone">
+                                <a class="footer-email"></a>
+                                <a class="footer-phone"></a>
+                            </span>
+                            <span>Copyright ® CakeHouse <%: DateTime.Now.Year %></span>
+                        </div>
+                    </footer>
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

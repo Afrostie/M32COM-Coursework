@@ -1,43 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 using M32COM___Coursework.App_Code;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
-namespace M32COM___Coursework
+public partial class Default : System.Web.UI.Page
 {
-    public partial class Default : System.Web.UI.Page
+    private XDocument contentDoc;
+    public XDocument ContentDoc
     {
-        private UserUtilities userUtil;
-        private CartUtilities cartUtil;
-        protected void Page_Load(object sender, EventArgs e)
+        get
         {
-            cartUtil = new CartUtilities();
-            userUtil = new UserUtilities();
-
-            if (IsPostBack) return;
-
-            //If the user is logged in, let them into page
-            if (userUtil.IsLoggedIn())
-                Response.Write("Successfully Logged In as " + userUtil.GetUserName() + " with ID " + userUtil.GetUserID() + " with role " +
-            userUtil.GetUserRole());
-            //Otherwise redirect back to login page
-            else
-                Response.Redirect("Login.aspx");
-
-            
+            if (contentDoc == null)
+            {
+                return contentDoc = XDocument.Load(Server.MapPath("~/App_Data/content.xml"));
+            }
+            return contentDoc;
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
         {
-            //When Logout button is clicked, logout and go back to login page
-            userUtil.Logout();
-            Response.Redirect("Login.aspx");
+            BindPageContent();
         }
+    }
 
-        protected void Button2_Click(object sender, EventArgs e)
+    protected void BindPageContent()
+    {
+        List<XElement> xContent = ContentDoc.Descendants("content").ToList<XElement>();
+        rptMainContent.DataSource = xContent.ToList().Where(item => item.Attribute("frontPage").Value.Contains("true")).Select(s => new
         {
-            cartUtil.AddNewItemToCart(5, 1);
-            cartUtil.AddNewItemToCart(5, 1);
-            cartUtil.AddNewItemToCart(2, 1);
-        }
+
+            PostTitle = s.Attribute("title").Value,
+            PostContent = s.Value,
+        });
+        rptMainContent.DataBind();
     }
 }

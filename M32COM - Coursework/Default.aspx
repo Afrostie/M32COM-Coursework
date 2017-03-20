@@ -1,24 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="M32COM___Coursework.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Default.aspx.cs" Inherits="Default" %>
 
-<!DOCTYPE html>
+<%--<%@ Register Src="~/Widgets/SlideShow.ascx" TagName="SlideShow" TagPrefix="module" %>--%>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Test Page!</title>
-</head>
-<body>
-    <form id="form1" runat="server">  
-        <div>
-            <h1>M32COM Group Coursework Test Page!!</h1>
-            <br/>
-            <asp:Button ID="Button1" runat="server" Text="Log Out" OnClick="Button1_Click" />
-            <br />
-            <asp:Label ID="Label1" runat="server" Text="Label">Current Cart: </asp:Label>
-            <asp:Label ID="CartLabel" runat="server" Text="Label"></asp:Label>
-            <asp:Label ID="CartLabel2" runat="server" Text="Label"></asp:Label>
-            <br />
-            <asp:Button ID="Button2" runat="server" Text="Add 1 to Cart" OnClick="Button2_Click" />
-        </div>
-    </form>
-</body>
-</html>
+<asp:content id="BodyContent" contentplaceholderid="MainContent" runat="server">
+    <div class="jumbotron">
+        <%--<module:SlideShow ID="SlideShowModule" runat="server" />--%>
+    </div>
+    <div class="entry-content">
+        <asp:Repeater ID="rptMainContent" runat="server">
+            <ItemTemplate>
+                <asp:Label ID="lblTitle" Text='<%# Eval("PostTitle") %>' runat="server" />
+                <asp:Literal ID="literalContent" Text='<%# Eval("PostContent") %>' runat="server" />
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+    <div></div>
+</asp:content>
