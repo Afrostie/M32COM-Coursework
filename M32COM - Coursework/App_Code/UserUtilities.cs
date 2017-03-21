@@ -172,5 +172,11 @@ namespace M32COM___Coursework.App_Code
 
             return true;
         }
+
+        public void RefreshUsers()
+        {
+            userDb = new Database();
+            userDb.ReadXml(Server.MapPath(UserPath));
+        }
     }
 }

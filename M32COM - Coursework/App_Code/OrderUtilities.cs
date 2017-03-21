@@ -77,8 +77,7 @@ namespace M32COM___Coursework.App_Code
 
             foreach (var row in query)
             {
-                if (row.UserID != null)
-                    list.Add(row.UserID);
+                list.Add(row.UserID);
             }
 
             List<int> tmp = list.Distinct().ToList();

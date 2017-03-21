@@ -20,17 +20,40 @@ namespace M32COM___Coursework
             //Try and login the User
             if (userUtil.LoginUser(UserNameTB.Text, PasswordTB.Text))
                 // If User and Password are correct, move to another page
-                Response.Redirect("Default.aspx");
+                Response.Redirect("Products.aspx");
             //Otherwise tell the user to register
             else
-                Response.Write("User Does Not Exist, Please Register");
+                Response.Write("Incorrect Details");   
         }
 
         protected void Register_Click(object sender, EventArgs e)
         {
-            if(userUtil.UserExists(TextBox1.Text))
-                Response.Write("User Exists");
-            userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, DropDownList1.SelectedValue);
+            if (userUtil.UserExists(UserRegister.Text))
+            {
+                Response.Write("User Already Exists");
+            }
+            else
+            {
+                userUtil.RegisterUser(UserRegister.Text, PasswordRegister.Text, NameRegister.Text, EmailRegister.Text, AddressRegister.Text, "User");
+
+                userUtil.RefreshUsers();
+
+                RegisterPanel.Visible = false;
+                LoginPanel.Visible = true;
+            } 
+
+        }
+
+        protected void ShowLogin_Click(object sender, EventArgs e)
+        {
+            RegisterPanel.Visible = false;
+            LoginPanel.Visible = true;
+        }
+
+        protected void RegisterButton_Click(object sender, EventArgs e)
+        {
+            RegisterPanel.Visible = true;
+            LoginPanel.Visible = false;
         }
     }
 }
