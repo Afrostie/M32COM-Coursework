@@ -18,7 +18,7 @@ namespace M32COM___Coursework
             productUtil = new ProductUtilities();
             userUtil = new UserUtilities();
 
-            if (IsPostBack) return;
+            //if (IsPostBack) return;
 
             if(!(userUtil.IsLoggedIn() && userUtil.GetUserRole() == "Admin"))
                 Response.Redirect("Login.aspx");

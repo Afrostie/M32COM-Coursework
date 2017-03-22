@@ -1,21 +1,3 @@
 <?xml version="1.0" standalone="yes"?>
 <Database xmlns="http://tempuri.org/Database.xsd">
-  <Order>
-    <OrderID>0</OrderID>
-    <UserID>4</UserID>
-    <ProductID>0</ProductID>
-    <Quantity>3</Quantity>
-  </Order>
-  <Order>
-    <OrderID>1</OrderID>
-    <UserID>4</UserID>
-    <ProductID>1</ProductID>
-    <Quantity>2</Quantity>
-  </Order>
-  <Order>
-    <OrderID>3</OrderID>
-    <UserID>2</UserID>
-    <ProductID>1</ProductID>
-    <Quantity>2</Quantity>
-  </Order>
 </Database>

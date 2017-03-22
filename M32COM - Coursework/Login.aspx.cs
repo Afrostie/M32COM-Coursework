@@ -20,7 +20,7 @@ namespace M32COM___Coursework
             //Try and login the User
             if (userUtil.LoginUser(UserNameTB.Text, PasswordTB.Text))
                 // If User and Password are correct, move to another page
-                Response.Redirect("Products.aspx");
+                Response.Redirect("Orders.aspx");
             //Otherwise tell the user to register
             else
                 Response.Write("Incorrect Details");   

@@ -25,56 +25,7 @@ namespace M32COM___Coursework
             if (!userUtilities.IsLoggedIn())
                  Response.Redirect("Login.aspx");
 
-            Label5.Text = cartUtilities.GetCartString();
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            cartUtilities.AddNewItemToCart(productUtilities.GetID(Label1.Text), Convert.ToInt32(DropDownList1.SelectedItem.Text));
-
-            GetCartString();
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
-
-            Panel1.Visible = true;
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            cartUtilities.AddNewItemToCart(productUtilities.GetID(Label2.Text), Convert.ToInt32(DropDownList2.SelectedItem.Text));
-
-            GetCartString();
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
-
-            Panel1.Visible = true;
-        }
-
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-            cartUtilities.AddNewItemToCart(productUtilities.GetID(Label3.Text), Convert.ToInt32(DropDownList3.SelectedItem.Text));
-
-            GetCartString();
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
-
-            Panel1.Visible = true;
-        }
-
-        protected void Button4_Click(object sender, EventArgs e)
-        {
-           if(!cartUtilities.OrderCart())
-                Response.Write("Not Enough Stock");
-
-            Panel1.Visible = true;
-
-
-            cartUtilities.EmptyCart();
-
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
-        }
-
-        protected void Button5_Click(object sender, EventArgs e)
-        {
-            Clear();
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
+            BuildPage();
         }
 
         private void GetCartString()
@@ -98,10 +49,41 @@ namespace M32COM___Coursework
             Panel1.Visible = false;
 
             cartUtilities.EmptyCart();
+        }
 
-            Cart0.Text = "";
-            Cart1.Text = "";
-            Cart2.Text = "";
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button3_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        public void BuildPage()
+        {
+            int i = 1;
+            const string CakeName = "CakeName";
+            const string CakeDescripion = "CakeDesc";
+            const string PanelName = "Panel";
+            foreach (var row in productUtilities.ReturnTable())
+            {
+                var panel = (Panel)FindControl(PanelName + i);
+                var cakeName = (Label)FindControl(CakeName + i);
+                var cakeDescription = (Label)FindControl(CakeDescripion + i);
+
+                cakeName.Text = row.Name;
+                cakeDescription.Text = row.Description;
+                panel.Visible = true;
+
+                i++;
+            }
         }
     }
 }

@@ -1037,6 +1037,8 @@ namespace M32COM___Coursework {
             
             private global::System.Data.DataColumn columnQuantity;
             
+            private global::System.Data.DataColumn columnDateOrdered;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public OrderDataTable() {
@@ -1104,6 +1106,14 @@ namespace M32COM___Coursework {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DateOrderedColumn {
+                get {
+                    return this.columnDateOrdered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1139,13 +1149,14 @@ namespace M32COM___Coursework {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public OrderRow AddOrderRow(int UserID, int ProductID, int Quantity) {
+            public OrderRow AddOrderRow(int UserID, int ProductID, int Quantity, System.DateTime DateOrdered) {
                 OrderRow rowOrderRow = ((OrderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         UserID,
                         ProductID,
-                        Quantity};
+                        Quantity,
+                        DateOrdered};
                 rowOrderRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOrderRow);
                 return rowOrderRow;
@@ -1179,6 +1190,7 @@ namespace M32COM___Coursework {
                 this.columnUserID = base.Columns["UserID"];
                 this.columnProductID = base.Columns["ProductID"];
                 this.columnQuantity = base.Columns["Quantity"];
+                this.columnDateOrdered = base.Columns["DateOrdered"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1192,6 +1204,8 @@ namespace M32COM___Coursework {
                 base.Columns.Add(this.columnProductID);
                 this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity);
+                this.columnDateOrdered = new global::System.Data.DataColumn("DateOrdered", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateOrdered);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnOrderID}, true));
                 this.columnOrderID.AutoIncrement = true;
@@ -1772,6 +1786,22 @@ namespace M32COM___Coursework {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime DateOrdered {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableOrder.DateOrderedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateOrdered\' in table \'Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrder.DateOrderedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsQuantityNull() {
                 return this.IsNull(this.tableOrder.QuantityColumn);
             }
@@ -1780,6 +1810,18 @@ namespace M32COM___Coursework {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetQuantityNull() {
                 this[this.tableOrder.QuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateOrderedNull() {
+                return this.IsNull(this.tableOrder.DateOrderedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateOrderedNull() {
+                this[this.tableOrder.DateOrderedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

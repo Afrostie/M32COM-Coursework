@@ -110,4 +110,14 @@
     <Salt>ji58ZZZAvXGO7GiWl9g67TFlZMBY1NggSZgKFeOZxIQ=</Salt>
     <Role>User</Role>
   </User>
+  <User>
+    <UserID>13</UserID>
+    <UserName />
+    <Name />
+    <Email />
+    <Password>a+4DHw6h/Q28WqyDW2FswHSrPUqK+PwU5VVqdYuN1Fo=</Password>
+    <Address />
+    <Salt>cjDcv7EO0DQAn+MZ55Gz5im6KlJm1LOguXzRDGW2qhc=</Salt>
+    <Role>User</Role>
+  </User>
 </Database>
