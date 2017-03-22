@@ -6,10 +6,11 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> Car Info</title>
+    <title><%: Page.Title %> CakeHouse</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-        <link rel="stylesheet" href="/css/Site.css" type="text/css" />
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="/App_Themes/Site.css" rel="stylesheet" type="text/css" />
+        <link href="/App_Themes/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -22,10 +23,10 @@
                             <a class="navbar-brand" runat="server" title="Car Info" href="~/"></a>
                             <div class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
-                                    <li><a class="nav-audi" runat="server" href="/Brands/Audi.aspx">Home</a></li>
-                                    <li><a runat="server" href="~/cakes">Cakes</a></li>
-                                    <li><a runat="server" href="~/About">About Us</a></li>
-                                    <li><a runat="server" visible="false" href="~/Contact">Contact</a></li>
+                                    <li><a title="Home" runat="server" href="/">Home</a></li>
+                                    <li><a title="Cakes" runat="server" href="/cakes">Cakes</a></li>
+                                    <li><a title="About Us" runat="server" href="/about">About Us</a></li>
+                                    <li><a href="~/Contact" runat="server">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

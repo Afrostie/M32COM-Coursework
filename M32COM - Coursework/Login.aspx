@@ -8,14 +8,14 @@
 </head>
 <body>
 <form id="form1" runat="server">
-    <div>
+    <div class="login">
         <asp:TextBox ID="UserNameTB" runat="server">Username</asp:TextBox>
         <br/>
         <asp:TextBox ID="PasswordTB" runat="server">Password</asp:TextBox>
         <br/>
-        <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" style="height: 26px"/>
+        <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" class="button" />
     </div>
-    <div>
+    <div class="registration">
         <asp:TextBox ID="TextBox1" runat="server"> Username</asp:TextBox>
         <br/>
         <asp:TextBox ID="TextBox2" runat="server">Password</asp:TextBox>
