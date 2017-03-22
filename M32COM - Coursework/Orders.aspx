@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<asp: runat="server">
-    <title>Order a Product</title>
-</asp:>
+<head runat="server">
+    <title>Orders Page</title>
+</head>
 <body>
     <form id="form1" runat="server">
         <div>

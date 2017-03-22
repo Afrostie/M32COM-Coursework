@@ -38,7 +38,7 @@ namespace M32COM___Coursework.App_Code
             if(!productUtil.UpdateStock(productID, quantity * -1))
                 return false;
 
-            orderDB.Order.AddOrderRow(userUtil.GetUserID(), productID, quantity);
+            orderDB.Order.AddOrderRow(userUtil.GetUserID(), productID, quantity, DateTime.Now);
 
             orderDB.WriteXml(Server.MapPath(OrderPath));
 
@@ -73,14 +73,13 @@ namespace M32COM___Coursework.App_Code
 
             
 
-            List<int> list = new List<int>();
+            var list = new List<int>();
 
             foreach (var row in query)
             {
-                if (row.UserID != null)
                     list.Add(row.UserID);
             }
-
+            
             List<int> tmp = list.Distinct().ToList();
 
             return tmp;
