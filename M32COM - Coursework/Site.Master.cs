@@ -28,9 +28,9 @@ namespace M32COM___Coursework
             if (userUtil.IsLoggedIn())
                 Response.Write("Successfully Logged In as " + userUtil.GetUserName() + " with ID " + userUtil.GetUserID() + " with role " +
             userUtil.GetUserRole());
-            //Otherwise redirect back to login page
-            else
-                Response.Redirect("Login.aspx");
+            ////Otherwise redirect back to login page
+            //else
+            //    Response.Redirect("Login.aspx");
         }
 
         protected void LogIn_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace M32COM___Coursework
             //Try and login the User
             if (userUtil.LoginUser(UserNameTB.Text, PasswordTB.Text))
                 // If User and Password are correct, move to another page
-                Response.Redirect("Default.aspx");
+                lblUserName.Text = userUtil.GetUserName();
             //Otherwise tell the user to register
             else
                 Response.Write("User Does Not Exist, Please Register");
