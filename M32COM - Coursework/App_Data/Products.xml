@@ -5,20 +5,20 @@
     <Name>Cake 1</Name>
     <Price>10.99</Price>
     <Description>Fancy Cake</Description>
-    <Stock>20</Stock>
-  </Product> 
+    <Stock>19</Stock>
+  </Product>
   <Product>
     <ProductID>1</ProductID>
     <Name>Cake 2</Name>
     <Price>5.99</Price>
     <Description>Another Cake</Description>
-    <Stock>5</Stock>
+    <Stock>4</Stock>
   </Product>
   <Product>
     <ProductID>2</ProductID>
     <Name>Cake 3</Name>
     <Price>10.99</Price>
     <Description>Another Cake</Description>
-    <Stock>5</Stock>
+    <Stock>4</Stock>
   </Product>
 </Database>

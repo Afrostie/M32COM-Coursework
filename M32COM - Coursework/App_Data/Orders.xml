@@ -1,3 +1,24 @@
 <?xml version="1.0" standalone="yes"?>
 <Database xmlns="http://tempuri.org/Database.xsd">
+  <Order>
+    <OrderID>0</OrderID>
+    <UserID>4</UserID>
+    <ProductID>0</ProductID>
+    <Quantity>1</Quantity>
+    <DateOrdered>2017-03-22T19:49:19.0843942+00:00</DateOrdered>
+  </Order>
+  <Order>
+    <OrderID>1</OrderID>
+    <UserID>4</UserID>
+    <ProductID>1</ProductID>
+    <Quantity>1</Quantity>
+    <DateOrdered>2017-03-22T19:49:19.0894334+00:00</DateOrdered>
+  </Order>
+  <Order>
+    <OrderID>2</OrderID>
+    <UserID>4</UserID>
+    <ProductID>2</ProductID>
+    <Quantity>1</Quantity>
+    <DateOrdered>2017-03-22T19:49:19.1050935+00:00</DateOrdered>
+  </Order>
 </Database>
