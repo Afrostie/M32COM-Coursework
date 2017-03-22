@@ -53,17 +53,17 @@ namespace M32COM___Coursework
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-
+            cartUtilities.AddNewItemToCart(productUtilities.GetID(CakeName1.Text), Convert.ToInt32(Quantity1.SelectedValue));
         }
 
         protected void Button2_Click1(object sender, EventArgs e)
         {
-
+            cartUtilities.AddNewItemToCart(productUtilities.GetID(CakeName2.Text), Convert.ToInt32(Quantity2.SelectedValue));
         }
 
         protected void Button3_Click1(object sender, EventArgs e)
         {
-
+            cartUtilities.AddNewItemToCart(productUtilities.GetID(CakeName3.Text), Convert.ToInt32(Quantity3.SelectedValue));
         }
 
         public void BuildPage()
