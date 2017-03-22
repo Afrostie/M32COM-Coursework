@@ -88,6 +88,46 @@
       <BrowseToURL>~/home</BrowseToURL>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="Images\Birthday-Cakes\Almond-Raspberry-Cake.png" />
+    <Content Include="Images\Birthday-Cakes\Congratulations-Cake-in-a-Tin.png" />
+    <Content Include="Images\Birthday-Cakes\Grand-Cru-Chocolate-Sachertorte.png" />
+    <Content Include="Images\Birthday-Cakes\Happy-Birthday-Cake-in-a-Tin.png" />
+    <Content Include="Images\Birthday-Cakes\Happy-Birthday-Chocolate-Cake.png" />
+    <Content Include="Images\Birthday-Cakes\Lemon-Lime-Cake.png" />
+    <Content Include="Images\Birthday-Cakes\Soft-Iced-Happy-Birthday-Cake.png" />
+    <Content Include="Images\Birthday-Cakes\Victoria-Sponge-Cake.png" />
+    <Content Include="Images\Birthday-Cakes\Yorkshire-Fruit-Cake-in-a-Tin.png" />
+    <Content Include="Images\Birthday-Cakes\Yorkshire-Sloe-Gin-Fruit Cake-in-a-Tin.png" />
+    <Content Include="Images\Celebration-Cakes\Bettys-Bear-Cake.png" />
+    <Content Include="Images\Celebration-Cakes\Chocolate-Ruffle-Party-Cake.png" />
+    <Content Include="Images\Celebration-Cakes\Congratulations-Cake-in-a-Tin.png" />
+    <Content Include="Images\Celebration-Cakes\Engagement-Cake.png" />
+    <Content Include="Images\Celebration-Cakes\Lemon-Lime-Cake.png" />
+    <Content Include="Images\Celebration-Cakes\Parcel-Cake.png" />
+    <Content Include="Images\Celebration-Cakes\Personalised-Birthday-Cakes.png" />
+    <Content Include="Images\Celebration-Cakes\Presents-Cake.png" />
+    <Content Include="Images\Celebration-Cakes\Victoria-Sponge-Cake.png" />
+    <Content Include="Images\Celebration-Cakes\Yorkshire-Fruit-Cake-in-a-Tin.png" />
+    <Content Include="Images\Teatime-Cakes\Almond-Raspberry-Cake.png" />
+    <Content Include="Images\Teatime-Cakes\Bettys-Bury-Simnel.png" />
+    <Content Include="Images\Teatime-Cakes\ChocolateEaster-Nest-Cake.png" />
+    <Content Include="Images\Teatime-Cakes\Grand-Cru-Chocolate-Sachertorte.png" />
+    <Content Include="Images\Teatime-Cakes\Large Hot Cross Bun.png" />
+    <Content Include="Images\Teatime-Cakes\Large-Chocolate-Orange-Hot-Cross-Bun.png" />
+    <Content Include="Images\Teatime-Cakes\Lemon-Lime-Cake.png" />
+    <Content Include="Images\Teatime-Cakes\Stem-Ginger-Cake.png" />
+    <Content Include="Images\Teatime-Cakes\Yorkshire-Fat-Rascal-Scones.png" />
+    <Content Include="Images\Teatime-Cakes\Yorkshire-Fruit-Cake-Portion.png" />
+    <Content Include="Images\Wedding-Cakes\Chocolate-Ruffle-Party-Cake.png" />
+    <Content Include="Images\Wedding-Cakes\Classic-Hexagonal-Cake.png" />
+    <Content Include="Images\Wedding-Cakes\Fondant-Fancy-Wedding-Cake.png" />
+    <Content Include="Images\Wedding-Cakes\Lily-Cascade-Cake.png" />
+    <Content Include="Images\Wedding-Cakes\Orchid-Cascade-Cake.png" />
+    <Content Include="Images\Wedding-Cakes\Pink-Rose-Cascade-Cake.png" />
+    <Content Include="Images\Wedding-Cakes\Rose-Dot-Cascade-Cake.png" />
+    <Content Include="Images\Wedding-Cakes\Scroll-Cascade-Cake.png" />
+    <Content Include="Images\Wedding-Cakes\Sweet-Pea-Cascade-Cake.png" />
+    <Content Include="Images\Wedding-Cakes\Vintage-Cascade-Cake.png" />
     <Content Include="Orders.aspx" />
     <Content Include="packages.config" />
     <Content Include="Database.xsc">
@@ -171,7 +211,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Files\Images\" />
-    <Folder Include="Images\" />
     <Folder Include="Scripts\" />
     <Folder Include="Widgets\" />
   </ItemGroup>
