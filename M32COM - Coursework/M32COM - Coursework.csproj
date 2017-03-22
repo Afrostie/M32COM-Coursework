@@ -84,9 +84,10 @@
     <Content Include="App_Themes\js\bootstrap.js" />
     <Content Include="App_Themes\js\bootstrap.min.js" />
     <Content Include="App_Themes\Site.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="Default.aspx">
+      <BrowseToURL>~/home</BrowseToURL>
+    </Content>
     <Content Include="Global.asax" />
-    <Content Include="Login.aspx" />
     <Content Include="Orders.aspx" />
     <Content Include="packages.config" />
     <Content Include="Database.xsc">
@@ -144,13 +145,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
