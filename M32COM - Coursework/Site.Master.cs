@@ -37,8 +37,13 @@ namespace M32COM___Coursework
         {
             //Try and login the User
             if (userUtil.LoginUser(UserNameTB.Text, PasswordTB.Text))
+            {
                 // If User and Password are correct, move to another page
                 lblUserName.Text = userUtil.GetUserName();
+                pnlLogIn.Visible = false;
+                pnlRegister.Visible = false;
+            }
+
             //Otherwise tell the user to register
             else
                 Response.Write("User Does Not Exist, Please Register");
@@ -48,7 +53,9 @@ namespace M32COM___Coursework
         {
             if (userUtil.UserExists(TextBox1.Text))
                 Response.Write("User Exists");
-            userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, DropDownList1.SelectedValue);
+            userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
+
+            pnlRegister.Visible = false;
         }
 
         protected void LogOut_Click(object sender, EventArgs e)
