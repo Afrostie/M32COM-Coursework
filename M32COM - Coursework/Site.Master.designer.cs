@@ -31,24 +31,6 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblCurrentCart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCurrentCart;
-        
-        /// <summary>
-        /// lblCart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCart;
-        
-        /// <summary>
         /// lblUserName control.
         /// </summary>
         /// <remarks>
@@ -103,31 +85,22 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.Button btnLogIn;
         
         /// <summary>
-        /// Label1 control.
+        /// lblCurrentCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblCurrentCart;
         
         /// <summary>
-        /// CartLabel control.
+        /// lblCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CartLabel;
-        
-        /// <summary>
-        /// CartLabel2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CartLabel2;
+        protected global::System.Web.UI.WebControls.Label lblCart;
         
         /// <summary>
         /// MainContent control.

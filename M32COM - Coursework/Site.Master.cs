@@ -31,6 +31,9 @@ namespace M32COM___Coursework
                                userUtil.GetUserRole());
 
             lblCart.Text = Convert.ToString(cartUtil.GetItemCount());
+
+            lblUserName.Visible = false;
+            btnLogOut.Visible = false;
         }
 
         protected void LogIn_Click(object sender, EventArgs e)
@@ -41,6 +44,9 @@ namespace M32COM___Coursework
                 // If User and Password are correct, move to another page
                 lblUserName.Text = userUtil.GetUserName();
                 pnlLogIn.Visible = false;
+
+                lblUserName.Visible = true;
+                btnLogOut.Visible = true;
             }
 
             //Otherwise tell the user to register

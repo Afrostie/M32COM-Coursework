@@ -24,7 +24,7 @@ namespace M32COM___Coursework
         {
             if (userUtil.UserExists(txtBoxUserName.Text))
                 Response.Write("User Exists");
-            userUtil.RegisterUser(txtBoxUserName.Text, txtBoxPass.Text, txtBoxName.Text, txtBoxEmail.Text, txtBoxAddress.Text, "User");
+            userUtil.RegisterUser(txtBoxUserName.Text, txtBoxPass.Text, txtBoxFullName.Text, txtBoxEmail.Text, txtBoxAddress.Text, "User");
 
             pnlRegister.Visible = false;
         }

@@ -22,13 +22,13 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.Panel pnlRegister;
         
         /// <summary>
-        /// txtBoxName control.
+        /// txtBoxFullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxName;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxFullName;
         
         /// <summary>
         /// txtBoxEmail control.

@@ -14,20 +14,20 @@
         <div class="register">
             <div class="row">
                 <div class="col-md-6">
-                    <asp:TextBox ID="txtBoxName" runat="server" CssClass="txtbox">Your Name</asp:TextBox></div>
+                    <asp:TextBox ID="txtBoxFullName" runat="server" CssClass="txtbox" ToolTip="Your Name" placeholder="Full Name"></asp:TextBox></div>
                 <div class="col-md-6">
-                    <asp:TextBox ID="txtBoxEmail" runat="server" CssClass="txtbox">Email</asp:TextBox></div>
+                    <asp:TextBox ID="txtBoxEmail" runat="server" CssClass="txtbox" ToolTip="Email Address" placeholder="Email"></asp:TextBox></div>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <asp:TextBox ID="txtBoxUserName" runat="server" CssClass="txtbox">Username</asp:TextBox></div>
+                    <asp:TextBox ID="txtBoxUserName" runat="server" CssClass="txtbox" ToolTip="UserName" placeholder="UserName"></asp:TextBox></div>
                 <div class="col-md-6">
-                    <asp:TextBox ID="txtBoxPass" runat="server" CssClass="txtbox">Password</asp:TextBox></div>
+                    <asp:TextBox ID="txtBoxPass" runat="server" CssClass="txtbox" ToolTip="Password" placeholder="Password"></asp:TextBox></div>
             </div>
             
             <div class="row">
                 <div class="col-xs-12">
-                    <asp:TextBox ID="txtBoxAddress" runat="server" CssClass="txtbox">Address</asp:TextBox></div>
+                    <asp:TextBox ID="txtBoxAddress" runat="server" CssClass="txtbox address" ToolTip="Delivery Address" placeholder="Address"></asp:TextBox></div>
             </div>
             <div>
                 <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Register_Click" ToolTip="Sign Up" CssClass="button" /></div>
