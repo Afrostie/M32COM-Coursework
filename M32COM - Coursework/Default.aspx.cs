@@ -9,8 +9,6 @@ using System.Xml.Linq;
 
 public partial class Default : System.Web.UI.Page
 {
-    //Object instances
-    private UserUtilities userUtil;
     private XDocument contentDoc;
     public XDocument ContentDoc
     {
@@ -31,16 +29,26 @@ public partial class Default : System.Web.UI.Page
         }
     }
 
-    protected void BindPageContent()
-    {
-        List<XElement> xContent = ContentDoc.Descendants("content").ToList<XElement>();
-        rptMainContent.DataSource = xContent.ToList().Where(item => item.Attribute("frontPage").Value.Contains("true")).Select(s => new
+        /*protected void BindPageContent()
         {
+            List<XElement> xContent = ContentDoc.Descendants("content").ToList<XElement>();
+            rptMainContent.DataSource =
+                xContent.ToList().Where(item => item.Attribute("frontPage").Value.Contains("true")).Select(s => new
+                {
+                    PostTitle = s.Attribute("title").Value,
+                    PostContent = s.Value,
+                });
+            rptMainContent.DataBind();
+        }*/
 
-            PostTitle = s.Attribute("title").Value,
-            PostContent = s.Value,
-        });
-        rptMainContent.DataBind();
+        protected void Register_Click(object sender, EventArgs e)
+        {
+            if (userUtilities.UserExists(TextBox1.Text))
+                Response.Write("User Exists");
+            userUtilities.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
+
+            pnlRegister.Visible = false;
+        }
     }
 
     protected void Register_Click(object sender, EventArgs e)
