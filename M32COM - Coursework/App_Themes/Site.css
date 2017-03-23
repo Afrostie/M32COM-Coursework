@@ -1,11 +1,22 @@
 /*Fonts*/
 
-/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    width: 100%;
-    height: 100%;
-    min-width: 1000px;
+    font-family: 'Roboto', sans-serif, Arial;
+    font-size: 16px;
+    font-weight: 300;
+    color: #888;
+    line-height: 30px;
 }
+
+strong { font-weight: 500; }
+
+a, a:hover, a:focus {
+	color: #19b9e7;
+	text-decoration: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+img { max-width: 100%; }
 
 /* Wrapping element */
 .main {
@@ -14,36 +25,128 @@ body {
     clear: both;
 }
 
-.body-content {
-    /* padding: 45px 0 0; */
-    clear: both;
-    min-height: 300px;
-    margin: 0 auto;
+/*#region General*/
+.txtbox {
 }
 
-.body-content img.align-left, 
-.body-content img.align-right, 
-.body-content img.align-center {
+.button {
+    height: 50px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #19b9e7;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #fff;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+.button:hover {
+    opacity: 0.6;
+    color: #fff;
+}
+
+.button:active {
+    outline: 0;
+    opacity: 0.6;
+    color: #fff;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.button:focus {
+    outline: 0;
+    opacity: 0.6;
+    background: #19b9e7;
+    color: #fff;
+}
+
+.button:active:focus, 
+.button.active:focus {
+    outline: 0;
+    opacity: 0.6;
+    background: #19b9e7;
+    color: #fff;
+}
+
+/*#endregion General*/
+
+/*#region Entry Content css*/
+.entry-content {
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1em;
+    font-family: 'Roboto', sans-serif, Arial;
+    font-weight: 400;
+    clear: both;
+    min-height: 300px;
+}
+
+.entry-content h1,
+.entry-content h2 {
+    font-family: 'Roboto', sans-serif, Arial;
+    font-weight: 400;
+    color: #494949;
+    margin-bottom: 0.4em;
+    font-size: 1.750em;
+    line-height: 1.2em;
+}
+
+.entry-content h3,
+.entry-content h4 {
+}
+
+.entry-content h5,
+.entry-content h6 {
+}
+
+.entry-content p,
+.entry-content span,
+.entry-content ul,
+.entry-content ol {
+    margin: 0 0 25px;
+    font: 400 14px/1.8em 'Roboto', sans-serif, Arial;
+    color: #494949;
+}
+
+.entry-content img.align-left,
+.entry-content img.align-right,
+.entry-content img.align-center {
     margin-bottom: 1.625em;
 }
 
-.body-content p img {
+.entry-content p img {
     margin-top: .4em;
 }
 
-.body-content .align-left {
+.entry-content .align-left {
     display: inline;
     float: left;
     margin-right: 1.625em;
 }
 
-.body-content .align-right {
+.entry-content .align-right {
     display: inline;
     float: right;
     margin-left: 1.625em;
 }
 
-.body-content .align-center {
+.entry-content .align-center {
     display: block;
     clear: both;
     margin-left: auto;
@@ -51,7 +154,7 @@ body {
     text-align: center;
 }
 
-.body-content .br {
+.entry-content .br {
     width: 100%;
     height: 100%;
     display: block;
@@ -68,6 +171,8 @@ body {
     text-align: center;
     clear: both;
 }
+    
+/*#endregion Entry Content*/
 
 /*#region Header Navigation*/
 .navigation li.first-item {
@@ -117,66 +222,7 @@ body {
     padding: 0;
     margin: 20px 30px 20px 0;
 }
-
-.navbar-nav .nav-audi {
-    background: url(/Files/Images/audi-brand-icon.jpg) no-repeat top center;  
-    width: 55px;
-    text-align: center;
-}
-
-.navbar-nav .nav-bmw {
-    background: url(/Files/Images/bmw-brand-icon.jpg) no-repeat top center;  
-}
-
-.navbar-nav .nav-mercedes {
-    background: url(/Files/Images/mercedes-brand-icon.jpg) no-repeat top center;  
-}
-
-.navbar-nav .nav-vw {
-    background: url(/Files/Images/vw-brand-icon.jpg) no-repeat top center;    
-}
 /*#endregion Header Navigation*/
-
-/*#region SearchBox*/
-.searchbox-wrapper {
-    position: relative;
-    float: right;
-    border-left: 1px solid #d4d4d4;
-    border-right: 1px solid #d4d4d4;
-}
-
-.searchbox {
-    width: 220px;
-    margin: 0 10px;
-    border: none;
-    padding-right: 20px;
-    background: url(/Files/Images/search-icon.png) no-repeat right center;
-    font: 400 14px 'OpenSans semiBold', Verdana, sans-serif;
-    color: #585858;
-    clear: both;
-}
-
-.ui-helper-hidden-accessible {
-    font: 400 14px 'OpenSans', Verdana, sans-serif;
-    color: #585858;
-    display: block;
-    margin: 10px;
-}
-
-.ui-autocomplete {
-    clear: both;
-    float: left;
-}
-
-.ui-menu-item {
-    padding: 5px 0
-}
-
-.ui-menu-item a {
-    cursor: pointer;
-}
-
-/*#endregion SearchBox*/
 
 /*#region Slideshow css*/
 .cycle-slideshow {
@@ -226,7 +272,7 @@ body {
 
 .cycle-caption {
     text-align: left;
-    font: 400 28px/1.4em 'OpenSans', Verdana, sans-serif;
+    font: 400 28px/1.4em 'Roboto', sans-serif, Arial;
     color: #494949;
     position: absolute;
     top: -65px;
@@ -241,7 +287,7 @@ body {
     min-height: 120px;
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
-    font: 400 14px/1.4em 'OpenSans', Verdana, sans-serif;
+    font: 400 14px/1.4em 'Roboto', sans-serif, Arial;
     padding: 40px 35px 20px 45px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -255,13 +301,13 @@ body {
 .cycle-overlay p {
     color: #fff;
     display: inline-block;
-    font: 400 14px 'OpenSans', Verdana, sans-serif;
+    font: 400 14px 'Roboto', sans-serif, Arial;
 }
 
 .cycle-overlay .slideshow-read-more {
     float: right;
     color: #fff;
-    font: 700 16px 'OpenSans bold', Verdana, sans-serif;
+    font: 700 16px 'Roboto bold', sans-serif, Arial;
     background: none;
     padding: 11px 24px;
     border: 3px solid #df1d38;
@@ -276,50 +322,17 @@ body {
 
 /*#endregion Slideshow*/
 
-/*#region Entry Content css*/
-.entry-content {
-    overflow: hidden;
-    margin: 50px 0;
-    font-size: 14px;
-    line-height: 1em;
-    font-family: 'OpenSans', Verdana, sans-serif;
-    font-weight: 400;
+/*#region Forms*/
+
+/*#region Register*/
+.register {
+    margin: 30px 0;
+    text-align: center;
 }
 
-.entry-content p, 
-.entry-content span,
-.entry-content ul,
-.entry-content ol {
-    margin: 0 0 25px;
-    font: 400 14px/1.8em 'OpenSans', Verdana, sans-serif;
-    color: #494949;
-}
+/*#endregion Register*/
 
-.entry-content h1, .entry-content h2 {
-    font-family: 'OpenSans', Verdana, Arial;
-    font-weight: 400;
-    color: #494949;
-    margin-bottom: 0.4em;
-    font-size: 1.750em;
-    line-height: 1.2em;
-}
-
-.body-content .no-cars {
-    font: 400 16px/1.8em 'OpenSans', Verdana, sans-serif;
-    color: #df1d38;
-    padding: 10px;
-    border: 1px solid;
-}
-/*#endregion Entry Content*/
-
-/*#region All Cars*/
-.all-cars .car-image {
-    border-radius: 4px;
-}
-
-.body-content .add-car-btn {
-    display: block;
-}
+/*#endregion*/
 
 /*#region Footer*/
 .footer {
@@ -329,92 +342,12 @@ body {
 }
 
 .footer-content {
-    width: 1190px;
     margin: 0 auto;
     padding: 25px 0;
-    text-align: right;
-}
-
-.footer-content span {
-    font: 14px 'OpenSans light', Verdana, sans-serif;
-    color: #868686;
-}
-
-.email-phone {
-    float: left;
-}
-
-.email-phone .footer-email {
-    font: 14px 'OpenSans light', Verdana, sans-serif;
-    color: #868686;
-    padding-left: 20px;
-    background: url(/Files/Images/email-icon.png) no-repeat left center;
-    margin: 0 30px;
-    text-decoration: underline;
-}
-
-.email-phone .footer-email:hover {
-    text-decoration: none;
-    color: #df1d38;
-}
-
-.email-phone .footer-phone {
-    font: 14px 'OpenSans light', Verdana, sans-serif;
-    color: #868686;
-    padding-left: 20px;
-    background: url(/Files/Images/phone-icon.png) no-repeat left center;
-    text-decoration: underline;
-}
-
-.email-phone .footer-phone:hover {
-    text-decoration: none;
-    color: #df1d38;
+    text-align: center;
 }
 
 /*#endregion Footer*/
-
-/*#region Car Catalog css*/
-.single-car-info img {
-    float: right;
-    margin-left: 25px;
-    margin-bottom: 20px;
-}
-
-.single-car-info span {
-    font: 14px/1.8em 'OpenSans', Verdana, sans-serif;
-    color: #494949;
-}
-
-.car-info {
-    float: right;
-    clear: both;
-    margin-bottom: 25px;
-    width: 365px;
-}
-/*#endregion Car Catalog*/
-
-/*#region Administration menu css*/
-input[type="submit"] {
-    margin: 45px 5px;
-    font: 16px 'OpenSans bold', Verdana, sans-serif;
-    color: #fff;
-    background-color: #df1d38;  
-    padding: 12px 25px !important;  border: 2px solid #df1d38;  border-radius: 5px;
-    transition: all ease 0.3s;
-}
-
-input[type="submit"]:hover {
-    color: #df1d38;
-    border: 2px solid #df1d38;
-    background: #fff;
-}
-
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input[type="text"],
-input[type="password"] {
-    max-width: 220px;
-}
-/*#endregion Administration*/
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

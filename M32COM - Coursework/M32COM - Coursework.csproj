@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include="Admin.aspx" />
     <Content Include="App_Data\cakes.xml" />
-    <Content Include="App_Data\content.xml" />
     <Content Include="App_Data\Orders.xml" />
     <Content Include="App_Data\Products.xml" />
     <Content Include="App_Data\slideshow.xml" />

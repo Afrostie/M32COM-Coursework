@@ -14,47 +14,17 @@ namespace M32COM___Coursework
     {
         //Object instances
         private UserUtilities userUtil;
-        /*private XDocument contentDoc;
-        public XDocument ContentDoc
-        {
-            get
-            {
-                if (contentDoc == null)
-                {
-                    return contentDoc = XDocument.Load(Server.MapPath("~/App_Data/content.xml"));
-                }
-                return contentDoc;
-            }
-        }*/
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
-                //BindPageContent();
-            }
-
             userUtil = new UserUtilities();
         }
 
-       /* protected void BindPageContent()
-        {
-            List<XElement> xContent = ContentDoc.Descendants("content").ToList<XElement>();
-            rptMainContent.DataSource =
-                xContent.ToList().Where(item => item.Attribute("frontPage").Value.Contains("true")).Select(s => new
-                {
-
-                    PostTitle = s.Attribute("title").Value,
-                    PostContent = s.Value,
-                });
-            rptMainContent.DataBind();
-        }*/
-
         protected void Register_Click(object sender, EventArgs e)
         {
-            if (userUtil.UserExists(TextBox1.Text))
+            if (userUtil.UserExists(txtBoxUserName.Text))
                 Response.Write("User Exists");
-            userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
+            userUtil.RegisterUser(txtBoxUserName.Text, txtBoxPass.Text, txtBoxName.Text, txtBoxEmail.Text, txtBoxAddress.Text, "User");
 
             pnlRegister.Visible = false;
         }

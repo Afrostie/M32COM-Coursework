@@ -3,32 +3,34 @@
 <%--<%@ Register Src="~/Widgets/SlideShow.ascx" TagName="SlideShow" TagPrefix="module" %>--%>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <!-- <div class="jumbotron">
+    <div class="jumbotron">
         <%--<module:SlideShow ID="SlideShowModule" runat="server" />--%>
     </div>
     <div class="entry-content">
-        <asp:Repeater ID="rptMainContent" runat="server">
-            <ItemTemplate>
-                <asp:Label ID="lblTitle" Text='<%# Eval("PostTitle") %>' runat="server" />
-                <asp:Literal ID="literalContent" Text='<%# Eval("PostContent") %>' runat="server" />
-            </ItemTemplate>
-        </asp:Repeater>
+        <h1>Welcome</h1>
+        <p>content content content</p>
     </div>
-    <div></div>
-    -->
     <asp:Panel ID="pnlRegister" runat="server">
         <div class="register">
-            <asp:TextBox ID="TextBox1" runat="server">Username</asp:TextBox>
-            <br />
-            <asp:TextBox ID="TextBox2" runat="server">Password</asp:TextBox>
-            <br />
-            <asp:TextBox ID="TextBox3" runat="server">Email</asp:TextBox>
-            <br />
-            <asp:TextBox ID="TextBox4" runat="server">Name</asp:TextBox>
-            <br />
-            <asp:TextBox ID="TextBox5" runat="server">Address</asp:TextBox>
-            <br />
-            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Register_Click" Style="height: 26px" />
+            <div class="row">
+                <div class="col-md-6">
+                    <asp:TextBox ID="txtBoxName" runat="server" CssClass="txtbox">Your Name</asp:TextBox></div>
+                <div class="col-md-6">
+                    <asp:TextBox ID="txtBoxEmail" runat="server" CssClass="txtbox">Email</asp:TextBox></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <asp:TextBox ID="txtBoxUserName" runat="server" CssClass="txtbox">Username</asp:TextBox></div>
+                <div class="col-md-6">
+                    <asp:TextBox ID="txtBoxPass" runat="server" CssClass="txtbox">Password</asp:TextBox></div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <asp:TextBox ID="txtBoxAddress" runat="server" CssClass="txtbox">Address</asp:TextBox></div>
+            </div>
+            <div>
+                <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Register_Click" ToolTip="Sign Up" CssClass="button" /></div>
         </div>
     </asp:Panel>
 </asp:Content>

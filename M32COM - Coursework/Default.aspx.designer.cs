@@ -13,15 +13,6 @@ namespace M32COM___Coursework {
     public partial class Default {
         
         /// <summary>
-        /// rptMainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptMainContent;
-        
-        /// <summary>
         /// pnlRegister control.
         /// </summary>
         /// <remarks>
@@ -31,49 +22,49 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.Panel pnlRegister;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtBoxName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxName;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtBoxEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxEmail;
         
         /// <summary>
-        /// TextBox3 control.
+        /// txtBoxUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxUserName;
         
         /// <summary>
-        /// TextBox4 control.
+        /// txtBoxPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxPass;
         
         /// <summary>
-        /// TextBox5 control.
+        /// txtBoxAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxAddress;
         
         /// <summary>
         /// btnRegister control.
