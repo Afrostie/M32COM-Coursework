@@ -1,4 +1,4 @@
-﻿/*Fonts*/
+/*Fonts*/
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
@@ -15,7 +15,7 @@ body {
 }
 
 .body-content {
-    padding: 45px 0 0;
+    /* padding: 45px 0 0; */
     clear: both;
     min-height: 300px;
     margin: 0 auto;
@@ -70,6 +70,25 @@ body {
 }
 
 /*#region Header Navigation*/
+.navigation li.first-item {
+    padding-left: 0;
+}
+
+.navigation li.last-item {
+    padding-right: 0;
+}
+
+.navigation ul {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navigation ul li {
+    display: inline-block;
+    float: none;
+}
+
 .navbar-header {
     width: 100%;
     border-bottom: 1px solid #d4d4d4;
@@ -83,7 +102,7 @@ body {
 }
 
 .header-content {
-    width: 1190px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -293,47 +312,6 @@ body {
 }
 /*#endregion Entry Content*/
 
-/*#region Home Boxes*/
-.col-md-4 {
-    width: 365px;
-    padding: 0;
-}
-
-.col-md-4 + .col-md-4 {
-    margin-left: 32px;
-}
-
-.col-md-4 img {
-    border-radius: 4px;
-}
-
-.col-md-4 span > h3 {
-    margin: 35px 0 20px;
-}
-
-.col-md-4 span > p {
-    font: 12px/1.8em 'OpenSans', Verdana, sans-serif;
-}
-
-.look-for-more {
-    font: 16px 'OpenSans bold', Verdana, sans-serif;
-    color: #fff;
-    background-color: #df1d38;
-    padding: 12px 25px !important;
-    border: 2px solid #df1d38;
-    border-radius: 5px;
-    margin: 15px 0 0 0 !important;
-    transition: all ease 0.3s;
-}
-
-.look-for-more:hover {
-    color: #df1d38;
-    border: 2px solid #df1d38;
-    background: #fff;
-}
-
-/*#endregion Home Boxes*/
-
 /*#region All Cars*/
 .all-cars .car-image {
     border-radius: 4px;
@@ -459,3 +437,50 @@ input[type="password"] {
     background: red;
     color: #fff;
 }
+
+/*#region Media Queries */
+@media only screen and (min-width : 320px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .navbar-header {
+        float: none !important;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+}
+
+/*#endregion */

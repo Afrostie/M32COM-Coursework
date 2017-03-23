@@ -28,9 +28,6 @@ namespace M32COM___Coursework
             if (userUtil.IsLoggedIn())
                 Response.Write("Successfully Logged In as " + userUtil.GetUserName() + " with ID " + userUtil.GetUserID() + " with role " +
             userUtil.GetUserRole());
-            ////Otherwise redirect back to login page
-            //else
-            //    Response.Redirect("Login.aspx");
         }
 
         protected void LogIn_Click(object sender, EventArgs e)
