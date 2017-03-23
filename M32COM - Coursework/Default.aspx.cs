@@ -7,46 +7,52 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 
-public partial class Default : System.Web.UI.Page
+namespace M32COM___Coursework
 {
-    //Object instances
-    private UserUtilities userUtil;
-    private XDocument contentDoc;
-    public XDocument ContentDoc
+
+    public partial class Default : System.Web.UI.Page
     {
-        get
+        //Object instances
+        private UserUtilities userUtil;
+        /*private XDocument contentDoc;
+        public XDocument ContentDoc
         {
-            if (contentDoc == null)
+            get
             {
-                return contentDoc = XDocument.Load(Server.MapPath("~/App_Data/content.xml"));
+                if (contentDoc == null)
+                {
+                    return contentDoc = XDocument.Load(Server.MapPath("~/App_Data/content.xml"));
+                }
+                return contentDoc;
             }
-            return contentDoc;
-        }
-    }
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        if (!Page.IsPostBack)
+        }*/
+
+        protected void Page_Load(object sender, EventArgs e)
         {
-            BindPageContent();
+            if (!Page.IsPostBack)
+            {
+                //BindPageContent();
+            }
         }
-    }
 
-    protected void BindPageContent()
-    {
-        List<XElement> xContent = ContentDoc.Descendants("content").ToList<XElement>();
-        rptMainContent.DataSource = xContent.ToList().Where(item => item.Attribute("frontPage").Value.Contains("true")).Select(s => new
+       /* protected void BindPageContent()
         {
+            List<XElement> xContent = ContentDoc.Descendants("content").ToList<XElement>();
+            rptMainContent.DataSource =
+                xContent.ToList().Where(item => item.Attribute("frontPage").Value.Contains("true")).Select(s => new
+                {
 
-            PostTitle = s.Attribute("title").Value,
-            PostContent = s.Value,
-        });
-        rptMainContent.DataBind();
-    }
+                    PostTitle = s.Attribute("title").Value,
+                    PostContent = s.Value,
+                });
+            rptMainContent.DataBind();
+        }*/
 
-    protected void Register_Click(object sender, EventArgs e)
-    {
-        if (userUtil.UserExists(TextBox1.Text))
-            Response.Write("User Exists");
-        userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
+        protected void Register_Click(object sender, EventArgs e)
+        {
+            if (userUtil.UserExists(TextBox1.Text))
+                Response.Write("User Exists");
+            userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
+        }
     }
 }
