@@ -9,6 +9,8 @@ using System.Xml.Linq;
 
 public partial class Default : System.Web.UI.Page
 {
+    //Object instances
+    private UserUtilities userUtil;
     private XDocument contentDoc;
     public XDocument ContentDoc
     {
@@ -39,5 +41,12 @@ public partial class Default : System.Web.UI.Page
             PostContent = s.Value,
         });
         rptMainContent.DataBind();
+    }
+
+    protected void Register_Click(object sender, EventArgs e)
+    {
+        if (userUtil.UserExists(TextBox1.Text))
+            Response.Write("User Exists");
+        userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
     }
 }

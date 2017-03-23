@@ -38,7 +38,6 @@ namespace M32COM___Coursework
                 // If User and Password are correct, move to another page
                 lblUserName.Text = userUtil.GetUserName();
                 pnlLogIn.Visible = false;
-                pnlRegister.Visible = false;
             }
 
             //Otherwise tell the user to register
@@ -46,20 +45,11 @@ namespace M32COM___Coursework
                 Response.Write("User Does Not Exist, Please Register");
         }
 
-        protected void Register_Click(object sender, EventArgs e)
-        {
-            if (userUtil.UserExists(TextBox1.Text))
-                Response.Write("User Exists");
-            userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
-
-            pnlRegister.Visible = false;
-        }
-
         protected void LogOut_Click(object sender, EventArgs e)
         {
             //When Logout button is clicked, logout and go back to login page
             userUtil.Logout();
-            Response.Redirect("Login.aspx");
+            Response.Redirect("Default.aspx");
         }
 
         protected void AddCart_Click(object sender, EventArgs e)
