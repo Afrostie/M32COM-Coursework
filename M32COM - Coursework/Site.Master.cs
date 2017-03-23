@@ -26,8 +26,11 @@ namespace M32COM___Coursework
 
             //If the user is logged in, let them into page
             if (userUtil.IsLoggedIn())
-                Response.Write("Successfully Logged In as " + userUtil.GetUserName() + " with ID " + userUtil.GetUserID() + " with role " +
-            userUtil.GetUserRole());
+                Response.Write("Successfully Logged In as " + userUtil.GetUserName() + " with ID " +
+                               userUtil.GetUserID() + " with role " +
+                               userUtil.GetUserRole());
+
+            lblCart.Text = Convert.ToString(cartUtil.GetItemCount());
         }
 
         protected void LogIn_Click(object sender, EventArgs e)
@@ -50,13 +53,6 @@ namespace M32COM___Coursework
             //When Logout button is clicked, logout and go back to login page
             userUtil.Logout();
             Response.Redirect("Default.aspx");
-        }
-
-        protected void AddCart_Click(object sender, EventArgs e)
-        {
-            cartUtil.AddNewItemToCart(5, 1);
-            cartUtil.AddNewItemToCart(5, 1);
-            cartUtil.AddNewItemToCart(2, 1);
         }
     }
 }
