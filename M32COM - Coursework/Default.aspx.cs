@@ -7,34 +7,41 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 
-public partial class Default : System.Web.UI.Page
+namespace M32COM___Coursework
 {
-    private XDocument contentDoc;
-    public XDocument ContentDoc
-    {
-        get
-        {
-            if (contentDoc == null)
-            {
-                return contentDoc = XDocument.Load(Server.MapPath("~/App_Data/content.xml"));
-            }
-            return contentDoc;
-        }
-    }
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        if (!Page.IsPostBack)
-        {
-            BindPageContent();
-        }
-    }
 
-        /*protected void BindPageContent()
+    public partial class Default : System.Web.UI.Page
+    {
+        //Object instances
+        private UserUtilities userUtil;
+        /*private XDocument contentDoc;
+        public XDocument ContentDoc
+        {
+            get
+            {
+                if (contentDoc == null)
+                {
+                    return contentDoc = XDocument.Load(Server.MapPath("~/App_Data/content.xml"));
+                }
+                return contentDoc;
+            }
+        }*/
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+                //BindPageContent();
+            }
+        }
+
+       /* protected void BindPageContent()
         {
             List<XElement> xContent = ContentDoc.Descendants("content").ToList<XElement>();
             rptMainContent.DataSource =
                 xContent.ToList().Where(item => item.Attribute("frontPage").Value.Contains("true")).Select(s => new
                 {
+
                     PostTitle = s.Attribute("title").Value,
                     PostContent = s.Value,
                 });
@@ -43,18 +50,9 @@ public partial class Default : System.Web.UI.Page
 
         protected void Register_Click(object sender, EventArgs e)
         {
-            if (userUtilities.UserExists(TextBox1.Text))
+            if (userUtil.UserExists(TextBox1.Text))
                 Response.Write("User Exists");
-            userUtilities.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
-
-            pnlRegister.Visible = false;
+            userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
         }
-    }
-
-    protected void Register_Click(object sender, EventArgs e)
-    {
-        if (userUtil.UserExists(TextBox1.Text))
-            Response.Write("User Exists");
-        userUtil.RegisterUser(TextBox1.Text, TextBox2.Text, TextBox4.Text, TextBox3.Text, TextBox5.Text, "User");
     }
 }
