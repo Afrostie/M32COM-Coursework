@@ -138,7 +138,6 @@ img { max-width: 100%; }
 }
 
 .entry-content p,
-.entry-content span,
 .entry-content ul,
 .entry-content ol {
     margin: 0 0 25px;
@@ -369,6 +368,27 @@ img { max-width: 100%; }
 }
 
 /*#endregion Register*/
+
+/*#region Orders*/
+.orders {
+}
+
+.orders .label {
+    
+}
+
+/*#endregion Orders*/
+
+/*#region Products*/
+.products {
+}
+
+.products .txtbox {
+    width: 100%;
+    padding: 0 10px;
+}
+
+/*#endregion Products*/
 
 /*#endregion*/
 

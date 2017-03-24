@@ -97,7 +97,7 @@
                                     <li><a title="Cakes" runat="server" href="/Products.aspx">Cakes</a></li>
                                     <li><a title="About Us" runat="server" href="/about">About Us</a></li>
                                     <li><a title="Orders" runat="server" href="Orders.aspx">Orders</a></li>
-                                    <li class="last-item"><a href="~/Contact" runat="server">Contact</a></li>
+                                    <li class="last-item"><a href="Admin.aspx" runat="server">Admin</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -115,7 +115,6 @@
                     </div>
                 </div>
             </div>
-
         </main>
 
         <footer class="footer">

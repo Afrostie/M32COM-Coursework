@@ -25,40 +25,40 @@ namespace M32COM___Coursework
             if (!userUtilities.IsLoggedIn())
                  Response.Redirect("Default.aspx");
 
-            Label5.Text = cartUtilities.GetCartString();
+            lblTotal.Text = cartUtilities.GetCartString();
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void AddOrder1_Click(object sender, EventArgs e)
         {
-            cartUtilities.AddNewItemToCart(productUtilities.GetID(Label1.Text), Convert.ToInt32(DropDownList1.SelectedItem.Text));
+            cartUtilities.AddNewItemToCart(productUtilities.GetID(lblCake1.Text), Convert.ToInt32(DropDownList1.SelectedItem.Text));
 
             GetCartString();
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
+            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
 
             Panel1.Visible = true;
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void AddOrder2_Click(object sender, EventArgs e)
         {
-            cartUtilities.AddNewItemToCart(productUtilities.GetID(Label2.Text), Convert.ToInt32(DropDownList2.SelectedItem.Text));
+            cartUtilities.AddNewItemToCart(productUtilities.GetID(lblCake2.Text), Convert.ToInt32(DropDownList2.SelectedItem.Text));
 
             GetCartString();
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
+            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
 
             Panel1.Visible = true;
         }
 
-        protected void Button3_Click(object sender, EventArgs e)
+        protected void AddOrder3_Click(object sender, EventArgs e)
         {
-            cartUtilities.AddNewItemToCart(productUtilities.GetID(Label3.Text), Convert.ToInt32(DropDownList3.SelectedItem.Text));
+            cartUtilities.AddNewItemToCart(productUtilities.GetID(lblCake3.Text), Convert.ToInt32(DropDownList3.SelectedItem.Text));
 
             GetCartString();
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
+            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
 
             Panel1.Visible = true;
         }
 
-        protected void Button4_Click(object sender, EventArgs e)
+        protected void OrderCart_Click(object sender, EventArgs e)
         {
            if(!cartUtilities.OrderCart())
                 Response.Write("Not Enough Stock");
@@ -68,13 +68,13 @@ namespace M32COM___Coursework
 
             cartUtilities.EmptyCart();
 
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
+            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
         }
 
-        protected void Button5_Click(object sender, EventArgs e)
+        protected void ClearCart_Click(object sender, EventArgs e)
         {
             Clear();
-            Label5.Text = Convert.ToString(cartUtilities.GetTotal());
+            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
         }
 
         private void GetCartString()

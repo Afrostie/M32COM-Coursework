@@ -24,15 +24,15 @@ namespace M32COM___Coursework
                 Response.Redirect("Default.aspx");
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void AddCake_Click(object sender, EventArgs e)
         {
-            productUtil.AddProduct(TextBox1.Text, Convert.ToDouble(TextBox2.Text), TextBox3.Text,
-                Convert.ToInt32(TextBox4.Text));
+            productUtil.AddProduct(txtBoxCakeName.Text, Convert.ToDouble(txtBoxCakePrice.Text), txtBoxCakeDescription.Text,
+                Convert.ToInt32(txtBoxCakeStock.Text));
 
-            TextBox1.Text = "";
-            TextBox2.Text = "";
-            TextBox3.Text = "";
-            TextBox4.Text = "";
+            txtBoxCakeName.Text = "";
+            txtBoxCakePrice.Text = "";
+            txtBoxCakeDescription.Text = "";
+            txtBoxCakeStock.Text = "";
         }
     }
 }

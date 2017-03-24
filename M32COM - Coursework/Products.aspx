@@ -1,28 +1,39 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="M32COM___Coursework.Products" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Products.aspx.cs" Inherits="M32COM___Coursework.Products" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Product Admin Page</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="breadcrumb">
+        <h1>CakeHouse Cakes</h1>
+    </div>
+    <div class="products clearfix">
+        <div class="col-md-3">
+            <asp:Label ID="lblCakeName" runat="server" Text="Name" CssClass="label label-default"></asp:Label>
             <br />
-            <asp:Label ID="Label2" runat="server" Text="Price"></asp:Label>
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Label3" runat="server" Text="Description"></asp:Label>
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-            <br />
-            <asp:Label ID="Label4" runat="server" Text="Stock"></asp:Label>
-            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-            <br />
-            <asp:Button ID="Button1" runat="server" Text="Add Product" OnClick="Button1_Click" />
+            <asp:TextBox ID="txtBoxCakeName" runat="server" CssClass="txtbox"></asp:TextBox>
         </div>
-    </form>
-</body>
-</html>
+        <div class="col-md-3">
+            <asp:Label ID="lblCakePrice" runat="server" Text="Price" CssClass="label label-default"></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="txtBoxCakePrice" runat="server" CssClass="txtbox"></asp:TextBox>
+        </div>
+        <div class="col-md-3">
+            <asp:Label ID="lblCakeStock" runat="server" Text="Stock" CssClass="label label-default"></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="txtBoxCakeStock" runat="server" CssClass="txtbox"></asp:TextBox>
+        </div>
+        <div class="col-md-3 text-center">
+            <asp:Button ID="btnAddCake" runat="server" Text="Add Product" ToolTip="Add Cake" OnClick="AddCake_Click" CssClass="button" />
+        </div>
+        <div class="col-md-12">
+            <asp:Label ID="lblCakeDescription" runat="server" Text="Description" CssClass="label label-default"></asp:Label>
+            <br />
+            <br />
+            <asp:TextBox ID="txtBoxCakeDescription" runat="server" CssClass="txtbox"></asp:TextBox>
+        </div>
+    </div>
+    <div class="products-content">
+
+    </div>
+</asp:Content>
