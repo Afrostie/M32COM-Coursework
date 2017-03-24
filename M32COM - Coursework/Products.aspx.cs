@@ -21,7 +21,7 @@ namespace M32COM___Coursework
             if (IsPostBack) return;
 
             if(!(userUtil.IsLoggedIn() && userUtil.GetUserRole() == "Admin"))
-                Response.Redirect("Login.aspx");
+                Response.Redirect("Default.aspx");
         }
 
         protected void Button1_Click(object sender, EventArgs e)

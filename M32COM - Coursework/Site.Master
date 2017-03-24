@@ -7,6 +7,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> CakeHouse</title>
+    <%--<script lang="javascript" type="text/javascript">
+        function ValidatePassword(source, arguments) {
+            var data = arguments.Value.split('');
+            //start by setting false
+            arguments.IsValid = false;
+            //check length
+            if (data.length < 6 || data.length > 12) return;
+            //check for uppercase
+            var uc = false;
+            for (var c in data) {
+                if (data[c] >= 'A' && data[c] <= 'Z') {
+                    uc = true; break;
+                }
+            }
+            if (!uc) return;
+            //check for lowercase
+            var lc = false;
+            for (c in data) {
+                if (data[c] >= 'a' && data[c] <= 'z') {
+                    lc = true; break;
+                }
+            }
+            if (!lc) return;
+            //check for numeric
+            var num = false;
+            for (c in data) {
+                if (data[c] >= '0' && data[c] <= '9') {
+                    num = true; break;
+                }
+            }
+            if (!num) return;
+            //must be valid
+            arguments.IsValid = true;
+        }
+    </script>--%>
     <asp:ContentPlaceHolder ID="head" runat="server">
         <link href="/App_Themes/Site.css" rel="stylesheet" type="text/css" />
         <link href="/App_Themes/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -15,6 +50,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/bootstrap.min.js" />
+            </Scripts>
+        </asp:ScriptManager>
         <header class="header">
             <div class="header-content container">
                 <div class="row">
@@ -32,6 +72,8 @@
                         <asp:Panel ID="pnlLogIn" runat="server">
                             <div class="login">
                                 <asp:TextBox ID="UserNameTB" runat="server" placeholder="UserName" ToolTip="UserName" CssClass="txtbox"></asp:TextBox>
+                                <%--<asp:RequiredFieldValidator ID="recvalName" runat="server" Text="*" ErrorMessage="User name is required" ControlToValidate="txtbName" ToolTip="User name is required" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator runat="server" Text="*" ErrorMessage="please enter only alpha-numeric characters (and no spaces)" ToolTip="please enter only alpha-numeric characters (and no spaces)" ControlToValidate="txtbName" ValidationExpression="\w{6,14}" ForeColor="Red"></asp:RegularExpressionValidator>--%>
                                 <br />
                                 <asp:TextBox ID="PasswordTB" runat="server" placeholder="Password" ToolTip="Password" CssClass="txtbox"></asp:TextBox>
                                 <br />

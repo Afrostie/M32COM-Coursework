@@ -23,7 +23,7 @@ namespace M32COM___Coursework
             if (IsPostBack) return;
 
             if (!userUtilities.IsLoggedIn())
-                 Response.Redirect("Login.aspx");
+                 Response.Redirect("Default.aspx");
 
             Label5.Text = cartUtilities.GetCartString();
         }

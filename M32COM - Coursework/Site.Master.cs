@@ -36,6 +36,41 @@ namespace M32COM___Coursework
             btnLogOut.Visible = false;
         }
 
+        protected void CustomValidatorPassword_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            string data = args.Value;
+            args.IsValid = false; //start by setting false
+            if (data.Length < 6 || data.Length > 12) return;
+            bool uc = false;
+            foreach (char c in data)
+            {
+                if (c >= 'A' && c <= 'Z')
+                {
+                    uc = true; break;
+                }
+            }
+            if (!uc) return;
+            bool lc = false;
+            foreach (char c in data)
+            {
+                if (c >= 'a' && c <= 'z')
+                {
+                    lc = true; break;
+                }
+            }
+            if (!lc) return;
+            bool num = false;
+            foreach (char c in data)
+            {
+                if (c >= '0' && c <= '9')
+                {
+                    num = true; break;
+                }
+            }
+            if (!num) return;
+            args.IsValid = true;
+        }
+
         protected void LogIn_Click(object sender, EventArgs e)
         {
             //Try and login the User
