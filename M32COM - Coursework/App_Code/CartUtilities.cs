@@ -1,18 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Web;
 using System.Web.SessionState;
+using Newtonsoft.Json;
 
 namespace M32COM___Coursework.App_Code
 {
     public class CartUtilities
     {
         private HttpSessionState Session;
+        private HttpApplicationState Application;
         private ProductUtilities productUtil;
         private OrderUtilities orderUtil;
 
         public CartUtilities()
         {
             Session = HttpContext.Current.Session;
+            Application = HttpContext.Current.Application;
 
             productUtil = new ProductUtilities();
             orderUtil = new OrderUtilities();

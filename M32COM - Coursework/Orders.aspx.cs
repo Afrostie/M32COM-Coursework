@@ -26,13 +26,15 @@ namespace M32COM___Coursework
                  Response.Redirect("Default.aspx");
 
             lblTotal.Text = cartUtilities.GetCartString();
+
+            productUtilities.SetCurrency("GBP");
         }
 
         protected void AddOrder1_Click(object sender, EventArgs e)
         {
             cartUtilities.AddNewItemToCart(productUtilities.GetID(lblCake1.Text), Convert.ToInt32(DropDownList1.SelectedItem.Text));
 
-            GetCartString();
+            //GetCartString();
             lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
 
             Panel1.Visible = true;
@@ -42,7 +44,7 @@ namespace M32COM___Coursework
         {
             cartUtilities.AddNewItemToCart(productUtilities.GetID(lblCake2.Text), Convert.ToInt32(DropDownList2.SelectedItem.Text));
 
-            GetCartString();
+            //GetCartString();
             lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
 
             Panel1.Visible = true;
@@ -52,7 +54,7 @@ namespace M32COM___Coursework
         {
             cartUtilities.AddNewItemToCart(productUtilities.GetID(lblCake3.Text), Convert.ToInt32(DropDownList3.SelectedItem.Text));
 
-            GetCartString();
+            //GetCartString();
             lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
 
             Panel1.Visible = true;
@@ -77,7 +79,7 @@ namespace M32COM___Coursework
             lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
         }
 
-        private void GetCartString()
+        /*private void GetCartString()
         {
             const string label = "Cart";
 
@@ -90,7 +92,7 @@ namespace M32COM___Coursework
                 var control = (Label)FindControl(tmp);
                 control.Text = productUtilities.GetName(row.Key) + " Quantity: " + row.Value + " at: £" + productUtilities.GetPrice(row.Key) + " Item Total: £" + (productUtilities.GetPrice(row.Key) * row.Value);
             }
-        }
+        }*/
 
         //Temporary method to clear the labels
         private void Clear()

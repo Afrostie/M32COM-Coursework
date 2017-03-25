@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
 using System.Data;
+using System.Web.SessionState;
 
 namespace M32COM___Coursework.App_Code
 {
@@ -12,10 +13,14 @@ namespace M32COM___Coursework.App_Code
         private Database productDB;
         private const string ProductFile = "~/App_Data/Products.xml";
         private readonly HttpServerUtility Server;
+        private HttpSessionState Session;
+        private HttpApplicationState Application;
 
         public ProductUtilities()
         {
             Server = HttpContext.Current.Server;
+            Session = HttpContext.Current.Session;
+            Application = HttpContext.Current.Application;
 
             productDB = new Database();
             productDB.ReadXml(Server.MapPath(ProductFile));
@@ -67,8 +72,7 @@ namespace M32COM___Coursework.App_Code
             {
                 return 0.0;
             }
-
-            return (double)row["Price"];
+            return Math.Round(((double)row["Price"] * (double)Session["CurrentRate"]), 2);
         }
 
         /// <summary>
@@ -86,7 +90,7 @@ namespace M32COM___Coursework.App_Code
                 return 0.0;
             }
 
-            return (double)row["Price"];
+            return Math.Round(((double)row["Price"] * (double)Session["CurrentRate"]), 2);
         }
 
         /// <summary>
@@ -149,9 +153,31 @@ namespace M32COM___Coursework.App_Code
             return query.Any();
         }
 
+        //Sets currency to GBP, EUR or USD
+        public bool SetCurrency(string currency)
+        {
+            switch (currency)
+            {
+                case "USD":
+                    Session["CurrentRate"] = 1.0;
+                    break;
+                case "GBP":
+                    Session["CurrentRate"] = (double) Application["GBP"];
+                    break;
+                case "EUR":
+                    Session["CurrentRate"] = (double)Application["EUR"];
+                    break;
+                default:
+                    return false;
+            }
+            return true;
+        }
+
+        
         public Database.ProductDataTable ReturnTable()
         {
             return productDB.Product;
         }
+        
     }
 }
