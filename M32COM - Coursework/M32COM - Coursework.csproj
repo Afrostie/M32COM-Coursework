@@ -93,9 +93,9 @@
     <Content Include="App_Themes\css\bootstrap-theme.min.css" />
     <Content Include="App_Themes\css\bootstrap.css" />
     <Content Include="App_Themes\css\bootstrap.min.css" />
-    <Content Include="App_Themes\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="App_Themes\js\bootstrap.js" />
-    <Content Include="App_Themes\js\bootstrap.min.js" />
+    <Content Include="Files\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Themes\Site.css" />
     <Content Include="Default.aspx">
       <BrowseToURL>~/home</BrowseToURL>
@@ -147,10 +147,10 @@
       <DependentUpon>Database.xsd</DependentUpon>
     </Content>
     <Content Include="App_Themes\config.json" />
-    <Content Include="App_Themes\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="App_Themes\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="App_Themes\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="App_Themes\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Files\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Files\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Files\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Files\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Database.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -226,7 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Files\Images\" />
-    <Folder Include="Scripts\" />
     <Folder Include="Widgets\" />
   </ItemGroup>
   <PropertyGroup>
