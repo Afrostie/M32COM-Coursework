@@ -22,10 +22,7 @@ namespace M32COM___Coursework
             //Create the instance of UserUtilities class
             userUtil = new UserUtilities();
 
-           // if (IsPostBack) return;
-
-            //If the user is logged in and an admin, show the admin tab
-            pnlAdmin.Visible = userUtil.GetUserRole() == "Admin";
+            if (IsPostBack) return;
 
             lblCart.Text = Convert.ToString(cartUtil.GetItemCount());
 
@@ -33,12 +30,37 @@ namespace M32COM___Coursework
             btnLogOut.Visible = false;
 
             if (userUtil.IsLoggedIn())
-            {
-                pnlLogIn.Visible = false;
-                btnLogOut.Visible = true;
-                lblUserName.Visible = true;
-                lblUserName.Text = userUtil.GetUserName();
-            }
+                LogIn();
+        }
+
+        protected void LogIn_Click(object sender, EventArgs e)
+        {
+            //Try and login the User
+            if (userUtil.LoginUser(UserNameTB.Text, PasswordTB.Text))
+                LogIn();
+
+            //Otherwise tell the user to register
+            else
+                Response.Write("User Does Not Exist, Please Register");
+        }
+
+        protected void LogOut_Click(object sender, EventArgs e)
+        {
+            //When Logout button is clicked, logout and go back to login page
+            userUtil.Logout();
+            Response.Redirect("Default.aspx");
+        }
+
+        private void LogIn()
+        {
+            lblUserName.Text = userUtil.GetUserName();
+            pnlLogIn.Visible = false;
+
+            lblUserName.Visible = true;
+            btnLogOut.Visible = true;
+
+            if (userUtil.GetUserRole() == "Admin")
+                pnlAdmin.Visible = true;
         }
 
         protected void CustomValidatorPassword_ServerValidate(object source, ServerValidateEventArgs args)
@@ -74,34 +96,6 @@ namespace M32COM___Coursework
             }
             if (!num) return;
             args.IsValid = true;
-        }
-
-        protected void LogIn_Click(object sender, EventArgs e)
-        {
-            //Try and login the User
-            if (userUtil.LoginUser(UserNameTB.Text, PasswordTB.Text))
-            {
-                // If User and Password are correct, move to another page
-                lblUserName.Text = userUtil.GetUserName();
-                pnlLogIn.Visible = false;
-
-                lblUserName.Visible = true;
-                btnLogOut.Visible = true;
-
-                if (userUtil.GetUserRole() == "Admin")
-                    pnlAdmin.Visible = true;
-            }
-
-            //Otherwise tell the user to register
-            else
-                Response.Write("User Does Not Exist, Please Register");
-        }
-
-        protected void LogOut_Click(object sender, EventArgs e)
-        {
-            //When Logout button is clicked, logout and go back to login page
-            userUtil.Logout();
-            Response.Redirect("Default.aspx");
         }
     }
 }

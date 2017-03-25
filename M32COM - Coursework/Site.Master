@@ -98,7 +98,7 @@
                                     <li><a title="About Us" runat="server" href="/about">About Us</a></li>
                                     <li><a title="Orders" runat="server" href="Orders.aspx">Orders</a></li>
                                     <li class="last-item">
-                                        <asp:Panel ID="pnlAdmin" runat="server"><a href="Admin.aspx" runat="server">Admin</a></asp:Panel>
+                                        <asp:Panel ID="pnlAdmin" runat="server" Visible="False"><a href="Admin.aspx" runat="server">Admin</a></asp:Panel>
                                     </li>
                                 </ul>
                             </div>
