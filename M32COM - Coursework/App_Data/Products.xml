@@ -6,6 +6,7 @@
     <Price>10.99</Price>
     <Description>Fancy Cake</Description>
     <Stock>0</Stock>
+    <Image>Almond-Raspberry-Cake.png</Image>
   </Product>
   <Product>
     <ProductID>1</ProductID>
@@ -13,6 +14,7 @@
     <Price>5.99</Price>
     <Description>Another Cake</Description>
     <Stock>2</Stock>
+    <Image>Congratulations-Cake-in-a-Tin.png</Image>
   </Product>
   <Product>
     <ProductID>2</ProductID>
@@ -20,5 +22,6 @@
     <Price>15.99</Price>
     <Description>Cake!!!</Description>
     <Stock>12</Stock>
+    <Image>Happy-Birthday-Chocolate-Cake.png</Image>
   </Product>
 </Database>

@@ -20,11 +20,8 @@ namespace M32COM___Coursework
 
             if (IsPostBack) return;
 
-            if(!(userUtil.IsLoggedIn() && userUtil.GetUserRole() == "Admin"))
-                Response.Redirect("Default.aspx");
-
             if (userUtil.GetUserRole() == "Admin")
-                AdminPanel.Visible = true;
+                pnlAdmin.Visible = true;
         }
 
         protected void AddCake_Click(object sender, EventArgs e)

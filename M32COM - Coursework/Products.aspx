@@ -4,7 +4,7 @@
     <div class="breadcrumb">
         <h1>CakeHouse Cakes</h1>
     </div>
-    <asp:Panel ID="AdminPanel" runat="server" Visible="False">
+    <asp:Panel ID="pnlAdmin" runat="server" Visible="False">
             <div class="products clearfix">
         <div class="col-md-3">
             <asp:Label ID="lblCakeName" runat="server" Text="Name" CssClass="label label-default"></asp:Label>
