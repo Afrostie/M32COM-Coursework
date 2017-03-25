@@ -25,6 +25,9 @@ namespace M32COM___Coursework
             lblTotal.Text = cartUtilities.GetCartString();
 
             productUtilities.SetCurrency("GBP");
+
+            if (userUtilities.GetUserRole() == "Admin")
+                pnlAdmin.Visible = true;
         }
 
         protected void AddOrder1_Click(object sender, EventArgs e)

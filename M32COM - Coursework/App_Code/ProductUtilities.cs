@@ -33,12 +33,12 @@ namespace M32COM___Coursework.App_Code
         /// <param name="price">Price of Product</param>
         /// <param name="description">Description of Product</param>
         /// <param name="stock">Stock Count of Product</param>
-        public bool AddProduct(string name, double price, string description, int stock)
+        public bool AddProduct(string name, double price, string description, int stock, string image)
         {
             if (ProductExists(name))
                 return false;
 
-            productDB.Product.AddProductRow(name, price, description, stock);
+            productDB.Product.AddProductRow(name, price, description, stock, image);
 
             productDB.Product.WriteXml(Server.MapPath(ProductFile));
 

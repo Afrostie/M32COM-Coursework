@@ -27,12 +27,13 @@ namespace M32COM___Coursework
         protected void AddCake_Click(object sender, EventArgs e)
         {
             productUtil.AddProduct(txtBoxCakeName.Text, Convert.ToDouble(txtBoxCakePrice.Text), txtBoxCakeDescription.Text,
-                Convert.ToInt32(txtBoxCakeStock.Text));
+                Convert.ToInt32(txtBoxCakeStock.Text), txtBoxCakeImage.Text);
 
             txtBoxCakeName.Text = "";
             txtBoxCakePrice.Text = "";
             txtBoxCakeDescription.Text = "";
             txtBoxCakeStock.Text = "";
+            txtBoxCakeImage.Text = "";
         }
     }
 }

@@ -58,6 +58,24 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.TextBox txtBoxCakePrice;
         
         /// <summary>
+        /// lblCakeImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCakeImage;
+        
+        /// <summary>
+        /// txtBoxCakeImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBoxCakeImage;
+        
+        /// <summary>
         /// lblCakeStock control.
         /// </summary>
         /// <remarks>
@@ -76,15 +94,6 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.TextBox txtBoxCakeStock;
         
         /// <summary>
-        /// btnAddCake control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddCake;
-        
-        /// <summary>
         /// lblCakeDescription control.
         /// </summary>
         /// <remarks>
@@ -101,5 +110,14 @@ namespace M32COM___Coursework {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBoxCakeDescription;
+        
+        /// <summary>
+        /// btnAddCake control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddCake;
     }
 }

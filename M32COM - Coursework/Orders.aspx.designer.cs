@@ -13,6 +13,15 @@ namespace M32COM___Coursework {
     public partial class Orders {
         
         /// <summary>
+        /// pnlAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlAdmin;
+        
+        /// <summary>
         /// lblCake1 control.
         /// </summary>
         /// <remarks>
