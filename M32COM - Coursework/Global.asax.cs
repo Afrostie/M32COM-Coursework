@@ -58,7 +58,6 @@ namespace M32COM___Coursework
                 Application["GBP"] = parsed.quotes.USDGBP;
                 Application["EUR"] = parsed.quotes.USDEUR;
                 Application["USD"] = 1.0;
-
             }
         }
 

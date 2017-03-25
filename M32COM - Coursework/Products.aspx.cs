@@ -22,6 +22,9 @@ namespace M32COM___Coursework
 
             if(!(userUtil.IsLoggedIn() && userUtil.GetUserRole() == "Admin"))
                 Response.Redirect("Default.aspx");
+
+            if (userUtil.GetUserRole() == "Admin")
+                AdminPanel.Visible = true;
         }
 
         protected void AddCake_Click(object sender, EventArgs e)

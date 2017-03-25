@@ -15,14 +15,22 @@ namespace M32COM___Coursework
     {
         private OrderUtilities orderUtilities;
         private ProductUtilities productUtilities;
+        private UserUtilities userUtilities;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             orderUtilities = new OrderUtilities();
             productUtilities = new ProductUtilities();
+            userUtilities = new UserUtilities();
+
 
             DropDownList1.DataSource = orderUtilities.GetAllUserID();
             DropDownList1.DataBind();
             GridView1.Visible = true;
+
+            if (!(userUtilities.IsLoggedIn() && userUtilities.GetUserRole() == "Admin"))
+                Response.Redirect("Default.aspx");
+
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)

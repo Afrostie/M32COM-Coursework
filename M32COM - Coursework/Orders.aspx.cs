@@ -22,9 +22,6 @@ namespace M32COM___Coursework
 
             if (IsPostBack) return;
 
-            if (!userUtilities.IsLoggedIn())
-                 Response.Redirect("Default.aspx");
-
             lblTotal.Text = cartUtilities.GetCartString();
 
             productUtilities.SetCurrency("GBP");
