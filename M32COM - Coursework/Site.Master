@@ -66,8 +66,8 @@
                     </div>
                     <div class="header-login text-right col-md-4">
                         <div class="user-profile">
-                            <asp:Label ID="lblUserName" runat="server" CssClass="user" />
-                            <asp:Button ID="btnLogOut" runat="server" Text="Log Out" OnClick="LogOut_Click" ToolTip="Sign Out" CssClass="button" />
+                            <asp:Label ID="lblUserName" runat="server" CssClass="user" Visible="False" />
+                            <asp:Button ID="btnLogOut" runat="server" Text="Log Out" OnClick="LogOut_Click" ToolTip="Sign Out" CssClass="button" Visible="False" />
                         </div>
                         <asp:Panel ID="pnlLogIn" runat="server">
                             <div class="login">

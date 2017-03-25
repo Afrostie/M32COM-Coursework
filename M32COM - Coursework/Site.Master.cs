@@ -26,9 +26,6 @@ namespace M32COM___Coursework
 
             lblCart.Text = Convert.ToString(cartUtil.GetItemCount());
 
-            lblUserName.Visible = false;
-            btnLogOut.Visible = false;
-
             if (userUtil.IsLoggedIn())
                 LogIn();
         }
@@ -51,6 +48,7 @@ namespace M32COM___Coursework
             Response.Redirect("Default.aspx");
         }
 
+        //Handles hiding/showing appropriate panels if use is logged in
         private void LogIn()
         {
             lblUserName.Text = userUtil.GetUserName();
