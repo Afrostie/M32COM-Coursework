@@ -68,7 +68,7 @@ namespace M32COM___Coursework
             Session["LoggedIn"] = false;
             Session["CurrentUser"] = null;
             Session["CurrentID"] = null;
-            Session["CurrentRole"] = null;
+            Session["CurrentRole"] = "Guest";
             Session["Cart"] = currentCart;
             Session["DropDownID"] = 4;
             Session["CurrentRate"] = 1.0;

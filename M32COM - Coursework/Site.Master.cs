@@ -25,15 +25,20 @@ namespace M32COM___Coursework
            // if (IsPostBack) return;
 
             //If the user is logged in and an admin, show the admin tab
-            if (userUtil.GetUserRole() == "Admin")
-                pnlAdmin.Visible = true;
-            else
-                pnlAdmin.Visible = false;
+            pnlAdmin.Visible = userUtil.GetUserRole() == "Admin";
 
             lblCart.Text = Convert.ToString(cartUtil.GetItemCount());
 
             lblUserName.Visible = false;
             btnLogOut.Visible = false;
+
+            if (userUtil.IsLoggedIn())
+            {
+                pnlLogIn.Visible = false;
+                btnLogOut.Visible = true;
+                lblUserName.Visible = true;
+                lblUserName.Text = userUtil.GetUserName();
+            }
         }
 
         protected void CustomValidatorPassword_ServerValidate(object source, ServerValidateEventArgs args)

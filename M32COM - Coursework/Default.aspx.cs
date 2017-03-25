@@ -18,6 +18,9 @@ namespace M32COM___Coursework
         protected void Page_Load(object sender, EventArgs e)
         {
             userUtil = new UserUtilities();
+
+            if (userUtil.IsLoggedIn())
+                pnlRegister.Visible = false;
         }
 
         protected void Register_Click(object sender, EventArgs e)
