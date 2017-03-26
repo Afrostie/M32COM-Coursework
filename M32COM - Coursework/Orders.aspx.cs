@@ -28,6 +28,9 @@ namespace M32COM___Coursework
 
             if (userUtilities.GetUserRole() == "Admin")
                 pnlAdmin.Visible = true;
+
+            //rptCartItem.DataSource = productUtilities.GetTable();
+            //rptCartItem.DataBind();
         }
 
         protected void AddOrder1_Click(object sender, EventArgs e)
