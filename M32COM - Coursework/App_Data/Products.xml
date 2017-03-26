@@ -4,33 +4,34 @@
     <ProductID>0</ProductID>
     <Name>Almond Raspberry Cake</Name>
     <Price>10.99</Price>
-    <Description>
-      <![CDATA[<p>Made at our Craft Bakery with ground almonds and raspberry preserve, this light and delicate cake is prettily decorated with fondant icing and flaked almonds. Serving six to eight people, it's ideal for spring teatimes and delighting guests.<br />
+    <Description>&lt;p&gt;Made at our Craft Bakery with ground almonds and raspberry preserve, this light and delicate cake is prettily decorated with fondant icing and flaked almonds. Serving six to eight people, it's ideal for spring teatimes and delighting guests.&lt;br /&gt;
         Perfect for serving 8 - 10 people.
-        <br />
+        &lt;br /&gt;
         Best enjoyed within 2 days of delivery, or suitable for freezing.
-        <br />
+        &lt;br /&gt;
         18cm diameter | 800g
-        <br />
-        Our Raspberry & Almond Cake can only be delivered within the UK.</p>]]>
-    </Description>
+        &lt;br /&gt;
+        Our Raspberry &amp; Almond Cake can only be delivered within the UK.&lt;/p&gt;</Description>
     <Stock>0</Stock>
     <Image>~/Images/Birthday-Cakes/Almond-Raspberry-Cake.png</Image>
+    <Category>Birthday-Cakes</Category>
   </Product>
   <Product>
     <ProductID>1</ProductID>
     <Name>Congratulations Cake in a Tin</Name>
     <Price>5.99</Price>
-    <Description><![CDATA[<p>Cake!!!!!!!!!!!!</p>]]></Description>
+    <Description>&lt;p&gt;Cake!!!!!!!!!!!!&lt;/p&gt;</Description>
     <Stock>2</Stock>
     <Image>~/Images/Birthday-Cakes/Congratulations-Cake-in-a-Tin.png</Image>
+    <Category>Birthday-Cakes</Category>
   </Product>
   <Product>
     <ProductID>2</ProductID>
     <Name>Happy Birthday Chocolate Cake</Name>
     <Price>15.99</Price>
-    <Description><![CDATA[<p>Cake!!!</p>]]></Description>
+    <Description>&lt;p&gt;Cake!!!&lt;/p&gt;</Description>
     <Stock>12</Stock>
     <Image>~/Images/Birthday-Cakes/Happy-Birthday-Chocolate-Cake.png</Image>
+    <Category>Celebration-Cakes</Category>
   </Product>
 </Database>

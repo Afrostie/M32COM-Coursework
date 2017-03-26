@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -14,6 +15,7 @@ namespace M32COM___Coursework
     {
         private ProductUtilities productUtil;
         private UserUtilities userUtil;
+        private CartUtilities cartUtilities;
 
         private XDocument productsDoc;
         public XDocument ProductsDoc
@@ -32,26 +34,48 @@ namespace M32COM___Coursework
         {
             productUtil = new ProductUtilities();
             userUtil = new UserUtilities();
+            cartUtilities = new CartUtilities();
 
             if (IsPostBack) return;
 
             if (userUtil.GetUserRole() == "Admin")
                 pnlAdmin.Visible = true;
 
-            rptSingleCake.DataSource = productUtil.ReturnTable();
+            //Displays all cakes in a certain category
+            rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
+            //Displays all cakes
+            //rptSingleCake.DataSource = productUtil.GetTable();
             rptSingleCake.DataBind();
         }
 
+        //Add a new product to the products xml
         protected void AddCake_Click(object sender, EventArgs e)
         {
+            //Gets filename and path to save the image to
+            var fileName = ImageUpload.FileName;
+            var category = CategoryDropDown.SelectedItem.Value;
+
+            var path = "~/Images/" + category + "/";
+
+            ImageUpload.SaveAs(Server.MapPath(path) + fileName);
+
             productUtil.AddProduct(txtBoxCakeName.Text, Convert.ToDouble(txtBoxCakePrice.Text), txtBoxCakeDescription.Text,
-                Convert.ToInt32(txtBoxCakeStock.Text), txtBoxCakeImage.Text);
+                Convert.ToInt32(txtBoxCakeStock.Text), path + fileName, category);
 
             txtBoxCakeName.Text = "";
             txtBoxCakePrice.Text = "";
             txtBoxCakeDescription.Text = "";
             txtBoxCakeStock.Text = "";
-            txtBoxCakeImage.Text = "";
+            //txtBoxCakeImage.Text = "";
+        }
+
+        //Adds the correct item to cart when button is clicked
+        protected void rptSingleCake_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "AddToCart")
+            {
+                var tmp = e.CommandArgument.ToString();
+               cartUtilities.AddNewItemToCart(Convert.ToInt32(tmp), 1);}
         }
     }
 }

@@ -39,7 +39,7 @@ namespace M32COM___Coursework
 
         private void Bind(int ID)
         {
-            var tmp3 = productUtilities.ReturnTable();
+            var tmp3 = productUtilities.GetTable();
             var tmp4 = orderUtilities.GetTable();
 
             var query = from m in tmp3

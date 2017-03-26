@@ -22,7 +22,7 @@
                 <asp:Label ID="lblCakeImage" runat="server" Text="Image" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
-                <asp:TextBox ID="txtBoxCakeImage" runat="server" CssClass="txtbox"></asp:TextBox>
+                <asp:FileUpload ID="ImageUpload" runat="server" />
             </div>
             <div class="col-md-3">
                 <asp:Label ID="lblCakeStock" runat="server" Text="Stock" CssClass="label label-default"></asp:Label>
@@ -37,12 +37,20 @@
                 <asp:TextBox ID="txtBoxCakeDescription" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
             <div class="col-md-3">
+                <asp:DropDownList ID="CategoryDropDown" runat="server">
+                    <asp:ListItem>Birthday-Cakes</asp:ListItem>
+                    <asp:ListItem>Celebration-Cakes</asp:ListItem>
+                    <asp:ListItem>Teatime-Cakes</asp:ListItem>
+                    <asp:ListItem>Wedding-Cakes</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-md-3">
                 <asp:Button ID="btnAddCake" runat="server" Text="Add Product" ToolTip="Add Cake" OnClick="AddCake_Click" CssClass="button" />
             </div>
         </div>
     </asp:Panel>
     <div class="products-content">
-        <asp:Repeater ID="rptSingleCake" runat="server">
+        <asp:Repeater ID="rptSingleCake" runat="server" OnItemCommand="rptSingleCake_ItemCommand">
             <HeaderTemplate>
             </HeaderTemplate>
             <ItemTemplate>
@@ -63,7 +71,7 @@
                         </div>
                         <div class="col-md-12 text-right">
                             <asp:Button ID="btnMoreInfo" Text="More Info" runat="server" Visible="false" />
-                            <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" OnClientClick="AddToCart" />
+                            <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" OnClientClick="AddToCart"  CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>'/>
                             <asp:Button ID="btnAddToWL" Text="Add To Wish List" runat="server" Visible="false" />
                         </div>
                     </div>

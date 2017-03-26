@@ -33,12 +33,12 @@ namespace M32COM___Coursework.App_Code
         /// <param name="price">Price of Product</param>
         /// <param name="description">Description of Product</param>
         /// <param name="stock">Stock Count of Product</param>
-        public bool AddProduct(string name, double price, string description, int stock, string image)
+        public bool AddProduct(string name, double price, string description, int stock, string image, string category)
         {
             if (ProductExists(name))
                 return false;
 
-            productDB.Product.AddProductRow(name, price, description, stock, image);
+            productDB.Product.AddProductRow(name, price, description, stock, image, category);
 
             productDB.Product.WriteXml(Server.MapPath(ProductFile));
 
@@ -173,10 +173,16 @@ namespace M32COM___Coursework.App_Code
             return true;
         }
 
-        
-        public Database.ProductDataTable ReturnTable()
+        //Returns the entire table
+        public Database.ProductDataTable GetTable()
         {
             return productDB.Product;
+        }
+
+        //Return a filtered table
+        public EnumerableRowCollection<Database.ProductRow> GetTableByCategory(string category)
+        {
+            return productDB.Product.AsEnumerable().Where(a => a.Field<string>("Category") == category);
         }
         
     }
