@@ -4,14 +4,16 @@
     <ProductID>0</ProductID>
     <Name>Almond Raspberry Cake</Name>
     <Price>10.99</Price>
-    <Description>&lt;p&gt;Made at our Craft Bakery with ground almonds and raspberry preserve, this light and delicate cake is prettily decorated with fondant icing and flaked almonds. Serving six to eight people, it's ideal for spring teatimes and delighting guests.&lt;br /&gt;
-        Perfect for serving 8 - 10 people.
-        &lt;br /&gt;
-        Best enjoyed within 2 days of delivery, or suitable for freezing.
-        &lt;br /&gt;
-        18cm diameter | 800g
-        &lt;br /&gt;
-        Our Raspberry &amp; Almond Cake can only be delivered within the UK.&lt;/p&gt;</Description>
+    <Description>
+      &lt;p&gt;Made at our Craft Bakery with ground almonds and raspberry preserve, this light and delicate cake is prettily decorated with fondant icing and flaked almonds. Serving six to eight people, it's ideal for spring teatimes and delighting guests.&lt;br /&gt;
+      Perfect for serving 8 - 10 people.
+      &lt;br /&gt;
+      Best enjoyed within 2 days of delivery, or suitable for freezing.
+      &lt;br /&gt;
+      18cm diameter | 800g
+      &lt;br /&gt;
+      Our Raspberry &amp; Almond Cake can only be delivered within the UK.&lt;/p&gt;
+    </Description>
     <Stock>0</Stock>
     <Image>~/Images/Birthday-Cakes/Almond-Raspberry-Cake.png</Image>
     <Category>Birthday-Cakes</Category>
@@ -20,7 +22,13 @@
     <ProductID>1</ProductID>
     <Name>Congratulations Cake in a Tin</Name>
     <Price>5.99</Price>
-    <Description>&lt;p&gt;Cake!!!!!!!!!!!!&lt;/p&gt;</Description>
+    <Description>
+      &lt;p&gt;Whatever the happy occasion, make it memorable with this classic fruit cake. Hand-decorated with marzipan and royal icing and presented in a pretty tin inspired by vintage designs from our 1960s menu.
+      &lt;br /&gt;
+      12.5 x 9 x 5.5cm | 480g
+      &lt;br /&gt;
+      Suitable for overseas delivery.&lt;/p&gt;
+    </Description>
     <Stock>2</Stock>
     <Image>~/Images/Birthday-Cakes/Congratulations-Cake-in-a-Tin.png</Image>
     <Category>Birthday-Cakes</Category>
@@ -29,9 +37,24 @@
     <ProductID>2</ProductID>
     <Name>Happy Birthday Chocolate Cake</Name>
     <Price>15.99</Price>
-    <Description>&lt;p&gt;Cake!!!&lt;/p&gt;</Description>
+    <Description>
+      &lt;p&gt;Perfect for chocolate-lovers, this luxuriously rich sponge is made with our Swiss Grand Cru chocolate. As well as an apricot preserve filling, it's enrobed in delicious chocolate ganache and finished with chocolate shavings and a hand-piped birthday greeting.
+      &lt;br /&gt;
+      Our Happy Birthday Chocolate Cake can only be delivered within the UK.
+      &lt;br /&gt;
+      Best enjoyed within 4 days of delivery or suitable for freezing.&lt;/p&gt;
+    </Description>
     <Stock>12</Stock>
     <Image>~/Images/Birthday-Cakes/Happy-Birthday-Chocolate-Cake.png</Image>
     <Category>Celebration-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>3</ProductID>
+    <Name>Classic Hexagonal Cake</Name>
+    <Price>150</Price>
+    <Description>&lt;p&gt;A distinctive shape and elegant decoration gives this beautiful cake a timeless, classic feel. Each hexagonal tier is covered in royal icing with a delicate collar of icing around the top and subtle beadwork and ribbon at the bottom.  To ensure a beautiful finished look, the side panels of each tier feature a hand-piped twin heart design. An optional hand-piped monogram or swag design is also available.&lt;/p&gt;</Description>
+    <Stock>2</Stock>
+    <Image>~/Images/Wedding-Cakes/Classic-Hexagonal-Cake.png</Image>
+    <Category>Wedding-Cakes</Category>
   </Product>
 </Database>

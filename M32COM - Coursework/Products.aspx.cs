@@ -17,19 +17,6 @@ namespace M32COM___Coursework
         private UserUtilities userUtil;
         private CartUtilities cartUtilities;
 
-        private XDocument productsDoc;
-        public XDocument ProductsDoc
-        {
-            get
-            {
-                if (productsDoc == null)
-                {
-                    return productsDoc = XDocument.Load(Server.MapPath("~/App_Data/products.xml"));
-                }
-                return productsDoc;
-            }
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             productUtil = new ProductUtilities();
@@ -42,9 +29,9 @@ namespace M32COM___Coursework
                 pnlAdmin.Visible = true;
 
             //Displays all cakes in a certain category
-            rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
+            //rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
             //Displays all cakes
-            //rptSingleCake.DataSource = productUtil.GetTable();
+            rptSingleCake.DataSource = productUtil.GetTable();
             rptSingleCake.DataBind();
         }
 
@@ -66,7 +53,6 @@ namespace M32COM___Coursework
             txtBoxCakePrice.Text = "";
             txtBoxCakeDescription.Text = "";
             txtBoxCakeStock.Text = "";
-            //txtBoxCakeImage.Text = "";
         }
 
         //Adds the correct item to cart when button is clicked
@@ -75,7 +61,8 @@ namespace M32COM___Coursework
             if (e.CommandName == "AddToCart")
             {
                 var tmp = e.CommandArgument.ToString();
-               cartUtilities.AddNewItemToCart(Convert.ToInt32(tmp), 1);}
+                cartUtilities.AddNewItemToCart(Convert.ToInt32(tmp), 1);
+            }
         }
     }
 }

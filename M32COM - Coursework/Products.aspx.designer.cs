@@ -76,22 +76,22 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.FileUpload ImageUpload;
         
         /// <summary>
-        /// lblCakeStock control.
+        /// lblCakeCateg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCakeStock;
+        protected global::System.Web.UI.WebControls.Label lblCakeCateg;
         
         /// <summary>
-        /// txtBoxCakeStock control.
+        /// CategoryDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBoxCakeStock;
+        protected global::System.Web.UI.WebControls.DropDownList CategoryDropDown;
         
         /// <summary>
         /// lblCakeDescription control.
@@ -112,13 +112,22 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.TextBox txtBoxCakeDescription;
         
         /// <summary>
-        /// CategoryDropDown control.
+        /// lblCakeStock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CategoryDropDown;
+        protected global::System.Web.UI.WebControls.Label lblCakeStock;
+        
+        /// <summary>
+        /// txtBoxCakeStock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBoxCakeStock;
         
         /// <summary>
         /// btnAddCake control.
@@ -128,6 +137,42 @@ namespace M32COM___Coursework {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddCake;
+        
+        /// <summary>
+        /// btnBirthdayCakes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBirthdayCakes;
+        
+        /// <summary>
+        /// btnCelebrationCakes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCelebrationCakes;
+        
+        /// <summary>
+        /// btnWeddingCakes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnWeddingCakes;
+        
+        /// <summary>
+        /// btnTeaTimeCakes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnTeaTimeCakes;
         
         /// <summary>
         /// rptSingleCake control.

@@ -395,6 +395,10 @@ img {max-width: 100%;}
 .products {
 }
 
+.products .form-control {
+    cursor: pointer;
+}
+
 .products .txtbox {
     width: 100%;
     padding: 0 10px;
@@ -403,6 +407,11 @@ img {max-width: 100%;}
 .products-content {
     overflow: hidden;
     padding: 15px 0 25px;
+}
+
+.products-content .categories {
+    overflow: hidden;
+    text-align: center;
 }
 
 .products-cake {
@@ -419,20 +428,20 @@ img {max-width: 100%;}
 .products-content .title {
     display: block;
     padding: 10px 0;
-    font: 400 20px/1.4em 'Cupcake-Party', Roboto, Arial;
+    font: 600 20px/1.4em Roboto, Arial;
     text-align: center;
 }
 
-.products-content .price {
+.products-content .price,
+.products-content .price-label {
     display: block;
     margin-bottom: 10px;
+    font: 400 1.4em Roboto, Arial;
     text-align: center;
 }
 
-.products-content .stock {
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
+.products-content .price-label {
+    font: 600 1.4em Roboto, Arial;
 }
 
 /*#endregion Products*/

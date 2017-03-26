@@ -22,13 +22,18 @@
                 <asp:Label ID="lblCakeImage" runat="server" Text="Image" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
-                <asp:FileUpload ID="ImageUpload" runat="server" />
+                <asp:FileUpload ID="ImageUpload" runat="server" CssClass="form-control" />
             </div>
             <div class="col-md-3">
-                <asp:Label ID="lblCakeStock" runat="server" Text="Stock" CssClass="label label-default"></asp:Label>
+                <asp:Label ID="lblCakeCateg" Text="Cake Categories" runat="server" CssClass="label label-default" />
                 <br />
                 <br />
-                <asp:TextBox ID="txtBoxCakeStock" runat="server" CssClass="txtbox"></asp:TextBox>
+                <asp:DropDownList ID="CategoryDropDown" runat="server" ToolTip="Choose Category" CssClass="form-control">
+                    <asp:ListItem>Birthday-Cakes</asp:ListItem>
+                    <asp:ListItem>Celebration-Cakes</asp:ListItem>
+                    <asp:ListItem>Teatime-Cakes</asp:ListItem>
+                    <asp:ListItem>Wedding-Cakes</asp:ListItem>
+                </asp:DropDownList>
             </div>
             <div class="col-md-12">
                 <asp:Label ID="lblCakeDescription" runat="server" Text="Description" CssClass="label label-default"></asp:Label>
@@ -36,13 +41,11 @@
                 <br />
                 <asp:TextBox ID="txtBoxCakeDescription" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
-            <div class="col-md-3">
-                <asp:DropDownList ID="CategoryDropDown" runat="server">
-                    <asp:ListItem>Birthday-Cakes</asp:ListItem>
-                    <asp:ListItem>Celebration-Cakes</asp:ListItem>
-                    <asp:ListItem>Teatime-Cakes</asp:ListItem>
-                    <asp:ListItem>Wedding-Cakes</asp:ListItem>
-                </asp:DropDownList>
+            <div class="col-md-3 hidden">
+                <asp:Label ID="lblCakeStock" runat="server" Text="Stock" CssClass="label label-default"></asp:Label>
+                <br />
+                <br />
+                <asp:TextBox ID="txtBoxCakeStock" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
             <div class="col-md-3">
                 <asp:Button ID="btnAddCake" runat="server" Text="Add Product" ToolTip="Add Cake" OnClick="AddCake_Click" CssClass="button" />
@@ -50,6 +53,20 @@
         </div>
     </asp:Panel>
     <div class="products-content">
+        <div class="categories">
+            <div class="btn-birthday col-md-3">
+                <asp:Button ID="btnBirthdayCakes" Text="Birthdays" runat="server" ToolTip="Birthday Cakes" CssClass="button" />
+            </div>
+            <div class="btn-celebration col-md-3">
+                <asp:Button ID="btnCelebrationCakes" Text="Celebrations" runat="server" ToolTip="Celebration Cakes" CssClass="button" />
+            </div>
+            <div class="btn-wedding col-md-3">
+                <asp:Button ID="btnWeddingCakes" Text="Weddings" runat="server" ToolTip="Wedding Cakes" CssClass="button" />
+            </div>
+            <div class="btn-teatime col-md-3">
+                <asp:Button ID="btnTeaTimeCakes" Text="Teatime" runat="server" ToolTip="Teatime Cakes" CssClass="button" />
+            </div>
+        </div>
         <asp:Repeater ID="rptSingleCake" runat="server" OnItemCommand="rptSingleCake_ItemCommand">
             <HeaderTemplate>
             </HeaderTemplate>
@@ -61,17 +78,17 @@
                     </div>
                     <div class="col-md-9">
                         <div class="col-md-2">
-                            <span class="price">Price: 
-                            <asp:Label ID="lblCakePrice" Text='<%# Eval("Price")%>' runat="server" CssClass="price" /></span>
-                            <span class="stock">In Stock: 
-                            <asp:Label ID="lblCakeStock" Text='<%# Eval("Stock")%>' runat="server" CssClass="stock" /></span>
+                            <span class="price-label">Price: </span>
+                            <asp:Label ID="lblCakePrice" Text='<%# Eval("Price")%>' runat="server" CssClass="price" />
+                            <%--<span class="stock-label">In Stock: </span>
+                            <asp:Label ID="lblCakeStock" Text='<%# Eval("Stock")%>' runat="server" CssClass="stock" />--%>
                         </div>
                         <div class="col-md-10">
                             <asp:Literal ID="litCakeDescription" Text='<%# Eval("Description")%>' runat="server" />
                         </div>
                         <div class="col-md-12 text-right">
                             <asp:Button ID="btnMoreInfo" Text="More Info" runat="server" Visible="false" />
-                            <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" OnClientClick="AddToCart"  CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>'/>
+                            <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" CssClass="button" OnClientClick="AddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>'/>
                             <asp:Button ID="btnAddToWL" Text="Add To Wish List" runat="server" Visible="false" />
                         </div>
                     </div>
