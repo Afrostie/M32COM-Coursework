@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using M32COM___Coursework.App_Code;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace M32COM___Coursework
 {
@@ -12,6 +14,19 @@ namespace M32COM___Coursework
     {
         private ProductUtilities productUtil;
         private UserUtilities userUtil;
+
+        private XDocument productsDoc;
+        public XDocument ProductsDoc
+        {
+            get
+            {
+                if (productsDoc == null)
+                {
+                    return productsDoc = XDocument.Load(Server.MapPath("~/App_Data/products.xml"));
+                }
+                return productsDoc;
+            }
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,6 +37,9 @@ namespace M32COM___Coursework
 
             if (userUtil.GetUserRole() == "Admin")
                 pnlAdmin.Visible = true;
+
+            rptSingleCake.DataSource = productUtil.ReturnTable();
+            rptSingleCake.DataBind();
         }
 
         protected void AddCake_Click(object sender, EventArgs e)

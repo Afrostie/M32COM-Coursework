@@ -41,7 +41,31 @@
             </div>
         </div>
     </asp:Panel>
-
     <div class="products-content">
+        <asp:Repeater ID="rptSingleCake" runat="server">
+            <HeaderTemplate>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <div class="col-md-3">
+                    <asp:Image ID="CakeImage" ImageUrl='<%# Eval("Image")%>' runat="server" />
+                    <br />
+                    <asp:Label ID="lblCakeName" Text='<%# Eval("Name")%>' runat="server" />
+                </div>
+                <div class="col-md-1">
+                    <asp:Label ID="lblCakePrice" Text='<%# Eval("Price")%>' runat="server" />
+                    <br />
+                    <asp:Label ID="lblCakeStock" Text='<%# Eval("Stock")%>' runat="server" />
+                </div>
+                <div class="col-md-8">
+                    <asp:Literal ID="litCakeDescription" Text='<%# Eval("Description")%>' runat="server" />
+                </div>
+                <div class="col-md-12 text-right">
+                    <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" OnClientClick="AddToCart" />
+                    <asp:Button ID="btnAddToWL" Text="Add To Wish List" runat="server" Visible="false" />
+                </div>
+            </ItemTemplate>
+            <FooterTemplate>
+            </FooterTemplate>
+        </asp:Repeater>
     </div>
 </asp:Content>
