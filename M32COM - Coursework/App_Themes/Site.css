@@ -1,11 +1,23 @@
 /*Fonts*/
 
+/*Cupcake Party Demo Regular*/
+@font-face {
+    font-family: 'Cupcake-Party';
+    src: url('fonts/cupcake-party-demo/cupcake_party_demo-webfont.eot');
+    src: url('fonts/cupcake-party-demo/cupcake_party_demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cupcake-party-demo/cupcake_party_demo-webfont.woff') format('woff'), 
+         url('fonts/cupcake-party-demo/cupcake_party_demo-webfont.ttf') format('truetype'), 
+         url('fonts/cupcake-party-demo/cupcake_party_demo-webfont.svg#cupcake_party_demoregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     font-family: 'Roboto', sans-serif, Arial;
     font-size: 16px;
     font-weight: 300;
     color: #888;
-    line-height: 30px;
+    line-height: 1.875em;
 }
 
 strong { font-weight: 500; }
@@ -16,7 +28,7 @@ a, a:hover, a:focus {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
-img { max-width: 100%; }
+img {max-width: 100%;}
 
 /* Wrapping element */
 .main {
@@ -391,6 +403,36 @@ img { max-width: 100%; }
 .products-content {
     overflow: hidden;
     padding: 15px 0 25px;
+}
+
+.products-cake {
+    overflow: hidden;
+    background: #f5f5f5;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.products-content img {
+    display: block;
+}
+
+.products-content .title {
+    display: block;
+    padding: 10px 0;
+    font: 400 20px/1.4em 'Cupcake-Party', Roboto, Arial;
+    text-align: center;
+}
+
+.products-content .price {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.products-content .stock {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 /*#endregion Products*/

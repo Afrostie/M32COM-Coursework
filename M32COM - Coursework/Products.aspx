@@ -46,22 +46,27 @@
             <HeaderTemplate>
             </HeaderTemplate>
             <ItemTemplate>
-                <div class="col-md-3">
-                    <asp:Image ID="CakeImage" ImageUrl='<%# Eval("Image")%>' runat="server" />
-                    <br />
-                    <asp:Label ID="lblCakeName" Text='<%# Eval("Name")%>' runat="server" />
-                </div>
-                <div class="col-md-1">
-                    <asp:Label ID="lblCakePrice" Text='<%# Eval("Price")%>' runat="server" />
-                    <br />
-                    <asp:Label ID="lblCakeStock" Text='<%# Eval("Stock")%>' runat="server" />
-                </div>
-                <div class="col-md-8">
-                    <asp:Literal ID="litCakeDescription" Text='<%# Eval("Description")%>' runat="server" />
-                </div>
-                <div class="col-md-12 text-right">
-                    <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" OnClientClick="AddToCart" />
-                    <asp:Button ID="btnAddToWL" Text="Add To Wish List" runat="server" Visible="false" />
+                <div class="products-cake">
+                    <div class="col-md-3">
+                        <asp:Image ID="CakeImage" ImageUrl='<%# Eval("Image")%>' runat="server" />
+                        <asp:Label ID="lblCakeName" Text='<%# Eval("Name")%>' runat="server" CssClass="title" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="col-md-2">
+                            <span class="price">Price: 
+                            <asp:Label ID="lblCakePrice" Text='<%# Eval("Price")%>' runat="server" CssClass="price" /></span>
+                            <span class="stock">In Stock: 
+                            <asp:Label ID="lblCakeStock" Text='<%# Eval("Stock")%>' runat="server" CssClass="stock" /></span>
+                        </div>
+                        <div class="col-md-10">
+                            <asp:Literal ID="litCakeDescription" Text='<%# Eval("Description")%>' runat="server" />
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <asp:Button ID="btnMoreInfo" Text="More Info" runat="server" Visible="false" />
+                            <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" OnClientClick="AddToCart" />
+                            <asp:Button ID="btnAddToWL" Text="Add To Wish List" runat="server" Visible="false" />
+                        </div>
+                    </div>
                 </div>
             </ItemTemplate>
             <FooterTemplate>

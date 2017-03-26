@@ -6,9 +6,12 @@
     <div class="jumbotron">
         <%--<module:SlideShow ID="SlideShowModule" runat="server" />--%>
     </div>
-    <div class="entry-content">
-        <h1>Welcome</h1>
+    <div class="entry-content text-center">
+        <h1>About CakeHouse</h1>
         <p>content content content</p>
+        <h2>Our Products</h2>
+        <p>content content content</p>
+        <p><a href="Products.aspx">Our Cakes</a></p>
     </div>
     <asp:Panel ID="pnlRegister" runat="server">
         <div class="register">
