@@ -74,18 +74,26 @@
                         <div class="col-md-2">
                             <span class="price-label">Price: </span>
                             <asp:Label ID="lblCakePrice" Text='<%#(string)Session["CurrentFormat"] + Math.Round(((decimal)Eval("Price") * (decimal)Session["CurrentRate"]), 2)%>' runat="server" CssClass="price" />
-                            <%--<asp:Label ID="lblSelectQuantity" Text="Select Quantity" runat="server" />
+                            <asp:Label ID="lblSelectQuantity" Text="Select Quantity" runat="server" />
                             <asp:DropDownList ID="ddQuantity" runat="server" CssClass="form-control">
-                                <asp:ListItem Text="text1" />
-                                <asp:ListItem Text="text2" />
-                            </asp:DropDownList>--%>
+                                <asp:ListItem>1</asp:ListItem>
+                                <asp:ListItem>2</asp:ListItem>
+                                <asp:ListItem>3</asp:ListItem>
+                                <asp:ListItem>4</asp:ListItem>
+                                <asp:ListItem>5</asp:ListItem>
+                                <asp:ListItem>6</asp:ListItem>
+                                <asp:ListItem>7</asp:ListItem>
+                                <asp:ListItem>8</asp:ListItem>
+                                <asp:ListItem>9</asp:ListItem>
+                                <asp:ListItem>10</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                         <div class="col-md-10">
                             <asp:Literal ID="litCakeDescription" Text='<%# Eval("Description")%>' runat="server" />
                         </div>
                         <div class="col-md-12 text-right">
                             <asp:Button ID="btnMoreInfo" Text="More Info" runat="server" Visible="false" />
-                            <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" CssClass="button" OnClientClick="AddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>'/>
+                            <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" CssClass="button" OnClientClick="AddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>' />
                             <asp:Button ID="btnAddToWL" Text="Add To Wish List" runat="server" Visible="false" />
                         </div>
                     </div>
