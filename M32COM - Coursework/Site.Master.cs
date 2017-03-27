@@ -12,11 +12,14 @@ namespace M32COM___Coursework
     public partial class Site : System.Web.UI.MasterPage
     {
         //Object instances
+        private ProductUtilities productUtil;
         private UserUtilities userUtil;
         private CartUtilities cartUtil;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Create the instance of ProductUtilities class
+            productUtil = new ProductUtilities();
             //Create the instance of CartUtilities class
             cartUtil = new CartUtilities();
             //Create the instance of UserUtilities class
@@ -101,6 +104,13 @@ namespace M32COM___Coursework
             }
             if (!num) return;
             args.IsValid = true;
+        }
+
+        protected void ddHeaderCurrencies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            productUtil.SetCurrency(ddHeaderCurrencies.SelectedItem.Text);
+
+            Response.Redirect(this.Page.Request.FilePath);
         }
     }
 }

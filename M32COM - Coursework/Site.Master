@@ -62,7 +62,8 @@
                         <asp:HyperLink CssClass="header-phone" NavigateUrl="tel:044-4444-4444" Text="Phone: +44 4444 4444" runat="server" />
                     </div>
                     <div class="header-logo col-md-4">
-                        <a runat="server" title="CakeHouse" href="~/"></a>
+                        <a runat="server" title="CakeHouse" href="~/">
+                            <img src="Images/logo.png" /></a>
                     </div>
                     <div class="header-login text-right col-md-4">
                         <div class="user-profile">
@@ -83,6 +84,14 @@
                         <div class="cart-info">
                             <asp:Label ID="lblCurrentCart" runat="server" Text="Label">Current Cart: </asp:Label>
                             <asp:Label ID="lblCart" runat="server" Text=""></asp:Label>
+                        </div>
+                        <div class="currency">
+                            <asp:Label ID="lblCurrency" Text="Choose Currency: " runat="server" />
+                            <asp:DropDownList ID="ddHeaderCurrencies" runat="server" OnSelectedIndexChanged="ddHeaderCurrencies_SelectedIndexChanged" AutoPostBack="True">
+                                <asp:ListItem Text="USD" />
+                                <asp:ListItem Text="GBP" />
+                                <asp:ListItem Text="EUR" />
+                            </asp:DropDownList>
                         </div>
                     </div>
                 </div>

@@ -112,6 +112,24 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.Label lblCart;
         
         /// <summary>
+        /// lblCurrency control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCurrency;
+        
+        /// <summary>
+        /// ddHeaderCurrencies control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddHeaderCurrencies;
+        
+        /// <summary>
         /// pnlAdmin control.
         /// </summary>
         /// <remarks>

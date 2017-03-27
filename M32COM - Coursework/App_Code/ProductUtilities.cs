@@ -37,7 +37,10 @@ namespace M32COM___Coursework.App_Code
             if (ProductExists(name))
                 return false;
 
-            productDB.Product.AddProductRow(name, price, description, image, category);
+            const string p1 = "<p>";
+            const string p2 = "</p>";
+            
+            productDB.Product.AddProductRow(name, price, p1 + description + p2, image, category);
 
             productDB.Product.WriteXml(Server.MapPath(ProductFile));
 
