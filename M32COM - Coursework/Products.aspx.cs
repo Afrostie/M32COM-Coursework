@@ -62,6 +62,7 @@ namespace M32COM___Coursework
             {
                 var tmp = e.CommandArgument.ToString();
                 cartUtilities.AddNewItemToCart(Convert.ToInt32(tmp), 1);
+                Response.Redirect("Products.aspx");
             }
         }
     }

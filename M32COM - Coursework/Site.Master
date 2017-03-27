@@ -67,7 +67,7 @@
                     <div class="header-login text-right col-md-4">
                         <div class="user-profile">
                             <asp:Label ID="lblUserName" runat="server" CssClass="user" Visible="False" />
-                            <asp:Button ID="btnLogOut" runat="server" Text="Log Out" OnClick="LogOut_Click" ToolTip="Sign Out" CssClass="button" Visible="False" />
+                            <asp:Button ID="btnLogOut" runat="server" Text="Log Out" OnClick="LogOut_Click" ToolTip="Sign Out" CssClass="button" Visible="False" CausesValidation="False" />
                         </div>
                         <asp:Panel ID="pnlLogIn" runat="server">
                             <div class="login">
@@ -77,7 +77,7 @@
                                 <br />
                                 <asp:TextBox ID="PasswordTB" runat="server" placeholder="Password" ToolTip="Password" CssClass="txtbox"></asp:TextBox>
                                 <br />
-                                <asp:Button ID="btnLogIn" runat="server" Text="Login" OnClick="LogIn_Click" ToolTip="Sign In" CssClass="button" />
+                                <asp:Button ID="btnLogIn" runat="server" Text="Login" OnClick="LogIn_Click" ToolTip="Sign In" CssClass="button" CausesValidation="False" />
                             </div>
                         </asp:Panel>
                         <div class="cart-info">

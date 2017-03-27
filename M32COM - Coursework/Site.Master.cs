@@ -22,7 +22,7 @@ namespace M32COM___Coursework
             //Create the instance of UserUtilities class
             userUtil = new UserUtilities();
 
-            if (IsPostBack) return;
+            //if (IsPostBack) return;
 
             lblCart.Text = Convert.ToString(cartUtil.GetItemCount());
 
@@ -34,7 +34,14 @@ namespace M32COM___Coursework
         {
             //Try and login the User
             if (userUtil.LoginUser(UserNameTB.Text, PasswordTB.Text))
+            {
                 LogIn();
+                    
+                var page = this.Page.Request.FilePath;
+
+                Response.Redirect(page);
+            }
+                
 
             //Otherwise tell the user to register
             else
