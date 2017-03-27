@@ -72,7 +72,10 @@ namespace M32COM___Coursework
             if (e.CommandName == "AddToCart")
             {
                 var tmp = e.CommandArgument.ToString();
-                cartUtilities.AddNewItemToCart(Convert.ToInt32(tmp), 1);
+
+                var value = ((DropDownList)e.Item.FindControl("ddQuantity")).SelectedItem.Text;
+
+                cartUtilities.AddNewItemToCart(Convert.ToInt32(tmp), Convert.ToInt32(value));
                 Response.Redirect("Products.aspx");
             }
         }
