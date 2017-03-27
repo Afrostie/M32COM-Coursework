@@ -45,4 +45,4 @@
                 <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Register_Click" ToolTip="Sign Up" CssClass="button" /></div>
         </div>
     </asp:Panel>
-</asp:Content>
+</asp:Content> 
