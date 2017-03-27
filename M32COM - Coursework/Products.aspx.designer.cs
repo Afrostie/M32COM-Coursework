@@ -121,6 +121,15 @@ namespace M32COM___Coursework {
         protected global::System.Web.UI.WebControls.Button btnAddCake;
         
         /// <summary>
+        /// btnAllCakes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAllCakes;
+        
+        /// <summary>
         /// btnBirthdayCakes control.
         /// </summary>
         /// <remarks>

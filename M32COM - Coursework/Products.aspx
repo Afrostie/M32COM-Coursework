@@ -39,7 +39,7 @@
                 <asp:Label ID="lblCakeDescription" runat="server" Text="Description" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
-                <asp:TextBox ID="txtBoxCakeDescription" runat="server" CssClass="txtbox"></asp:TextBox>
+                <asp:TextBox ID="txtBoxCakeDescription" runat="server" TextMode="MultiLine" CssClass="txtbox txtbox-custom"></asp:TextBox>
             </div>
             <div class="col-md-3">
                 <asp:Button ID="btnAddCake" runat="server" Text="Add Product" ToolTip="Add Cake" OnClick="AddCake_Click" CssClass="button" />
@@ -48,17 +48,20 @@
     </asp:Panel>
     <div class="products-content">
         <div class="categories">
-            <div class="btn-birthday col-md-3">
-                <asp:Button ID="btnBirthdayCakes" Text="Birthdays" runat="server" ToolTip="Birthday Cakes" CssClass="button" />
+            <div class="col-md-2">
+                <asp:Button ID="btnAllCakes" Text="All" runat="server" ToolTip="All Cakes" CssClass="button" OnClick="btnAllCakes_Click" />
             </div>
-            <div class="btn-celebration col-md-3">
-                <asp:Button ID="btnCelebrationCakes" Text="Celebrations" runat="server" ToolTip="Celebration Cakes" CssClass="button" />
+            <div class="btn-birthday col-md-2">
+                <asp:Button ID="btnBirthdayCakes" Text="Birthdays" runat="server" ToolTip="Birthday Cakes" CssClass="button" OnClick="btnBirthdayCakes_Click" />
             </div>
-            <div class="btn-wedding col-md-3">
-                <asp:Button ID="btnWeddingCakes" Text="Weddings" runat="server" ToolTip="Wedding Cakes" CssClass="button" />
+            <div class="btn-celebration col-md-2">
+                <asp:Button ID="btnCelebrationCakes" Text="Celebrations" runat="server" ToolTip="Celebration Cakes" CssClass="button" OnClick="btnCelebrationCakes_Click" />
             </div>
-            <div class="btn-teatime col-md-3">
-                <asp:Button ID="btnTeaTimeCakes" Text="Teatime" runat="server" ToolTip="Teatime Cakes" CssClass="button" />
+            <div class="btn-wedding col-md-2">
+                <asp:Button ID="btnWeddingCakes" Text="Weddings" runat="server" ToolTip="Wedding Cakes" CssClass="button" OnClick="btnWeddingCakes_Click" />
+            </div>
+            <div class="btn-teatime col-md-2">
+                <asp:Button ID="btnTeaTimeCakes" Text="Teatime" runat="server" ToolTip="Teatime Cakes" CssClass="button" OnClick="btnTeaTimeCakes_Click" />
             </div>
         </div>
         <asp:Repeater ID="rptSingleCake" runat="server" OnItemCommand="rptSingleCake_ItemCommand">

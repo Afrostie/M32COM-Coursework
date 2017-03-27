@@ -416,16 +416,18 @@ img {max-width: 100%;}
 /*#endregion Orders*/
 
 /*#region Products*/
-.products {
-}
-
 .products .form-control {
     cursor: pointer;
 }
 
 .products .txtbox {
     width: 100%;
-    padding: 0 10px;
+    padding: 10px;
+}
+
+.products .txtbox-custom {
+    height: 100px;
+    line-height: 1em !important;
 }
 
 .products-content {

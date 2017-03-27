@@ -53,4 +53,12 @@
     <Image>~/Images/Wedding-Cakes/Classic-Hexagonal-Cake.png</Image>
     <Category>Wedding-Cakes</Category>
   </Product>
+  <Product>
+    <ProductID>4</ProductID>
+    <Name>Bettys Bury Simnel</Name>
+    <Price>3.99</Price>
+    <Description>&lt;p&gt;Our famous Yorkshire Fat Rascal scones have been a year-round favourite for more than three decades. These special versions are just for Easter and are every bit as tempting.  Made in our Craft Bakery with currants and seasonal spices and topped with flaked almonds, they're perfect served warm with butter for Easter teatimes.  Box of 4  Best enjoyed on the day of delivery or freeze for up to one month.  Our Bury Simnels can only be delivered within the UK.&lt;/p&gt;</Description>
+    <Image>~/Images/Teatime-Cakes/Bettys-Bury-Simnel.png</Image>
+    <Category>Teatime-Cakes</Category>
+  </Product>
 </Database>

@@ -76,7 +76,7 @@
                                 <%--<asp:RequiredFieldValidator ID="recvalName" runat="server" Text="*" ErrorMessage="User name is required" ControlToValidate="txtbName" ToolTip="User name is required" ForeColor="Red"></asp:RequiredFieldValidator>
                                 <asp:RegularExpressionValidator runat="server" Text="*" ErrorMessage="please enter only alpha-numeric characters (and no spaces)" ToolTip="please enter only alpha-numeric characters (and no spaces)" ControlToValidate="txtbName" ValidationExpression="\w{6,14}" ForeColor="Red"></asp:RegularExpressionValidator>--%>
                                 <br />
-                                <asp:TextBox ID="PasswordTB" runat="server" placeholder="Password" ToolTip="Password" CssClass="txtbox"></asp:TextBox>
+                                <asp:TextBox ID="PasswordTB" runat="server" placeholder="Password" TextMode="Password" ToolTip="Password" CssClass="txtbox"></asp:TextBox>
                                 <br />
                                 <asp:Button ID="btnLogIn" runat="server" Text="Login" OnClick="LogIn_Click" ToolTip="Sign In" CssClass="button" CausesValidation="False" />
                             </div>

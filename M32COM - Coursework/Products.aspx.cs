@@ -30,10 +30,7 @@ namespace M32COM___Coursework
 
             if (userUtil.GetUserRole() == "Admin")
                 pnlAdmin.Visible = true;
-
-            //Displays all cakes in a ceTrtain category
-            //rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
-
+            
             //Displays all cakes
             rptSingleCake.DataSource = productUtil.GetTable();
             rptSingleCake.DataBind();
@@ -78,6 +75,40 @@ namespace M32COM___Coursework
                 cartUtilities.AddNewItemToCart(Convert.ToInt32(tmp), Convert.ToInt32(value));
                 Response.Redirect("Products.aspx");
             }
+        }
+
+        protected void btnBirthdayCakes_Click(object sender, EventArgs e)
+        {
+            //Displays all cakes in a certain category
+            rptSingleCake.DataSource = productUtil.GetTableByCategory("Birthday-Cakes");
+            rptSingleCake.DataBind();
+        }
+
+        protected void btnCelebrationCakes_Click(object sender, EventArgs e)
+        {
+            //Displays all cakes in a certain category
+            rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
+            rptSingleCake.DataBind();
+        }
+
+        protected void btnWeddingCakes_Click(object sender, EventArgs e)
+        {
+            //Displays all cakes in a certain category
+            rptSingleCake.DataSource = productUtil.GetTableByCategory("Wedding-Cakes");
+            rptSingleCake.DataBind();
+        }
+
+        protected void btnTeaTimeCakes_Click(object sender, EventArgs e)
+        {
+            //Displays all cakes in a certain category
+            rptSingleCake.DataSource = productUtil.GetTableByCategory("Teatime-Cakes");
+            rptSingleCake.DataBind();
+        }
+
+        protected void btnAllCakes_Click(object sender, EventArgs e)
+        {
+            rptSingleCake.DataSource = productUtil.GetTable();
+            rptSingleCake.DataBind();
         }
     }
 }
