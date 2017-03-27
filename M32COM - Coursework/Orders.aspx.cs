@@ -35,7 +35,6 @@ namespace M32COM___Coursework
                 test[tmp] = item.Value;
             }
             Bind();
-
         }
 
         private void Bind()

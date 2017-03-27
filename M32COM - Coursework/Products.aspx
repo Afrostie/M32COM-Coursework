@@ -6,25 +6,25 @@
     </div>
     <asp:Panel ID="pnlAdmin" runat="server" Visible="False">
         <div class="products clearfix">
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <asp:Label ID="lblCakeName" runat="server" Text="Name" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
                 <asp:TextBox ID="txtBoxCakeName" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <asp:Label ID="lblCakePrice" runat="server" Text="Price" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
                 <asp:TextBox ID="txtBoxCakePrice" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <asp:Label ID="lblCakeImage" runat="server" Text="Image" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
                 <asp:FileUpload ID="ImageUpload" runat="server" CssClass="form-control" />
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-6 col-md-3">
                 <asp:Label ID="lblCakeCateg" Text="Cake Categories" runat="server" CssClass="label label-default" />
                 <br />
                 <br />
@@ -41,27 +41,19 @@
                 <br />
                 <asp:TextBox ID="txtBoxCakeDescription" runat="server" TextMode="MultiLine" CssClass="txtbox txtbox-custom"></asp:TextBox>
             </div>
-            <div class="col-md-3">
+            <div class="col-xs-12">
                 <asp:Button ID="btnAddCake" runat="server" Text="Add Product" ToolTip="Add Cake" OnClick="AddCake_Click" CssClass="button" />
             </div>
         </div>
     </asp:Panel>
     <div class="products-content">
         <div class="categories">
-            <div class="col-md-2">
-                <asp:Button ID="btnAllCakes" Text="All" runat="server" ToolTip="All Cakes" CssClass="button" OnClick="btnAllCakes_Click" />
-            </div>
-            <div class="btn-birthday col-md-2">
+            <div class="col-xs-12 col-centered">
                 <asp:Button ID="btnBirthdayCakes" Text="Birthdays" runat="server" ToolTip="Birthday Cakes" CssClass="button" OnClick="btnBirthdayCakes_Click" />
-            </div>
-            <div class="btn-celebration col-md-2">
                 <asp:Button ID="btnCelebrationCakes" Text="Celebrations" runat="server" ToolTip="Celebration Cakes" CssClass="button" OnClick="btnCelebrationCakes_Click" />
-            </div>
-            <div class="btn-wedding col-md-2">
                 <asp:Button ID="btnWeddingCakes" Text="Weddings" runat="server" ToolTip="Wedding Cakes" CssClass="button" OnClick="btnWeddingCakes_Click" />
-            </div>
-            <div class="btn-teatime col-md-2">
                 <asp:Button ID="btnTeaTimeCakes" Text="Teatime" runat="server" ToolTip="Teatime Cakes" CssClass="button" OnClick="btnTeaTimeCakes_Click" />
+                <asp:Button ID="btnAllCakes" Text="All" runat="server" ToolTip="All Cakes" CssClass="button" OnClick="btnAllCakes_Click" />
             </div>
         </div>
         <asp:Repeater ID="rptSingleCake" runat="server" OnItemCommand="rptSingleCake_ItemCommand">
@@ -77,14 +69,14 @@
                         <div class="col-md-2">
                             <span class="price-label">Price: </span>
                             <asp:Label ID="lblCakePrice" Text='<%#(string)Session["CurrentFormat"] + Math.Round(((decimal)Eval("Price") * (decimal)Session["CurrentRate"]), 2)%>' runat="server" CssClass="price" />
-                            <asp:Label ID="lblSelectQuantity" Text="Select Quantity" runat="server" />
+                            <asp:Label ID="lblSelectQuantity" Text="Select Quantity: " runat="server" CssClass="quantity" />
                             <asp:DropDownList ID="ddQuantity" runat="server" CssClass="form-control">
                                 <asp:ListItem>1</asp:ListItem>
                                 <asp:ListItem>2</asp:ListItem>
                                 <asp:ListItem>3</asp:ListItem>
                                 <asp:ListItem>4</asp:ListItem>
                                 <asp:ListItem>5</asp:ListItem>
-                                <asp:ListItem>6</asp:ListItem> 
+                                <asp:ListItem>6</asp:ListItem>
                                 <asp:ListItem>7</asp:ListItem>
                                 <asp:ListItem>8</asp:ListItem>
                                 <asp:ListItem>9</asp:ListItem>

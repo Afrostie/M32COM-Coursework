@@ -96,7 +96,6 @@
     <Content Include="App_Themes\css\bootstrap-theme.min.css" />
     <Content Include="App_Themes\css\bootstrap.css" />
     <Content Include="App_Themes\css\bootstrap.min.css" />
-    <Content Include="Files\fonts\cupcake-party-demo\cupcake_party_demo-webfont.svg" />
     <Content Include="Files\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -164,11 +163,6 @@
     <Content Include="Database.xss">
       <DependentUpon>Database.xsd</DependentUpon>
     </Content>
-    <Content Include="Files\fonts\cupcake-party-demo\Cupcake Party Demo.ttf" />
-    <Content Include="Files\fonts\cupcake-party-demo\cupcake_party_demo-webfont.eot" />
-    <Content Include="Files\fonts\cupcake-party-demo\cupcake_party_demo-webfont.ttf" />
-    <Content Include="Files\fonts\cupcake-party-demo\cupcake_party_demo-webfont.woff" />
-    <Content Include="Files\fonts\cupcake-party-demo\cupcake_party_demo-webfont.woff2" />
     <None Include="Properties\PublishProfiles\M32COM-Coursework20170318033028 - Web Deploy.pubxml" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">

@@ -44,8 +44,7 @@ namespace M32COM___Coursework
 
                 Response.Redirect(page);
             }
-                
-
+            
             //Otherwise tell the user to register
             else
                 Response.Write("User Does Not Exist, Please Register");
