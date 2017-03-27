@@ -17,6 +17,9 @@ namespace M32COM___Coursework
         private UserUtilities userUtil;
         private CartUtilities cartUtilities;
 
+        //TODO: Add Quantity Dropdown to Repeater on Products
+        //TODO: Remove Stock from Database
+
         protected void Page_Load(object sender, EventArgs e)
         {
             productUtil = new ProductUtilities();
@@ -31,6 +34,8 @@ namespace M32COM___Coursework
             //Displays all cakes in a certain category
             //rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
             //Displays all cakes
+            productUtil.SetCurrency("EUR");
+
             rptSingleCake.DataSource = productUtil.GetTable();
             rptSingleCake.DataBind();
         }

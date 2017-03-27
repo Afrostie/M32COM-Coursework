@@ -14,6 +14,8 @@ namespace M32COM___Coursework
         private ProductUtilities productUtilities;
         private UserUtilities userUtilities;
 
+        //TODO: Link Category Buttons together
+
         protected void Page_Load(object sender, EventArgs e)
         {
             cartUtilities = new CartUtilities();

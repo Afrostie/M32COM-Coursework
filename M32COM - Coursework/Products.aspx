@@ -79,7 +79,7 @@
                     <div class="col-md-9">
                         <div class="col-md-2">
                             <span class="price-label">Price: </span>
-                            <asp:Label ID="lblCakePrice" Text='<%# Eval("Price")%>' runat="server" CssClass="price" />
+                            <asp:Label ID="lblCakePrice" Text='<%# Math.Round(((double)Eval("Price") * (double)Session["CurrentRate"]), 2)%>' runat="server" CssClass="price" />
                             <%--<span class="stock-label">In Stock: </span>
                             <asp:Label ID="lblCakeStock" Text='<%# Eval("Stock")%>' runat="server" CssClass="stock" />--%>
                         </div>
