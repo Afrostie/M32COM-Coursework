@@ -92,7 +92,7 @@ namespace M32COM___Coursework.App_Code
         /// <returns>Current CurrentID</returns>
         public int GetUserID()
         {
-            return (int)Session["CurrentID"];
+                return (int)Session["CurrentID"];
         }
 
         /// <summary>

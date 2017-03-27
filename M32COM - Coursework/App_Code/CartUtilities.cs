@@ -14,6 +14,7 @@ namespace M32COM___Coursework.App_Code
         private HttpApplicationState Application;
         private ProductUtilities productUtil;
         private OrderUtilities orderUtil;
+        private UserUtilities userUtil;
 
         public CartUtilities()
         {
@@ -22,6 +23,7 @@ namespace M32COM___Coursework.App_Code
 
             productUtil = new ProductUtilities();
             orderUtil = new OrderUtilities();
+            userUtil = new UserUtilities();
         }
 
         /// <summary>
@@ -145,6 +147,9 @@ namespace M32COM___Coursework.App_Code
         /// </summary>
         public bool OrderCart()
         {
+            if (!userUtil.IsLoggedIn())
+                return false;
+
             var cart = GetCart();
 
             foreach (var item in cart)

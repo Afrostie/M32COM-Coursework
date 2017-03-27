@@ -85,7 +85,7 @@
                 <asp:Label ID="lblTotalPrice" Text="" runat="server" />
             </div>
             <div class="col-md-3 text-center">
-                <asp:Button ID="btnOrderCakes" Text="Order Cakes" runat="server" ToolTip="Order Cakes" CssClass="button" />
+                <asp:Button ID="btnOrderCakes" Text="Order Cakes" runat="server" ToolTip="Order Cakes" CssClass="button" OnClick="btnOrderCakes_Click" />
             </div>
         </div>
     </div>

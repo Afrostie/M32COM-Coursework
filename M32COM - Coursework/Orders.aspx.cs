@@ -107,10 +107,18 @@ namespace M32COM___Coursework
             Panel1.Visible = false;
 
             cartUtilities.EmptyCart();
+        }
 
-            Cart0.Text = "";
-            Cart1.Text = "";
-            Cart2.Text = "";
+        protected void btnOrderCakes_Click(object sender, EventArgs e)
+        {
+            if(!cartUtilities.OrderCart())
+                Response.Write("Please Login First");
+            cartUtilities.EmptyCart();
+
+            lblTotalPrice.Text = (string)Session["CurrentFormat"] + Convert.ToString(cartUtilities.GetTotal());
+
+            rptCartItem.DataSource = null;
+            rptCartItem.DataBind();
         }
     }
 }
