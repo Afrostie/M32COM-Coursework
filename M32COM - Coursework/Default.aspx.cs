@@ -31,5 +31,43 @@ namespace M32COM___Coursework
 
             pnlRegister.Visible = false;
         }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            string data = args.Value;
+            args.IsValid = false;
+            if (data.Length < 6 || data.Length > 12) return;
+            bool uc = false;
+            foreach (char c in data)
+            {
+                if (c >= 'A' && c <= 'Z')
+                {
+                    uc = true; break;
+                }
+            }
+            if (!uc) return;
+            //check for lowercase
+            bool lc = false;
+            foreach (char c in data)
+            {
+                if (c >= 'a' && c <= 'z')
+                {
+                    lc = true; break;
+                }
+            }
+            if (!lc) return;
+            //check for numeric
+            bool num = false;
+            foreach (char c in data)
+            {
+                if (c >= '0' && c <= '9')
+                {
+                    num = true; break;
+                }
+            }
+            if (!num) return;
+            //must be valid
+            args.IsValid = true;
+        }
     }
 }

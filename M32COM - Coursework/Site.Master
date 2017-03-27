@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> CakeHouse</title>
-    <%--<script lang="javascript" type="text/javascript">
+    <script lang="javascript" type="text/javascript">
         function ValidatePassword(source, arguments) {
             var data = arguments.Value.split('');
             //start by setting false
@@ -41,7 +41,7 @@
             //must be valid
             arguments.IsValid = true;
         }
-    </script>--%>
+    </script>
     <asp:ContentPlaceHolder ID="head" runat="server">
         <link href="/App_Themes/Site.css" rel="stylesheet" type="text/css" />
         <link href="/App_Themes/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
