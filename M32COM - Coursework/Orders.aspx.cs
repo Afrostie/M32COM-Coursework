@@ -131,8 +131,6 @@ namespace M32COM___Coursework
         {
             if (e.CommandName == "RemoveFromCart")
             {
-                var tmp = e.CommandArgument.ToString();
-
                 cartUtilities.RemoveItem(Convert.ToInt32(e.CommandArgument.ToString()));
                 Bind();
 
