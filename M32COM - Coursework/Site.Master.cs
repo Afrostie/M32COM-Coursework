@@ -109,7 +109,6 @@ namespace M32COM___Coursework
         protected void ddHeaderCurrencies_SelectedIndexChanged(object sender, EventArgs e)
         {
             productUtil.SetCurrency(ddHeaderCurrencies.SelectedItem.Text);
-
             Response.Redirect(this.Page.Request.FilePath);
         }
     }

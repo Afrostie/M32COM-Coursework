@@ -86,8 +86,8 @@
                             <asp:Label ID="lblCart" runat="server" Text=""></asp:Label>
                         </div>
                         <div class="currency">
-                            <asp:Label ID="lblCurrency" Text="Choose Currency: " runat="server" />
-                            <asp:DropDownList ID="ddHeaderCurrencies" runat="server" OnSelectedIndexChanged="ddHeaderCurrencies_SelectedIndexChanged" AutoPostBack="True">
+                            <asp:DropDownList ID="ddHeaderCurrencies" runat="server" OnSelectedIndexChanged="ddHeaderCurrencies_SelectedIndexChanged" AutoPostBack="True" CssClass="form-control">
+                                <asp:ListItem Text="Select Currency" />
                                 <asp:ListItem Text="USD" />
                                 <asp:ListItem Text="GBP" />
                                 <asp:ListItem Text="EUR" />

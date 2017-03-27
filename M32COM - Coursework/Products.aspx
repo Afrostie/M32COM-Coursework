@@ -74,6 +74,11 @@
                         <div class="col-md-2">
                             <span class="price-label">Price: </span>
                             <asp:Label ID="lblCakePrice" Text='<%#(string)Session["CurrentFormat"] + Math.Round(((decimal)Eval("Price") * (decimal)Session["CurrentRate"]), 2)%>' runat="server" CssClass="price" />
+                            <%--<asp:Label ID="lblSelectQuantity" Text="Select Quantity" runat="server" />
+                            <asp:DropDownList ID="ddQuantity" runat="server" CssClass="form-control">
+                                <asp:ListItem Text="text1" />
+                                <asp:ListItem Text="text2" />
+                            </asp:DropDownList>--%>
                         </div>
                         <div class="col-md-10">
                             <asp:Literal ID="litCakeDescription" Text='<%# Eval("Description")%>' runat="server" />

@@ -25,9 +25,7 @@ namespace M32COM___Coursework
 
             if (IsPostBack) return;
 
-            lblTotalPrice.Text = Convert.ToString(cartUtilities.GetTotal());
-
-            productUtilities.SetCurrency("GBP");
+            lblTotalPrice.Text = (string)Session["CurrentFormat"] + Convert.ToString(cartUtilities.GetTotal());
 
             var test = new Dictionary<string, int>();
 

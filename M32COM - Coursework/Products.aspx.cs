@@ -33,9 +33,8 @@ namespace M32COM___Coursework
 
             //Displays all cakes in a ceTrtain category
             //rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
-            //Displays all cakes
-            productUtil.SetCurrency("USD");
 
+            //Displays all cakes
             rptSingleCake.DataSource = productUtil.GetTable();
             rptSingleCake.DataBind();
         }
