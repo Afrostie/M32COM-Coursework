@@ -41,12 +41,6 @@
                 <br />
                 <asp:TextBox ID="txtBoxCakeDescription" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
-            <div class="col-md-3 hidden">
-                <asp:Label ID="lblCakeStock" runat="server" Text="Stock" CssClass="label label-default"></asp:Label>
-                <br />
-                <br />
-                <asp:TextBox ID="txtBoxCakeStock" runat="server" CssClass="txtbox"></asp:TextBox>
-            </div>
             <div class="col-md-3">
                 <asp:Button ID="btnAddCake" runat="server" Text="Add Product" ToolTip="Add Cake" OnClick="AddCake_Click" CssClass="button" />
             </div>
@@ -79,9 +73,7 @@
                     <div class="col-md-9">
                         <div class="col-md-2">
                             <span class="price-label">Price: </span>
-                            <asp:Label ID="lblCakePrice" Text='<%#(string)Session["CurrentFormat"] + Math.Round(((double)Eval("Price") * (double)Session["CurrentRate"]), 2)%>' runat="server" CssClass="price" />
-                            <%--<span class="stock-label">In Stock: </span>
-                            <asp:Label ID="lblCakeStock" Text='<%# Eval("Stock")%>' runat="server" CssClass="stock" />--%>
+                            <asp:Label ID="lblCakePrice" Text='<%#(string)Session["CurrentFormat"] + Math.Round(((decimal)Eval("Price") * (decimal)Session["CurrentRate"]), 2)%>' runat="server" CssClass="price" />
                         </div>
                         <div class="col-md-10">
                             <asp:Literal ID="litCakeDescription" Text='<%# Eval("Description")%>' runat="server" />

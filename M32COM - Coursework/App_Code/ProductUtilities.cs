@@ -32,13 +32,12 @@ namespace M32COM___Coursework.App_Code
         /// <param name="name">Name of Product</param>
         /// <param name="price">Price of Product</param>
         /// <param name="description">Description of Product</param>
-        /// <param name="stock">Stock Count of Product</param>
-        public bool AddProduct(string name, double price, string description, int stock, string image, string category)
+        public bool AddProduct(string name, decimal price, string description, string image, string category)
         {
             if (ProductExists(name))
                 return false;
 
-            productDB.Product.AddProductRow(name, price, description, stock, image, category);
+            productDB.Product.AddProductRow(name, price, description, image, category);
 
             productDB.Product.WriteXml(Server.MapPath(ProductFile));
 
@@ -124,23 +123,6 @@ namespace M32COM___Coursework.App_Code
             return (string) row["Name"];
         }
 
-        /// <summary>
-        /// Changes the Stock Value of the given Product
-        /// </summary>
-        /// <param name="productID">Product ID</param>
-        /// <param name="quantity">Quantity to update (+-)</param>
-        public bool UpdateStock(int productID, int quantity)
-        {
-            var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == productID);
-
-
-            if ((query.First().Stock += quantity) < 0)
-                return false;
-
-            productDB.WriteXml(Server.MapPath(ProductFile));
-
-            return true;
-        }
 
         /// <summary>
         /// Checks if product exists already in database
@@ -159,19 +141,19 @@ namespace M32COM___Coursework.App_Code
             switch (currency)
             {
                 case "USD":
-                    Session["CurrentRate"] = 1.0;
+                    Session["CurrentRate"] = (decimal)1.0;
                     Session["CurrentFormat"] = "$";
                     break;
                 case "GBP":
-                    Session["CurrentRate"] = (double) Application["GBP"];
+                    Session["CurrentRate"] = (decimal) Application["GBP"];
                     Session["CurrentFormat"] = "£";
                     break;
                 case "EUR":
-                    Session["CurrentRate"] = (double)Application["EUR"];
+                    Session["CurrentRate"] = (decimal)Application["EUR"];
                     Session["CurrentFormat"] = "€";
                     break;
                 default:
-                    Session["CurrentRate"] = 1.0;
+                    Session["CurrentRate"] = (decimal)1.0;
                     Session["CurrentFormat"] = "$";
                     break;
             }

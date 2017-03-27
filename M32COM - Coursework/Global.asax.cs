@@ -55,8 +55,8 @@ namespace M32COM___Coursework
                 //Parse the json result and store in application state
                 var parsed = JsonConvert.DeserializeObject<Result>(result);
 
-                Application["GBP"] = parsed.quotes.USDGBP;
-                Application["EUR"] = parsed.quotes.USDEUR;
+                Application["GBP"] = Convert.ToDecimal(parsed.quotes.USDGBP);
+                Application["EUR"] = Convert.ToDecimal(parsed.quotes.USDEUR);
                 Application["USD"] = 1.0;
             }
         }

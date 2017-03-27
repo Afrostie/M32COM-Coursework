@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -18,7 +19,6 @@ namespace M32COM___Coursework
         private CartUtilities cartUtilities;
 
         //TODO: Add Quantity Dropdown to Repeater on Products
-        //TODO: Remove Stock from Database
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,7 +34,7 @@ namespace M32COM___Coursework
             //Displays all cakes in a ceTrtain category
             //rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
             //Displays all cakes
-            productUtil.SetCurrency("GBP");
+            productUtil.SetCurrency("USD");
 
             rptSingleCake.DataSource = productUtil.GetTable();
             rptSingleCake.DataBind();
@@ -49,15 +49,22 @@ namespace M32COM___Coursework
 
             var path = "~/Images/" + category + "/";
 
-            ImageUpload.SaveAs(Server.MapPath(path) + fileName);
+            var tmp = path + fileName;
 
-            productUtil.AddProduct(txtBoxCakeName.Text, Convert.ToDouble(txtBoxCakePrice.Text), txtBoxCakeDescription.Text,
-                Convert.ToInt32(txtBoxCakeStock.Text), path + fileName, category);
+            decimal tmpDecimal = Convert.ToDecimal(txtBoxCakePrice.Text);
+
+            if ((tmpDecimal % 1) == 0)
+                txtBoxCakePrice.Text += ".00";
+
+            productUtil.AddProduct(txtBoxCakeName.Text, Convert.ToDecimal(txtBoxCakePrice.Text), txtBoxCakeDescription.Text, tmp, category);
+
+            ImageUpload.SaveAs(Server.MapPath(path) + fileName);
 
             txtBoxCakeName.Text = "";
             txtBoxCakePrice.Text = "";
             txtBoxCakeDescription.Text = "";
-            txtBoxCakeStock.Text = "";
+
+            Response.Redirect("Products.aspx");
         }
 
         //Adds the correct item to cart when button is clicked

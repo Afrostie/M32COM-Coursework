@@ -67,9 +67,6 @@ namespace M32COM___Coursework
 
         protected void OrderCart_Click(object sender, EventArgs e)
         {
-           if(!cartUtilities.OrderCart())
-                Response.Write("Not Enough Stock");
-
             Panel1.Visible = true;
 
 

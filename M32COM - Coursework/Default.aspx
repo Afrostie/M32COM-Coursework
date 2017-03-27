@@ -39,7 +39,7 @@
                 <div class="col-xs-12">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtBoxAddress" ErrorMessage="Address is required" ToolTip="Address is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtBoxAddress" runat="server" CssClass="txtbox address" ToolTip="Delivery Address" placeholder="Address"></asp:TextBox></div>
-                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="True" />
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="True" ShowSummary="False" />
             </div>
             <div>
                 <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Register_Click" ToolTip="Sign Up" CssClass="button" /></div>

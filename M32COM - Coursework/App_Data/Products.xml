@@ -14,7 +14,6 @@
       &lt;br /&gt;
       Our Raspberry &amp; Almond Cake can only be delivered within the UK.&lt;/p&gt;
     </Description>
-    <Stock>0</Stock>
     <Image>~/Images/Birthday-Cakes/Almond-Raspberry-Cake.png</Image>
     <Category>Birthday-Cakes</Category>
   </Product>
@@ -29,7 +28,6 @@
       &lt;br /&gt;
       Suitable for overseas delivery.&lt;/p&gt;
     </Description>
-    <Stock>2</Stock>
     <Image>~/Images/Birthday-Cakes/Congratulations-Cake-in-a-Tin.png</Image>
     <Category>Birthday-Cakes</Category>
   </Product>
@@ -44,16 +42,14 @@
       &lt;br /&gt;
       Best enjoyed within 4 days of delivery or suitable for freezing.&lt;/p&gt;
     </Description>
-    <Stock>12</Stock>
     <Image>~/Images/Birthday-Cakes/Happy-Birthday-Chocolate-Cake.png</Image>
     <Category>Celebration-Cakes</Category>
   </Product>
   <Product>
     <ProductID>3</ProductID>
     <Name>Classic Hexagonal Cake</Name>
-    <Price>150</Price>
+    <Price>150.00</Price>
     <Description>&lt;p&gt;A distinctive shape and elegant decoration gives this beautiful cake a timeless, classic feel. Each hexagonal tier is covered in royal icing with a delicate collar of icing around the top and subtle beadwork and ribbon at the bottom.  To ensure a beautiful finished look, the side panels of each tier feature a hand-piped twin heart design. An optional hand-piped monogram or swag design is also available.&lt;/p&gt;</Description>
-    <Stock>2</Stock>
     <Image>~/Images/Wedding-Cakes/Classic-Hexagonal-Cake.png</Image>
     <Category>Wedding-Cakes</Category>
   </Product>

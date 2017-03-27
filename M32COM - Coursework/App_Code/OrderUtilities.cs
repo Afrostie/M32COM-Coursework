@@ -34,10 +34,7 @@ namespace M32COM___Coursework.App_Code
         /// <param name="productID">Product ID to add</param>
         /// <param name="quantity">Quantity of product</param>
         public bool AddOrder(int productID, int quantity)
-        {
-            if(!productUtil.UpdateStock(productID, quantity * -1))
-                return false;
-
+        {   
             orderDB.Order.AddOrderRow(userUtil.GetUserID(), productID, quantity, DateTime.Now);
 
             orderDB.WriteXml(Server.MapPath(OrderPath));
