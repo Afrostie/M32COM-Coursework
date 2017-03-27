@@ -56,7 +56,7 @@
         </div>
     </asp:Panel>
     <div class="orders-content">
-        <asp:Repeater ID="rptCartItem" runat="server">
+        <asp:Repeater ID="rptCartItem" runat="server" OnItemCommand="rptCartItem_ItemCommand">
             <ItemTemplate>
                 <div class="ordered-cake">
                     <div class="col-md-2">
@@ -74,7 +74,7 @@
                         <asp:Label ID="lblCakeQuantities" Text='<%# Eval("value")%>' runat="server" CssClass="quantity" />
                     </div>
                     <div class="col-md-3 text-center">
-                        <asp:Button ID="btnRemoveCake" Text="Remove Cake" runat="server" ToolTip="Remove Cake" CssClass="button" />
+                        <asp:Button ID="btnRemoveCake" Text="Remove Cake" runat="server" CommandName="RemoveFromCart" CommandArgument='<%# Eval("key") %>' ToolTip="Remove Cake" CssClass="button" />
                     </div>
                 </div>
             </ItemTemplate>

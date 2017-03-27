@@ -37,7 +37,12 @@ namespace M32COM___Coursework
                 var tmp = productUtilities.GetName(item.Key);
                 test[tmp] = item.Value;
             }
+            Bind();
 
+        }
+
+        private void Bind()
+        {
             var cartTable = cartUtilities.GetCart().AsEnumerable();
             var productTable = productUtilities.GetTable().AsEnumerable();
 
@@ -45,6 +50,7 @@ namespace M32COM___Coursework
                         join product in productTable on cart.Key equals product.ProductID
                         select new
                         {
+                            cart.Key,
                             product.Name,
                             product.Image,
                             product.Price,
@@ -119,6 +125,19 @@ namespace M32COM___Coursework
 
             rptCartItem.DataSource = null;
             rptCartItem.DataBind();
+        }
+
+        protected void rptCartItem_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "RemoveFromCart")
+            {
+                var tmp = e.CommandArgument.ToString();
+
+                cartUtilities.RemoveItem(Convert.ToInt32(e.CommandArgument.ToString()));
+                Bind();
+
+                lblTotalPrice.Text = (string)Session["CurrentFormat"] + Convert.ToString(cartUtilities.GetTotal());
+            }
         }
     }
 }

@@ -36,7 +36,7 @@ namespace M32COM___Coursework
         {
             string data = args.Value;
             args.IsValid = false;
-            if (data.Length < 6 || data.Length > 12) return;
+            if (data.Length < 6 || data.Length > 14) return;
             bool uc = false;
             foreach (char c in data)
             {
