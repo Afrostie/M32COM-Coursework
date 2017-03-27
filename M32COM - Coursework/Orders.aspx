@@ -32,7 +32,7 @@
                     <asp:ListItem>2</asp:ListItem>
                     <asp:ListItem>3</asp:ListItem>
 
-                </asp:DropDownList>
+                </asp:DropDownList>0
             </div>
             <div class="col-md-3">
                 <asp:Label ID="lblCartTotal" runat="server" Text="Cart Total: " CssClass="label label-default"></asp:Label>
@@ -59,26 +59,26 @@
         <asp:Repeater ID="rptCartItem" runat="server">
             <ItemTemplate>
                 <div class="ordered-cake">
-                    <div class="col-md-2">
+                      <div class="col-md-2">
                         <asp:Image ID="CakeImage" ImageUrl='<%# Eval("Image")%>' runat="server" />
                     </div>
                     <div class="col-md-3">
                         <asp:Label ID="lblCakeName" Text='<%# Eval("Name")%>' runat="server" CssClass="title" />
                     </div>
-                    <div class="col-md-2">
+                                        <div class="col-md-2">
                         <span class="price-label">Price: </span>
                         <asp:Label ID="lblCakePrice" Text='<%# Eval("Price")%>' runat="server" CssClass="price" />
                     </div>
                     <div class="col-md-2">
                         <span class="quantity-label">Quantity: </span>
-                        <%--<asp:Label ID="lblCakeQuantities" Text='<%# Eval("Quantity")%>' runat="server" CssClass="quantity" />--%>
+                        <asp:Label ID="lblCakeQuantities" Text='<%# Eval("value")%>' runat="server" CssClass="quantity" />
                     </div>
                     <div class="col-md-3 text-center">
                         <asp:Button ID="btnRemoveCake" Text="Remove Cake" runat="server" ToolTip="Remove Cake" CssClass="button" />
                     </div>
                 </div>
             </ItemTemplate>
-            <FooterTemplate>
+        </asp:Repeater>
                 <div class="totalprice">
                     <div class="col-md-9">
                         <asp:Label ID="lblTotalTitle" Text="Total: " runat="server" />
@@ -88,7 +88,5 @@
                         <asp:Button ID="btnOrderCakes" Text="Order Cakes" runat="server" ToolTip="Order Cakes" CssClass="button" />
                     </div>
                 </div>
-            </FooterTemplate>
-        </asp:Repeater>
     </div>
 </asp:Content>

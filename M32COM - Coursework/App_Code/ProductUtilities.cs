@@ -60,7 +60,7 @@ namespace M32COM___Coursework.App_Code
         /// Get Price of Product from ID
         /// </summary>
         /// <param name="productID">Product ID</param>
-        public double GetPrice(int productID)
+        public decimal GetPrice(int productID)
         {
             // var row = productDB.Product.Rows.Find(productID);
             var query = productDB.Product.AsEnumerable().Where(a => a.Field<int>("ProductID") == productID);
@@ -69,16 +69,16 @@ namespace M32COM___Coursework.App_Code
 
             if (row["Price"] == null)
             {
-                return 0.0;
+                return 0.0M;
             }
-            return Math.Round(((double)row["Price"] * (double)Session["CurrentRate"]), 2);
+            return Math.Round(((decimal)row["Price"] * (decimal)Session["CurrentRate"]), 2);
         }
 
         /// <summary>
         /// Get Price of Product from Name
         /// </summary>
         /// <param name="name">Name of Product</param>
-        public double GetPrice(string name)
+        public decimal GetPrice(string name)
         {
             var query = productDB.Product.AsEnumerable().Where(a => a.Field<string>("Name") == name);
 
@@ -86,10 +86,10 @@ namespace M32COM___Coursework.App_Code
 
             if (row["Price"] == null)
             {
-                return 0.0;
+                return 0.00M;
             }
 
-            return Math.Round(((double)row["Price"] * (double)Session["CurrentRate"]), 2);
+            return Math.Round(((decimal)row["Price"] * (decimal)Session["CurrentRate"]), 2);
         }
 
         /// <summary>

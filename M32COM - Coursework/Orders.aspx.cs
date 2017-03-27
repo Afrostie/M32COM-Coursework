@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,15 +25,36 @@ namespace M32COM___Coursework
 
             if (IsPostBack) return;
 
-            lblTotal.Text = cartUtilities.GetCartString();
+            lblTotalPrice.Text = Convert.ToString(cartUtilities.GetTotal());
 
             productUtilities.SetCurrency("GBP");
+
+            var test = new Dictionary<string, int>();
 
             if (userUtilities.GetUserRole() == "Admin")
                 pnlAdmin.Visible = true;
 
-            //rptCartItem.DataSource = productUtilities.GetTable();
-            //rptCartItem.DataBind();
+            foreach (var item in cartUtilities.GetCart())
+            {
+                var tmp = productUtilities.GetName(item.Key);
+                test[tmp] = item.Value;
+            }
+
+            var cartTable = cartUtilities.GetCart().AsEnumerable();
+            var productTable = productUtilities.GetTable().AsEnumerable();
+
+            var query = from cart in cartTable
+                        join product in productTable on cart.Key equals product.ProductID
+                        select new
+                        {
+                            product.Name,
+                            product.Image,
+                            product.Price,
+                            cart.Value,
+                        };
+
+            rptCartItem.DataSource = query;
+            rptCartItem.DataBind();
         }
 
         protected void AddOrder1_Click(object sender, EventArgs e)
@@ -80,21 +102,6 @@ namespace M32COM___Coursework
             Clear();
             lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
         }
-
-        /*private void GetCartString()
-        {
-            const string label = "Cart";
-
-            var count = 0;
-            foreach (var row in cartUtilities.GetCart())
-            {
-                var tmp = label + count;
-                count++;
-
-                var control = (Label)FindControl(tmp);
-                control.Text = productUtilities.GetName(row.Key) + " Quantity: " + row.Value + " at: £" + productUtilities.GetPrice(row.Key) + " Item Total: £" + (productUtilities.GetPrice(row.Key) * row.Value);
-            }
-        }*/
 
         //Temporary method to clear the labels
         private void Clear()

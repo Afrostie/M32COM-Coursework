@@ -127,11 +127,11 @@ namespace M32COM___Coursework.App_Code
         /// <summary>
         /// Returns total of Cart
         /// </summary>
-        public double GetTotal()
+        public decimal GetTotal()
         {
             var cart = GetCart();
 
-            var total = 0.0;
+            var total = 0.0M;
 
             foreach (var item in cart)
             {
