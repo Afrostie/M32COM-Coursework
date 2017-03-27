@@ -160,15 +160,20 @@ namespace M32COM___Coursework.App_Code
             {
                 case "USD":
                     Session["CurrentRate"] = 1.0;
+                    Session["CurrentFormat"] = "$";
                     break;
                 case "GBP":
                     Session["CurrentRate"] = (double) Application["GBP"];
+                    Session["CurrentFormat"] = "£";
                     break;
                 case "EUR":
                     Session["CurrentRate"] = (double)Application["EUR"];
+                    Session["CurrentFormat"] = "€";
                     break;
                 default:
-                    return false;
+                    Session["CurrentRate"] = 1.0;
+                    Session["CurrentFormat"] = "$";
+                    break;
             }
             return true;
         }

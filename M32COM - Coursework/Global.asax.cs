@@ -72,7 +72,8 @@ namespace M32COM___Coursework
             Session["Cart"] = currentCart;
             Session["DropDownID"] = 4;
             Session["CurrentRate"] = 1.0;
-            }
+            Session["CurrentFormat"] = "$";
+        }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {

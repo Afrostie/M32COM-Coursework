@@ -31,10 +31,10 @@ namespace M32COM___Coursework
             if (userUtil.GetUserRole() == "Admin")
                 pnlAdmin.Visible = true;
 
-            //Displays all cakes in a certain category
+            //Displays all cakes in a ceTrtain category
             //rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
             //Displays all cakes
-            productUtil.SetCurrency("EUR");
+            productUtil.SetCurrency("GBP");
 
             rptSingleCake.DataSource = productUtil.GetTable();
             rptSingleCake.DataBind();
