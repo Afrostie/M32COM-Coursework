@@ -60,4 +60,14 @@
     <Salt>1Z8SECh8MuYVe7jfW+Zmq4rMFdsZxJ5zPHhv7qlUnok=</Salt>
     <Role>User</Role>
   </User>
+  <User>
+    <UserID>7</UserID>
+    <UserName>afrostie4</UserName>
+    <Name>Andrew</Name>
+    <Email>test@test.com</Email>
+    <Password>R8lTZnwt0ahr35PPyqyyS4iRmGR9GKB6hDftZNEKqN0=</Password>
+    <Address>adasfaf</Address>
+    <Salt>/Fu9qy9vljhECTr9ORTIaphydIiV28ZqiQEfo+XrqCU=</Salt>
+    <Role>User</Role>
+  </User>
 </Database>

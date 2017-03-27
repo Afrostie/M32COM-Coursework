@@ -174,6 +174,5 @@ namespace M32COM___Coursework.App_Code
         {
             return productDB.Product.AsEnumerable().Where(a => a.Field<string>("Category") == category);
         }
-        
     }
 }

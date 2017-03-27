@@ -29,9 +29,6 @@ namespace M32COM___Coursework
 
             var test = new Dictionary<string, int>();
 
-            if (userUtilities.GetUserRole() == "Admin")
-                pnlAdmin.Visible = true;
-
             foreach (var item in cartUtilities.GetCart())
             {
                 var tmp = productUtilities.GetName(item.Key);
@@ -59,60 +56,6 @@ namespace M32COM___Coursework
 
             rptCartItem.DataSource = query;
             rptCartItem.DataBind();
-        }
-
-        protected void AddOrder1_Click(object sender, EventArgs e)
-        {
-            cartUtilities.AddNewItemToCart(productUtilities.GetID(lblCake1.Text), Convert.ToInt32(DropDownList1.SelectedItem.Text));
-
-            //GetCartString();
-            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
-
-            Panel1.Visible = true;
-        }
-
-        protected void AddOrder2_Click(object sender, EventArgs e)
-        {
-            cartUtilities.AddNewItemToCart(productUtilities.GetID(lblCake2.Text), Convert.ToInt32(DropDownList2.SelectedItem.Text));
-
-            //GetCartString();
-            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
-
-            Panel1.Visible = true;
-        }
-
-        protected void AddOrder3_Click(object sender, EventArgs e)
-        {
-            cartUtilities.AddNewItemToCart(productUtilities.GetID(lblCake3.Text), Convert.ToInt32(DropDownList3.SelectedItem.Text));
-
-            //GetCartString();
-            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
-
-            Panel1.Visible = true;
-        }
-
-        protected void OrderCart_Click(object sender, EventArgs e)
-        {
-            Panel1.Visible = true;
-
-
-            cartUtilities.EmptyCart();
-
-            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
-        }
-
-        protected void ClearCart_Click(object sender, EventArgs e)
-        {
-            Clear();
-            lblTotal.Text = Convert.ToString(cartUtilities.GetTotal());
-        }
-
-        //Temporary method to clear the labels
-        private void Clear()
-        {
-            Panel1.Visible = false;
-
-            cartUtilities.EmptyCart();
         }
 
         protected void btnOrderCakes_Click(object sender, EventArgs e)

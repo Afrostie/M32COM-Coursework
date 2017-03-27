@@ -5,8 +5,7 @@
         <h1>Admin</h1>
     </div>
     <div>
-        <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
-        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" CssClass="button" />
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
         <asp:GridView ID="GridView1" runat="server"></asp:GridView>
     </div>
 </asp:Content>

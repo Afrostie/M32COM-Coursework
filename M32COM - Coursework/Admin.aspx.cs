@@ -23,41 +23,49 @@ namespace M32COM___Coursework
             productUtilities = new ProductUtilities();
             userUtilities = new UserUtilities();
 
-
-            DropDownList1.DataSource = orderUtilities.GetAllUserID();
-            DropDownList1.DataBind();
-            GridView1.Visible = true;
+            if (!IsPostBack)
+            {
+                DropDownList1.DataSource = orderUtilities.GetAllUserID();
+                DropDownList1.DataBind();
+            }
+           
+            //GridView1.Visible = true;
 
             if (!(userUtilities.IsLoggedIn() && userUtilities.GetUserRole() == "Admin"))
                 Response.Redirect("Default.aspx");
 
+            //Bind(3);
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+             Bind(Convert.ToInt32(DropDownList1.SelectedItem.Text));
+            
+           // Response.Redirect(this.Page.Request.FilePath);
         }
 
         private void Bind(int ID)
         {
-            var tmp3 = productUtilities.GetTable();
-            var tmp4 = orderUtilities.GetTable();
+            var productTable = productUtilities.GetTable();
+            var orderTable = orderUtilities.GetTable();
+            var userTable = userUtilities.GetTable();
 
-            var query = from m in tmp3
-                        join g in tmp4 on m.ProductID equals g.ProductID
-                        where g.UserID == ID
+            var query = from product in productTable
+                        join order in orderTable on product.ProductID equals order.ProductID
+                        join user in userTable on order.UserID equals user.UserID
+                        where order.UserID == ID
                         select new
                         {
-                            g.OrderID, m.Name, m.Price, g.Quantity
+                            UserName = user.Name,
+                            order.OrderID,
+                            product.Name,
+                            product.Price,
+                            order.Quantity
                         };
 
-            GridView1.Visible = true;
+            //GridView1.Visible = true;
             GridView1.DataSource = query;
             GridView1.DataBind();
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Bind(Convert.ToInt32(DropDownList1.SelectedItem.Text));
         }
     }
 }

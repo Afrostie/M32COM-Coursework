@@ -73,6 +73,7 @@ namespace M32COM___Coursework
             Session["DropDownID"] = 4;
             Session["CurrentRate"] = 1.0M;
             Session["CurrentFormat"] = "$";
+            Session["SelectedUser"] = 4;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

@@ -63,4 +63,18 @@
     <Quantity>5</Quantity>
     <DateOrdered>2017-03-27T16:29:49.9777787+01:00</DateOrdered>
   </Order>
+  <Order>
+    <OrderID>9</OrderID>
+    <UserID>7</UserID>
+    <ProductID>0</ProductID>
+    <Quantity>1</Quantity>
+    <DateOrdered>2017-03-27T20:57:52.3730839+01:00</DateOrdered>
+  </Order>
+  <Order>
+    <OrderID>10</OrderID>
+    <UserID>7</UserID>
+    <ProductID>2</ProductID>
+    <Quantity>1</Quantity>
+    <DateOrdered>2017-03-27T20:57:52.3850819+01:00</DateOrdered>
+  </Order>
 </Database>

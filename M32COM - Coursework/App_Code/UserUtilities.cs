@@ -172,5 +172,11 @@ namespace M32COM___Coursework.App_Code
 
             return true;
         }
+
+
+        public Database.UserDataTable GetTable()
+        {
+            return userDb.User;
+        }
     }
 }
