@@ -65,7 +65,7 @@
                         <span>Email:
                             <asp:HyperLink CssClass="header-email" NavigateUrl="email:asd@gmail.com" Text="asd@gmail.com" runat="server" /></span>
                     </div>
-                    <div class="header-logo col-md-4">
+                    <div class="header-logo col-md-4 text-center">
                         <a runat="server" title="CakeHouseUK" href="~/">
                             <img src="Images/header-logo.png" alt="CakeHouseUK Logo" /></a>
                     </div>

@@ -261,6 +261,10 @@ img {
     padding-bottom: 25px;
 }
 
+.header-logo a {
+    display: inline-block;
+}
+
 .user-profile .user {
     display: inline-block;
     padding: 10px;
