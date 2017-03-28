@@ -1,9 +1,29 @@
 /*Fonts*/
 
+/*Dosis*/
+@font-face {
+    font-family: 'Dosis';
+    src: url('fonts/dosis/dosis-regular-webfont.eot');
+    src: url('fonts/dosis/dosis-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dosis/dosis-regular-webfont.woff') format('woff'), 
+         url('fonts/dosis/dosis-regular-webfont.ttf') format('truetype'), 
+         url('fonts/dosis/dosis-regular-webfont.svg#dosisregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dosis-Bold';
+    src: url('fonts/dosis/Dosis-Bold-webfont.eot');
+    src: url('fonts/dosis/Dosis-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/dosis/Dosis-Bold-webfont.woff') format('woff'), url('fonts/dosis/Dosis-Bold-webfont.ttf') format('truetype'), url('fonts/dosis/Dosis-Bold-webfont.svg#dosisbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
-    font-family: 'Roboto', sans-serif, Arial;
+    font-family: 'Dosis', Verdana, Arial;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     color: #888;
     line-height: 1.875em;
 }
@@ -16,7 +36,11 @@ a, a:hover, a:focus {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
-img {max-width: 100%;}
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
 
 /* Wrapping element */
 .main {
@@ -33,9 +57,9 @@ img {max-width: 100%;}
     vertical-align: middle;
     background: #f8f8f8;
     border: 3px solid #ddd;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', Verdana;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 50px;
     color: #888;
     -moz-border-radius: 4px;
@@ -58,9 +82,9 @@ img {max-width: 100%;}
     vertical-align: middle;
     background: #19b9e7;
     border: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
+    font-family: 'Dosis', Verdana;
+    font-size: 1.3em;
+    font-weight: 400;
     line-height: 50px;
     color: #fff;
     -moz-border-radius: 4px;
@@ -113,29 +137,39 @@ img {max-width: 100%;}
     overflow: hidden;
     font-size: 14px;
     line-height: 1em;
-    font-family: 'Roboto', sans-serif, Arial;
+    font-family: 'Dosis', Verdana, Arial;
     font-weight: 400;
     clear: both;
 }
 
 .entry-content h1,
 .entry-content h2 {
-    font-family: 'Roboto', sans-serif, Arial;
+    font-family: 'Dosis', Verdana, Arial;
     font-weight: 700;
     color: #494949;
     margin-bottom: 0.4em;
-    font-size: 1.750em;
+    font-size: 1.875em;
     line-height: 1.2em;
     text-transform: uppercase;
 }
 
 .entry-content h3,
 .entry-content h4 {
+    font-family: 'Dosis', Verdana, Arial;
+    font-weight: 700;
+    margin-bottom: 0.4em;
+    font-size: 1.650em;
+    line-height: 1.2em;
     text-transform: uppercase;
 }
 
 .entry-content h5,
 .entry-content h6 {
+    font-family: 'Dosis', Verdana, Arial;
+    font-weight: 700;
+    margin-bottom: 0.4em;
+    font-size: 1.550em;
+    line-height: 1.2em;
     text-transform: uppercase;
 }
 
@@ -143,7 +177,7 @@ img {max-width: 100%;}
 .entry-content ul,
 .entry-content ol {
     margin: 0 0 25px;
-    font: 400 14px/1.8em 'Roboto', sans-serif, Arial;
+    font: 400 1.3em/1.6em 'Dosis', Verdana, Arial;
     color: #494949;
 }
 
@@ -200,6 +234,11 @@ img {max-width: 100%;}
     margin: 0 auto;
 }
 
+.entry-content .label {
+    font-size: 1em;
+    font-weight: 400;
+}
+
 /*#endregion Entry Content*/
 
 /*#region Header Content*/
@@ -208,6 +247,26 @@ img {max-width: 100%;}
     margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+.user-profile .user {
+    display: inline-block;
+    padding: 10px;
+    font: 700 1.4em/1.6em 'Dosis', Verdana, Arial;
+    vertical-align: top;
+    text-transform: uppercase;
+}
+
+.header-login .cart-info span {
+    display: inline-block;
+    margin-bottom: 10px;
+    font: 400 1em 'Dosis', Verdana, Arial;
+    text-transform: uppercase;
+}
+
+.header-login .currency {
+    max-width: 200px;
+    float: right;
 }
 
 /*#endregion Header Content*/
@@ -309,7 +368,7 @@ img {max-width: 100%;}
 
 .cycle-caption {
     text-align: left;
-    font: 400 28px/1.4em 'Roboto', sans-serif, Arial;
+    font: 400 28px/1.4em 'Dosis', Verdana, Arial;
     color: #494949;
     position: absolute;
     top: -65px;
@@ -324,7 +383,7 @@ img {max-width: 100%;}
     min-height: 120px;
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
-    font: 400 14px/1.4em 'Roboto', sans-serif, Arial;
+    font: 400 14px/1.4em 'Dosis', Verdana, Arial;
     padding: 40px 35px 20px 45px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -338,13 +397,13 @@ img {max-width: 100%;}
 .cycle-overlay p {
     color: #fff;
     display: inline-block;
-    font: 400 14px 'Roboto', sans-serif, Arial;
+    font: 400 14px 'Dosis', Verdana, Arial;
 }
 
 .cycle-overlay .slideshow-read-more {
     float: right;
     color: #fff;
-    font: 700 16px 'Roboto bold', sans-serif, Arial;
+    font: 700 16px 'Dosis bold', Verdana, Arial;
     background: none;
     padding: 11px 24px;
     border: 3px solid #df1d38;
@@ -393,15 +452,42 @@ img {max-width: 100%;}
     margin-bottom: 15px;
 }
 
-.ordered-cake img {
+.orders-content .ordered-cake .order-info {
+    padding: 30px 0 10px;
+}
+
+.orders-content .ordered-cake img {
     width: 150px;
     height: 150px;
+}
+
+.orders-content .ordered-cake .title {
+    display: block;
+    margin-bottom: 10px;
+    font: 700 1.675em/1.4em Dosis, Arial;
+}
+
+.orders-content .ordered-cake .price-label,
+.orders-content .ordered-cake .price,
+.orders-content .ordered-cake .quantity-label,
+.orders-content .ordered-cake .quantity {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.orders-content .ordered-cake .price-label,
+.orders-content .ordered-cake .quantity-label {
+    font: 400 1.5em/1.4em 'Dosis', Verdana, Arial;
+}
+.orders-content .ordered-cake .price,
+.orders-content .ordered-cake .quantity {
+    font: 700 1.5em/1.4em 'Dosis', Verdana, Arial;
 }
 
 .totalprice span {
     display: inline-block;
     padding: 13px 0;
-    font: 700 20px Roboto, Verdana, Arial;
+    font: 700 1.875em Dosis, Verdana, Arial;
     text-transform: uppercase;
 }
 
@@ -452,15 +538,10 @@ img {max-width: 100%;}
     margin-bottom: 15px;
 }
 
-.products-content img {
-    display: block;
-    margin: 0 auto;
-}
-
 .products-content .title {
     display: block;
-    padding: 10px 0;
-    font: 600 20px/1.4em Roboto, Arial;
+    margin: 10px 0;
+    font: 700 1.675em/1.4em Dosis, Arial;
     text-align: center;
 }
 
@@ -469,13 +550,13 @@ img {max-width: 100%;}
 .products-content .quantity {
     display: block;
     margin: 10px 0;
-    font: 400 1.4em Roboto, Arial;
+    font: 700 1.6em Dosis, Arial;
     text-align: center;
 }
 
 .products-content .price-label,
 .products-content .quantity {
-    font: 600 1.3em Roboto, Arial;
+    font: 400 1.5em Dosis, Arial;
 }
 
 .products-cake .form-control {

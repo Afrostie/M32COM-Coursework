@@ -86,7 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.aspx" />
-    <Content Include="App_Data\Orders.xml" />
+    <Content Include="App_Data\Orders.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\Products.xml" />
     <Content Include="App_Data\slideshow.xml" />
     <Content Include="App_Data\Users.xml">
@@ -96,6 +98,8 @@
     <Content Include="App_Themes\css\bootstrap-theme.min.css" />
     <Content Include="App_Themes\css\bootstrap.css" />
     <Content Include="App_Themes\css\bootstrap.min.css" />
+    <Content Include="Files\fonts\dosis\Dosis-Bold-webfont.svg" />
+    <Content Include="Files\fonts\dosis\dosis-regular-webfont.svg" />
     <Content Include="Files\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\logo.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -163,6 +167,12 @@
     <Content Include="Database.xss">
       <DependentUpon>Database.xsd</DependentUpon>
     </Content>
+    <Content Include="Files\fonts\dosis\Dosis-Bold-webfont.eot" />
+    <Content Include="Files\fonts\dosis\Dosis-Bold-webfont.ttf" />
+    <Content Include="Files\fonts\dosis\Dosis-Bold-webfont.woff" />
+    <Content Include="Files\fonts\dosis\dosis-regular-webfont.eot" />
+    <Content Include="Files\fonts\dosis\dosis-regular-webfont.ttf" />
+    <Content Include="Files\fonts\dosis\dosis-regular-webfont.woff" />
     <None Include="Properties\PublishProfiles\M32COM-Coursework20170318033028 - Web Deploy.pubxml" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">

@@ -41,16 +41,6 @@
     <Role>User</Role>
   </User>
   <User>
-    <UserID>5</UserID>
-    <UserName>Username</UserName>
-    <Name>Name</Name>
-    <Email>Email</Email>
-    <Password>7odKr2IOzdn5KRz2lN0rNa8S4q32tDEJ1Ah+7isx6Mc=</Password>
-    <Address>Address</Address>
-    <Salt>26kQOvLJj3azals5cBx6Ogqgz3DI81Z+rd92dEkZSgs=</Salt>
-    <Role>User</Role>
-  </User>
-  <User>
     <UserID>6</UserID>
     <UserName />
     <Name />

@@ -59,11 +59,15 @@
             <div class="header-content container">
                 <div class="row">
                     <div class="header-contact col-md-4">
-                        <asp:HyperLink CssClass="header-phone" NavigateUrl="tel:044-4444-4444" Text="Phone: +44 4444 4444" runat="server" />
+                        <span>Phone:
+                            <asp:HyperLink CssClass="header-phone" NavigateUrl="tel:044-4444-4444" Text="+44 4444 4444" runat="server" /></span>
+                        <br />
+                        <span>Email:
+                            <asp:HyperLink CssClass="header-email" NavigateUrl="email:asd@gmail.com" Text="asd@gmail.com" runat="server" /></span>
                     </div>
                     <div class="header-logo col-md-4">
-                        <a runat="server" title="CakeHouse" href="~/">
-                            <img src="Images/logo.png" /></a>
+                        <a runat="server" title="CakeHouseUK" href="~/">
+                            <img src="Images/logo.png" alt="CakeHouseUK Logo" /></a>
                     </div>
                     <div class="header-login text-right col-md-4">
                         <div class="user-profile">
@@ -73,8 +77,6 @@
                         <asp:Panel ID="pnlLogIn" runat="server">
                             <div class="login">
                                 <asp:TextBox ID="UserNameTB" runat="server" placeholder="UserName" ToolTip="UserName" CssClass="txtbox"></asp:TextBox>
-                                <%--<asp:RequiredFieldValidator ID="recvalName" runat="server" Text="*" ErrorMessage="User name is required" ControlToValidate="txtbName" ToolTip="User name is required" ForeColor="Red"></asp:RequiredFieldValidator>
-                                <asp:RegularExpressionValidator runat="server" Text="*" ErrorMessage="please enter only alpha-numeric characters (and no spaces)" ToolTip="please enter only alpha-numeric characters (and no spaces)" ControlToValidate="txtbName" ValidationExpression="\w{6,14}" ForeColor="Red"></asp:RegularExpressionValidator>--%>
                                 <br />
                                 <asp:TextBox ID="PasswordTB" runat="server" placeholder="Password" TextMode="Password" ToolTip="Password" CssClass="txtbox"></asp:TextBox>
                                 <br />
@@ -104,7 +106,6 @@
                                 <ul class="nav navbar-nav">
                                     <li class="first-item"><a title="Home" runat="server" href="/">Home</a></li>
                                     <li><a title="Cakes" runat="server" href="Products.aspx">Cakes</a></li>
-                                    <li><a title="About Us" runat="server" href="/about">About Us</a></li>
                                     <li><a title="Orders" runat="server" href="Orders.aspx">Orders</a></li>
                                     <li class="last-item">
                                         <asp:Panel ID="pnlAdmin" runat="server" Visible="False"><a href="Admin.aspx" runat="server">Admin</a></asp:Panel>
@@ -133,10 +134,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="footer-logo col-md-4">
-                            <a runat="server" title="CakeHouse" href="~/"></a>
+                            <a runat="server" title="CakeHouseUK" href="~/">
+                                <img src="Images/logo.png" alt="CakeHouseUK Logo" /></a>
                         </div>
                         <div class="col-md-4">
-                            <asp:HyperLink CssClass="footer-phone" NavigateUrl="tel:044-4444-4444" Text="Phone: +44 4444 4444" runat="server" />
+                            <span>Phone:
+                            <asp:HyperLink CssClass="footer-phone" NavigateUrl="tel:044-4444-4444" Text="+44 4444 4444" runat="server" /></span>
+                            <br />
+                            <span>Email:
+                            <asp:HyperLink CssClass="footer-email" NavigateUrl="email:asd@gmail.com" Text="asd@gmail.com" runat="server" /></span>
                         </div>
                         <div class="col-md-4">
                             <span>Copyright ® CakeHouse <%: DateTime.Now.Year %></span>
