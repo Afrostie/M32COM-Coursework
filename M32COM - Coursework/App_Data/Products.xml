@@ -151,4 +151,12 @@ Salt	0.22g
     <Image>~/Images/Celebration-Cakes/Chocolate-Ruffle-Party-Cake.png</Image>
     <Category>Celebration-Cakes</Category>
   </Product>
+  <Product>
+    <ProductID>9</ProductID>
+    <Name>dsd</Name>
+    <Price>2100</Price>
+    <Description>&lt;p&gt;dsdsd&lt;/p&gt;</Description>
+    <Image>~/Images/Birthday-Cakes/Happy Birthday Cake in a Tin.png</Image>
+    <Category>Birthday-Cakes</Category>
+  </Product>
 </Database>
