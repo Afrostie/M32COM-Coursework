@@ -50,6 +50,7 @@ img {
 .main {
     width: 100%;
     min-height: 100%;
+    background: #1F191A;
     clear: both;
 }
 
@@ -254,6 +255,10 @@ img {
 /*#endregion Entry Content*/
 
 /*#region Header Content*/
+.header {
+    background: #FF9EB2;
+}
+
 .header-content {
     width: 100%;
     margin: 0 auto;
@@ -601,6 +606,7 @@ img {
 /*#region Footer*/
 .footer {
     width: 100%;
+    background: #FF9EB2;
     clear: both;
     border-top: 1px solid #d4d4d4;
 }
