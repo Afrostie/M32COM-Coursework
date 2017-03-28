@@ -9,13 +9,18 @@
             <div class="col-sm-6 col-md-3">
                 <asp:Label ID="lblCakeName" runat="server" Text="Name" CssClass="label label-default"></asp:Label>
                 <br />
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="True" ShowSummary="False" />
                 <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBoxCakeName" ErrorMessage="Full product name is required" ToolTip="Full product name is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage=" Product name must be Characters Only" ControlToValidate="txtBoxCakeName" ValidationExpression="^[a-zA-Z\s]*$" ToolTip=" Product name must be Characters Only" Text="*" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtBoxCakeName" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
             <div class="col-sm-6 col-md-3">
                 <asp:Label ID="lblCakePrice" runat="server" Text="Price" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtBoxCakePrice" ErrorMessage="Price is required" ToolTip="Price is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Product price must be Numbers Only" ControlToValidate="txtBoxCakePrice" ValidationExpression="^\d+$" ToolTip="Product price must be Numbers Only" Text="*" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtBoxCakePrice" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
             <div class="col-sm-6 col-md-3">
@@ -39,6 +44,8 @@
                 <asp:Label ID="lblCakeDescription" runat="server" Text="Description" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Out of Range" ControlToValidate="txtBoxCakeDescription" ForeColor="Red" ToolTip="Out of Range" ValidationExpression="^[a-zA-Z\s]{8,200}">*</asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Description is required" ControlToValidate="txtBoxCakeDescription" ForeColor="Red">*</asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtBoxCakeDescription" runat="server" TextMode="MultiLine" CssClass="txtbox txtbox-custom"></asp:TextBox>
             </div>
             <div class="col-xs-12">
