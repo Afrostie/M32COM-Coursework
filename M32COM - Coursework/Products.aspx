@@ -20,7 +20,7 @@
                 <br />
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtBoxCakePrice" ErrorMessage="Price is required" ToolTip="Price is required" ForeColor="Red">*</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Product price must be Numbers Only" ControlToValidate="txtBoxCakePrice" ValidationExpression="^\d+$" ToolTip="Product price must be Numbers Only" Text="*" ForeColor="Red"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Product price must be Numbers Only" ControlToValidate="txtBoxCakePrice" ValidationExpression="^\d*[\.]\d*$" ToolTip="Product price must be Numbers Only" Text="*" ForeColor="Red"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtBoxCakePrice" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
             <div class="col-sm-6 col-md-3">
