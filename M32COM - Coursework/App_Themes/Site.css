@@ -24,7 +24,7 @@ body {
     font-family: 'Dosis', Verdana, Arial;
     font-size: 16px;
     font-weight: 400;
-    color: #888;
+    color: #ddd;
     line-height: 1.875em;
 }
 
@@ -85,13 +85,13 @@ img {
     margin-bottom: 25px;
     padding: 0 20px;
     vertical-align: middle;
-    background: #19b9e7;
+    background: #FF9EB2;
     border: 0;
     font-family: 'Dosis', Verdana;
     font-size: 1.3em;
     font-weight: 400;
     line-height: 50px;
-    color: #fff;
+    color: #4D3316;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
@@ -107,13 +107,13 @@ img {
 }
 
 .button:hover {
-    opacity: 0.6;
+    opacity: 0.85;
     color: #fff;
 }
 
 .button:active {
     outline: 0;
-    opacity: 0.6;
+    opacity: 0.85;
     color: #fff;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -122,16 +122,14 @@ img {
 
 .button:focus {
     outline: 0;
-    opacity: 0.6;
-    background: #19b9e7;
+    opacity: 0.85;
     color: #fff;
 }
 
 .button:active:focus, 
 .button.active:focus {
     outline: 0;
-    opacity: 0.6;
-    background: #19b9e7;
+    opacity: 0.85;
     color: #fff;
 }
 
@@ -157,7 +155,7 @@ img {
 .entry-content h2 {
     font-family: 'Dosis', Verdana, Arial;
     font-weight: 700;
-    color: #494949;
+    color: #fff;
     margin-bottom: 0.4em;
     font-size: 1.875em;
     line-height: 1.2em;
@@ -189,7 +187,7 @@ img {
 .entry-content ol {
     margin: 0 0 25px;
     font: 400 1.3em/1.6em 'Dosis', Verdana, Arial;
-    color: #494949;
+    color: #ddd;
 }
 
 .entry-content img.align-left,
@@ -252,6 +250,10 @@ img {
     font-weight: 400;
 }
 
+.entry-content .breadcrumb h1 {
+    color: #494949;
+}
+
 /*#endregion Entry Content*/
 
 /*#region Header Content*/
@@ -278,9 +280,16 @@ img {
     text-transform: uppercase;
 }
 
+.header-login .login .button,
+.header-login .user-profile .button {
+    background: #1F191A;
+    color: #fff;
+}
+
 .header-login .cart-info span {
     display: inline-block;
     margin-bottom: 10px;
+    color: #494949;
     font: 400 1em 'Dosis', Verdana, Arial;
     text-transform: uppercase;
 }
@@ -294,7 +303,7 @@ img {
 
 /*#region Header Navigation*/
 .navigation {
-    background: #ccc;
+    background: #ddd;
 }
 
 .navigation li.first-item {
@@ -317,6 +326,7 @@ img {
 }
 
 .navigation ul li a {
+    color: #1F191A;
     text-transform: uppercase;
 }
 
@@ -468,7 +478,7 @@ img {
 
 .orders-content .ordered-cake {
     overflow: hidden;
-    background: #f5f5f5;
+    background: #ddd;
     border-radius: 5px;
      padding: 10px 0; 
     margin-bottom: 15px;
@@ -506,9 +516,15 @@ img {
     font: 700 1.5em/1.4em 'Dosis', Verdana, Arial;
 }
 
+.ordered-cake .order-info .button {
+    background: #1F191A;
+    color: #fff;
+}
+
 .totalprice span {
     display: inline-block;
     padding: 13px 0;
+    color: #fff;
     font: 700 1.875em Dosis, Verdana, Arial;
     text-transform: uppercase;
 }
@@ -518,7 +534,7 @@ img {
 /*#region Products*/
 .products {
     margin-bottom: 30px;
-    border-bottom: 3px solid #f5f5f5;
+    border-bottom: 3px solid #ddd;
 }
 
 .products .form-control {
@@ -554,17 +570,23 @@ img {
 
 .products-cake {
     overflow: hidden;
-    background: #f5f5f5;
+    background: #ddd;
     border-radius: 5px;
     padding: 15px 0;
     margin-bottom: 15px;
 }
 
+.products-cake img {
+    box-shadow: 0 0 7px 1px black;
+}
+
 .products-content .title {
     display: block;
     margin: 10px 0;
+    color: #333;
     font: 700 1.675em/1.4em Dosis, Arial;
     text-align: center;
+    text-shadow: 1px -1px 1px black;
 }
 
 .products-content .price,
@@ -572,6 +594,7 @@ img {
 .products-content .quantity {
     display: block;
     margin: 10px 0;
+    color: #333;
     font: 700 1.6em Dosis, Arial;
     text-align: center;
 }
@@ -581,9 +604,18 @@ img {
     font: 400 1.5em Dosis, Arial;
 }
 
+.products-cake .button {
+    background: #1F191A;
+    color: #fff;
+}
+
 .products-cake .form-control {
     max-width: 80px;
     margin: 0 auto 10px;
+}
+
+.products-cake p {
+    color: #333;
 }
 
 /*#endregion Products*/

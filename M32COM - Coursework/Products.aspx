@@ -95,7 +95,7 @@
                         </div>
                         <div class="col-md-12 text-right">
                             <asp:Button ID="btnMoreInfo" Text="More Info" runat="server" Visible="false" />
-                            <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" CssClass="button" OnClientClick="AddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>' />
+                            <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" CssClass="button" ToolTip="Add To Cart" OnClientClick="AddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>' />
                             <asp:Button ID="btnAddToWL" Text="Add To Wish List" runat="server" Visible="false" />
                         </div>
                     </div>
