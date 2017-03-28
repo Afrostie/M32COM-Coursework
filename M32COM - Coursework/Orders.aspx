@@ -17,7 +17,7 @@
                         </div>
                         <div class="col-md-2">
                             <span class="price-label">Price: </span>
-                            <asp:Label ID="lblCakePrice" Text='<%# (string) Session["CurrentFormat"] + Math.Round(((decimal) Eval("Price") * (decimal) Session["CurrentRate"]),2)%>' runat="server" CssClass="price" />
+                            <asp:Label ID="lblCakePrice" Text='<%# string.Format( Session["CurrentFormat"] + "{0:##,#.00}", Math.Round(((decimal)Eval("Price") * (decimal)Session["CurrentRate"]), 2))%>' runat="server" CssClass="price" />
                         </div>
                         <div class="col-md-2">
                             <span class="quantity-label">Quantity: </span>

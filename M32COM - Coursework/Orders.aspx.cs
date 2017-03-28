@@ -89,8 +89,7 @@ namespace M32COM___Coursework
             {
                 cartUtilities.RemoveItem(Convert.ToInt32(e.CommandArgument.ToString()));
                 Bind();
-
-                lblTotalPrice.Text = (string)Session["CurrentFormat"] + Convert.ToString(cartUtilities.GetTotal());
+                lblTotalPrice.Text = string.Format(Session["CurrentFormat"] + "{0:##,#.00}",Convert.ToString(cartUtilities.GetTotal()));
             }
         }
     }
