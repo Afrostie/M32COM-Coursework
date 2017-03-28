@@ -61,4 +61,40 @@
     <Image>~/Images/Teatime-Cakes/Bettys-Bury-Simnel.png</Image>
     <Category>Teatime-Cakes</Category>
   </Product>
+  <Product>
+    <ProductID>5</ProductID>
+    <Name>Grand Cru Chocolate Sachertorte</Name>
+    <Price>7.00</Price>
+    <Description>&lt;p&gt;A deliciously rich Swiss dark chocolate cake inspired by the classic Sachertorte recipe, filled with apricot preserve and with chocolate shavings on top.
+
+When our founder Frederick Belmont left his home in Switzerland to seek his fortune in England, he brought with him recipes like this. Bettys reputation was founded on such classic continental cake-making Β¨C a tradition weΞ…β€•re proud to continue to this day.
+
+16cm diameter | 680g | Serves 6-8
+
+Best enjoyed within 4 days of delivery or suitable for freezing.
+
+Product code: 2000131
+
+Rich Chocolate Cake with Apricot Preserve &amp; Chocolate Ganache Coating
+680	g
+Ingredients: sugar, dark chocolate (19%) (cocoa mass, sugar, cocoa butter, emulsifier (soya lecithin), flavouring (vanilla); cocoa solids 65% minimum), butter, wheat flour (with calcium, iron, niacin, thiamin), egg, apricot preserve (7%) (sugar, apricots, citric acid), apricot jam (6%) (glucose syrup, apricot puree, sugar, gelling agent (pectin), acidity regulators (citric acid, trisodium citrate), flavouring, colour (mixed carotenes), preservative (potassium sorbate)), milk, water, glucose syrup, dark chocolate (sugar, cocoa mass, cocoa butter, emulsifier (soya lecithin), flavouring (vanilla); cocoa solids 48% minimum), cocoa powder, raising agents (sodium bicarbonate, E450(i)), salt. May contain nuts. Allergy advice: for allergens see ingredients in bold.
+At our Craft Bakery we use nuts and various flours in many products, so although a particular item may not include nuts and various flours in the ingredients list, it may still contain traces.
+Suitable for Vegetarians
+Unsuitable for Vegans
+
+NUTRITION
+
+Typical Values per 100g
+
+Energy (kJ)	1831
+Energy (kcal)	438
+Fat	22g
+of which saturates	13g
+Carbohydrates	53g
+Of which sugars	42g
+Protein	4.7g
+Salt	0.41g&lt;/p&gt;</Description>
+    <Image>~/Images/Birthday-Cakes/Grand Cru Chocolate Sachertorte.png</Image>
+    <Category>Birthday-Cakes</Category>
+  </Product>
 </Database>
