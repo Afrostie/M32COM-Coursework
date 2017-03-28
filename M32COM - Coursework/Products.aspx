@@ -56,11 +56,11 @@
     <div class="products-content">
         <div class="categories">
             <div class="col-xs-12 col-centered">
-                <asp:Button ID="btnBirthdayCakes" Text="Birthdays" runat="server" ToolTip="Birthday Cakes" CssClass="button" OnClick="btnBirthdayCakes_Click" />
-                <asp:Button ID="btnCelebrationCakes" Text="Celebrations" runat="server" ToolTip="Celebration Cakes" CssClass="button" OnClick="btnCelebrationCakes_Click" />
-                <asp:Button ID="btnWeddingCakes" Text="Weddings" runat="server" ToolTip="Wedding Cakes" CssClass="button" OnClick="btnWeddingCakes_Click" />
-                <asp:Button ID="btnTeaTimeCakes" Text="Teatime" runat="server" ToolTip="Teatime Cakes" CssClass="button" OnClick="btnTeaTimeCakes_Click" />
-                <asp:Button ID="btnAllCakes" Text="All" runat="server" ToolTip="All Cakes" CssClass="button" OnClick="btnAllCakes_Click" />
+                <asp:Button ID="btnBirthdayCakes" Text="Birthdays" runat="server" ToolTip="Birthday Cakes" CssClass="button" OnClick="btnBirthdayCakes_Click" CausesValidation="False" />
+                <asp:Button ID="btnCelebrationCakes" Text="Celebrations" runat="server" ToolTip="Celebration Cakes" CssClass="button" OnClick="btnCelebrationCakes_Click" CausesValidation="False" />
+                <asp:Button ID="btnWeddingCakes" Text="Weddings" runat="server" ToolTip="Wedding Cakes" CssClass="button" OnClick="btnWeddingCakes_Click" CausesValidation="False" />
+                <asp:Button ID="btnTeaTimeCakes" Text="Teatime" runat="server" ToolTip="Teatime Cakes" CssClass="button" OnClick="btnTeaTimeCakes_Click" CausesValidation="False" />
+                <asp:Button ID="btnAllCakes" Text="All" runat="server" ToolTip="All Cakes" CssClass="button" OnClick="btnAllCakes_Click" CausesValidation="False" />
             </div>
         </div>
         <asp:Repeater ID="rptSingleCake" runat="server" OnItemCommand="rptSingleCake_ItemCommand">
