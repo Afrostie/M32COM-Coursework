@@ -42,12 +42,15 @@ namespace M32COM___Coursework
                     
                 var page = this.Page.Request.FilePath;
 
+                Response.Write("<script>alert('Please Login');</script>");
+
                 Response.Redirect(page);
+                
             }
             
             //Otherwise tell the user to register
             else
-                Response.Write("User Does Not Exist, Please Register");
+                Response.Write("<script>alert('Login Unsuccessful');</script>");
         }
 
         protected void LogOut_Click(object sender, EventArgs e)

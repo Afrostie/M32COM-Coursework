@@ -41,16 +41,6 @@
     <Role>User</Role>
   </User>
   <User>
-    <UserID>6</UserID>
-    <UserName />
-    <Name />
-    <Email />
-    <Password>A4mr2pCvY/QQOk5IKbmXbWQ2joCWabtlD4FdaYpxkTM=</Password>
-    <Address />
-    <Salt>1Z8SECh8MuYVe7jfW+Zmq4rMFdsZxJ5zPHhv7qlUnok=</Salt>
-    <Role>User</Role>
-  </User>
-  <User>
     <UserID>7</UserID>
     <UserName>afrostie4</UserName>
     <Name>Andrew</Name>

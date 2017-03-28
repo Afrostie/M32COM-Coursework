@@ -59,8 +59,22 @@ namespace M32COM___Coursework
 
         protected void btnOrderCakes_Click(object sender, EventArgs e)
         {
-            if(!cartUtilities.OrderCart())
-                Response.Write("Please Login First");
+            if (!userUtilities.IsLoggedIn())
+            {
+                Response.Write("<script>alert('Please Login');</script>");
+                return;
+            }
+
+
+            if (cartUtilities.GetItemCount() == 0)
+            {
+                Response.Write("<script>alert('Cart is Empty');</script>");
+                return;
+            }
+                
+
+            if (!cartUtilities.OrderCart())
+                Response.Write("Order Failed");
             cartUtilities.EmptyCart();
 
             lblTotalPrice.Text = (string)Session["CurrentFormat"] + Convert.ToString(cartUtilities.GetTotal());
