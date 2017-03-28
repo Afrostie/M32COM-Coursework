@@ -44,7 +44,7 @@
                 <asp:Label ID="lblCakeDescription" runat="server" Text="Description" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Out of Range" ControlToValidate="txtBoxCakeDescription" ForeColor="Red" ToolTip="Out of Range" ValidationExpression="^[a-zA-Z\s]{8,200}">*</asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Out of Range" ControlToValidate="txtBoxCakeDescription" ForeColor="Red" ToolTip="Out of Range" ValidationExpression="\w{8,200}">*</asp:RegularExpressionValidator>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Description is required" ControlToValidate="txtBoxCakeDescription" ForeColor="Red">*</asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtBoxCakeDescription" runat="server" TextMode="MultiLine" CssClass="txtbox txtbox-custom"></asp:TextBox>
             </div>
