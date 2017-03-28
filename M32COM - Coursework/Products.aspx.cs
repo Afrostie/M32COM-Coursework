@@ -43,6 +43,9 @@ namespace M32COM___Coursework
             var fileName = ImageUpload.FileName;
             var category = CategoryDropDown.SelectedItem.Value;
 
+            if(fileName == "")
+                return;
+
             var path = "~/Images/" + category + "/";
 
             var tmp = path + fileName;
