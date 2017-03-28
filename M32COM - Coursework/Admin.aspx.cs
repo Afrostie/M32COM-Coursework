@@ -25,8 +25,8 @@ namespace M32COM___Coursework
 
             if (!IsPostBack)
             {
-                DropDownList1.DataSource = orderUtilities.GetAllUserID();
-                DropDownList1.DataBind();
+                ddUserList.DataSource = orderUtilities.GetAllUserID();
+                ddUserList.DataBind();
             }
            
             //GridView1.Visible = true;
@@ -37,9 +37,9 @@ namespace M32COM___Coursework
             //Bind(3);
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddUserList_SelectedIndexChanged(object sender, EventArgs e)
         {
-             Bind(Convert.ToInt32(DropDownList1.SelectedItem.Text));
+             Bind(Convert.ToInt32(ddUserList.SelectedItem.Text));
             
            // Response.Redirect(this.Page.Request.FilePath);
         }

@@ -60,4 +60,14 @@
     <Salt>/Fu9qy9vljhECTr9ORTIaphydIiV28ZqiQEfo+XrqCU=</Salt>
     <Role>User</Role>
   </User>
+  <User>
+    <UserID>8</UserID>
+    <UserName>Opalcheneca</UserName>
+    <Name>Dimitar Zgurov</Name>
+    <Email>opalcheneca@gmail.com</Email>
+    <Password>8QTbbTmUpGBBdOqzhodEviK8N0nZtfVMsgI1AkEPn+U=</Password>
+    <Address>the place I leave 1</Address>
+    <Salt>u82Vb602rerB6Wloqp9flYCfD1VOCpKvSfJlsyzLZnU=</Salt>
+    <Role>User</Role>
+  </User>
 </Database>

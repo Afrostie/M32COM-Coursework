@@ -67,7 +67,7 @@
                     </div>
                     <div class="header-logo col-md-4">
                         <a runat="server" title="CakeHouseUK" href="~/">
-                            <img src="Images/logo.png" alt="CakeHouseUK Logo" /></a>
+                            <img src="Images/header-logo.png" alt="CakeHouseUK Logo" /></a>
                     </div>
                     <div class="header-login text-right col-md-4">
                         <div class="user-profile">
@@ -108,7 +108,7 @@
                                     <li><a title="Cakes" runat="server" href="Products.aspx">Cakes</a></li>
                                     <li><a title="Orders" runat="server" href="Orders.aspx">Orders</a></li>
                                     <li class="last-item">
-                                        <asp:Panel ID="pnlAdmin" runat="server" Visible="False"><a href="Admin.aspx" runat="server">Admin</a></asp:Panel>
+                                        <asp:Panel ID="pnlAdmin" runat="server" Visible="False"><a href="Admin.aspx" runat="server">Users Order List</a></asp:Panel>
                                     </li>
                                 </ul>
                             </div>
@@ -135,7 +135,7 @@
                     <div class="row">
                         <div class="footer-logo col-md-4">
                             <a runat="server" title="CakeHouseUK" href="~/">
-                                <img src="Images/logo.png" alt="CakeHouseUK Logo" /></a>
+                                <img src="Images/footer-logo.png" alt="CakeHouseUK Logo" /></a>
                         </div>
                         <div class="col-md-4">
                             <span>Phone:

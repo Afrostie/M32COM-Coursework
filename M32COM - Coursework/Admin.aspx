@@ -2,10 +2,13 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="breadcrumb">
-        <h1>Admin</h1>
+        <h1>Users Order List</h1>
     </div>
-    <div>
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
-        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+    <div class="usersorder-list">
+        <div class="col-xs-12">
+            <asp:Label ID="lblSelectUser" Text="Select User: " runat="server" CssClass="label label-default" />
+            <asp:DropDownList ID="ddUserList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddUserList_SelectedIndexChanged" CssClass="form-control"></asp:DropDownList>
+            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        </div>
     </div>
 </asp:Content>

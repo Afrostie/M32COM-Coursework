@@ -13,13 +13,22 @@ namespace M32COM___Coursework {
     public partial class Admin {
         
         /// <summary>
-        /// DropDownList1 control.
+        /// lblSelectUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.Label lblSelectUser;
+        
+        /// <summary>
+        /// ddUserList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddUserList;
         
         /// <summary>
         /// GridView1 control.

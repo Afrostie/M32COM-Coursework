@@ -101,7 +101,8 @@
     <Content Include="Files\fonts\dosis\Dosis-Bold-webfont.svg" />
     <Content Include="Files\fonts\dosis\dosis-regular-webfont.svg" />
     <Content Include="Files\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Images\logo.png" />
+    <Content Include="Images\footer-logo.png" />
+    <Content Include="Images\header-logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Themes\Site.css" />
