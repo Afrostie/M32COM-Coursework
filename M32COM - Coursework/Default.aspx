@@ -11,7 +11,7 @@
         <p>content content content</p>
         <h2>Our Products</h2>
         <p>content content content</p>
-        <p><a class="button" href="Products.aspx">Our Cakes</a></p>
+        <p><a class="button" href="Products.aspx" title="See Our Cakes">Our Cakes</a></p>
         <asp:Panel ID="pnlRegister" runat="server">
             <hr />
             <h2>Register to Our Website</h2>
