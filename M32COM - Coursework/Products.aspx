@@ -19,8 +19,8 @@
                 <asp:Label ID="lblCakePrice" runat="server" Text="Price" CssClass="label label-default"></asp:Label>
                 <br />
                 <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtBoxCakePrice" ErrorMessage="Price is required" ToolTip="Price is required" ForeColor="Red">*</asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Product price must be Numbers Only" ControlToValidate="txtBoxCakePrice" ValidationExpression="^\d{0,8}(\.\d{1,4})?$" ToolTip="Product price must be Numbers Only" Text="*" ForeColor="Red"></asp:RegularExpressionValidator>
+              <!--  <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtBoxCakePrice" ErrorMessage="Price is required" ToolTip="Price is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Product price must be Numbers Only" ControlToValidate="txtBoxCakePrice" ValidationExpression="^\d{0,8}(\.\d{1,4})?$" ToolTip="Product price must be Numbers Only" Text="*" ForeColor="Red"></asp:RegularExpressionValidator> -->
                 <asp:TextBox ID="txtBoxCakePrice" runat="server" CssClass="txtbox"></asp:TextBox>
             </div>
             <div class="col-sm-6 col-md-3">
@@ -75,7 +75,7 @@
                     <div class="col-md-9">
                         <div class="col-md-2">
                             <span class="price-label">Price: </span>
-                            <asp:Label ID="lblCakePrice" Text='<%#(string)Session["CurrentFormat"] + Math.Round(((decimal)Eval("Price") * (decimal)Session["CurrentRate"]), 2)%>' runat="server" CssClass="price" />
+                            <asp:Label ID="lblCakePrice" Text='<%# string.Format( Session["CurrentFormat"] + "{0:##,#.00}", Math.Round(((decimal)Eval("Price") * (decimal)Session["CurrentRate"]), 2))%>' runat="server" CssClass="price" />
                             <asp:Label ID="lblSelectQuantity" Text="Select Quantity: " runat="server" CssClass="quantity" />
                             <asp:DropDownList ID="ddQuantity" runat="server" CssClass="form-control">
                                 <asp:ListItem>1</asp:ListItem>

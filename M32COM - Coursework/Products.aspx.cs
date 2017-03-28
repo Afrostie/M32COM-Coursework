@@ -52,8 +52,8 @@ namespace M32COM___Coursework
 
             decimal tmpDecimal = Convert.ToDecimal(txtBoxCakePrice.Text);
 
-            if ((tmpDecimal % 1) == 0)
-                txtBoxCakePrice.Text += ".00";
+            //if ((tmpDecimal % 1) == 0)
+            //    txtBoxCakePrice.Text += ".00";
 
             productUtil.AddProduct(txtBoxCakeName.Text, Convert.ToDecimal(txtBoxCakePrice.Text), txtBoxCakeDescription.Text, tmp, category);
 
