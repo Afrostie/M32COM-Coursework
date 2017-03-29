@@ -97,7 +97,7 @@
                             <asp:Button ID="btnMoreInfo" Text="More Info" runat="server" Visible="false" />
                             <asp:Button ID="btnAddToCart" Text="Add To Cart" runat="server" CssClass="button" ToolTip="Add To Cart" OnClientClick="AddToCart" CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>' CausesValidation="False" />
                             <asp:Button ID="btnAddToWL" Text="Add To Wish List" runat="server" Visible="false" />
-                            <asp:Button ID="btnRemoveItem" Text="Remove product" runat="server" Visible="false" CommandName="RemoveCake" CommandArgument='<%# Eval("ProductID") %>' CausesValidation="False"/>
+                            <asp:Button ID="btnRemoveItem" Text="Remove Product" runat="server" CssClass="button" ToolTip="Remove Item" Visible="false" CommandName="RemoveCake" CommandArgument='<%# Eval("ProductID") %>' CausesValidation="False"/>
                         </div>
                     </div>
                 </div>
