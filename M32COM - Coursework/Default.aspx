@@ -3,9 +3,9 @@
 <%--<%@ Register Src="~/Widgets/SlideShow.ascx" TagName="SlideShow" TagPrefix="module" %>--%>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="jumbotron">
-        <%--<module:SlideShow ID="SlideShowModule" runat="server" />--%>
-    </div>
+    <%--<div class="jumbotron">
+        <module:SlideShow ID="SlideShowModule" runat="server" />
+    </div>--%>
     <div class="entry-content text-center">
         <h1>About CakeHouse</h1>
         <p>content content content</p>
@@ -18,7 +18,7 @@
             <div class="register">
                 <div class="col-md-6 col-centered">
                     <div class="col-xs-12">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBoxFullName" ErrorMessage="Full Name required" ToolTip="Full Name required" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBoxFullName" ErrorMessage="Full Name required" ToolTip="Full Name is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Name must be Characters Only" ControlToValidate="txtBoxFullName" ValidationExpression="^[a-zA-Z\s]*$" ToolTip="Name must be Characters Only" Text="*" ForeColor="Red"></asp:RegularExpressionValidator>
                         <asp:TextBox ID="txtBoxFullName" runat="server" CssClass="txtbox" ToolTip="Your Name" placeholder="Full Name"></asp:TextBox>
                     </div>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-xs-12">
                         <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Passwords Much Match" Text="*" ControlToCompare="txtBoxPass" ControlToValidate="txtBoxConfirmPassword" ToolTip="Passwords Much Match" ForeColor="Red"></asp:CompareValidator>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtBoxConfirmPassword" ErrorMessage="Password is required" ToolTip="Password is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtBoxConfirmPassword" ErrorMessage="Confirm Password is required" ToolTip="Confirm Password is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                         <asp:TextBox ID="txtBoxConfirmPassword" runat="server" CssClass="txtbox" ToolTip="Confirm Password" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
                     </div>
                     <div class="col-xs-12">

@@ -7,6 +7,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> CakeHouse</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="/App_Themes/Site.css" rel="stylesheet" type="text/css" />
+        <link href="/App_Themes/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    </asp:ContentPlaceHolder>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <script lang="javascript" type="text/javascript">
         function ValidatePassword(source, arguments) {
             var data = arguments.Value.split('');
@@ -42,19 +49,9 @@
             arguments.IsValid = true;
         }
     </script>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-        <link href="/App_Themes/Site.css" rel="stylesheet" type="text/css" />
-        <link href="/App_Themes/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server">
-            <Scripts>
-                <asp:ScriptReference Path="~/Scripts/bootstrap.min.js" />
-            </Scripts>
-        </asp:ScriptManager>
         <header class="header">
             <div class="header-content container">
                 <div class="row">
@@ -69,7 +66,7 @@
                         <a runat="server" title="CakeHouseUK" href="~/">
                             <img src="Images/header-logo.png" alt="CakeHouseUK Logo" /></a>
                     </div>
-                    <div class="header-login text-right col-md-4">
+                    <div class="header-login col-md-4">
                         <div class="user-profile">
                             <asp:Label ID="lblUserName" runat="server" CssClass="user" Visible="False" />
                             <asp:Button ID="btnLogOut" runat="server" Text="Log Out" OnClick="LogOut_Click" ToolTip="Sign Out" CssClass="button" Visible="False" CausesValidation="False" />
@@ -102,7 +99,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="navbar-collapse collapse">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="navbar-collapse collapse" id="navigationbar">
                                 <ul class="nav navbar-nav">
                                     <li class="first-item"><a title="Home" runat="server" href="/">Home</a></li>
                                     <li><a title="Cakes" runat="server" href="Products.aspx">Cakes</a></li>
@@ -116,6 +121,31 @@
                     </div>
                 </div>
             </div>
+
+            <%--<nav class="navbar navbar-default navbar-inverse" role="navigation">
+                <div class="container-fluid" id="navfluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./Index.html">Stadtfestlauf</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navigationbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="./Index.html">Startseite</a></li>
+                            <li><a href="./Rueckblick.html">R&uuml;ckblick</a></li>
+                            <li><a href="./Wettbewerb.html">Wettbewerb</a></li>
+                            <li><a href="./anmelden.html">Anmelden</a></li>
+                            <li><a href="./sponsoren.html">Sponsoren</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>--%>
         </header>
 
         <main class="main">
