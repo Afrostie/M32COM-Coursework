@@ -25,9 +25,15 @@ namespace M32COM___Coursework
             //Create the instance of UserUtilities class
             userUtil = new UserUtilities();
 
-            //if (IsPostBack) return;
-
             lblCart.Text = Convert.ToString(cartUtil.GetItemCount());
+            if (cartUtil.GetItemCount() == 1)
+            {
+                lblCart.Text = "1 Item";
+            }
+            else if (cartUtil.GetItemCount() > 1)
+            {
+                lblCart.Text = cartUtil.GetItemCount() + " Items";
+            }
 
             if (userUtil.IsLoggedIn())
                 LogIn();
