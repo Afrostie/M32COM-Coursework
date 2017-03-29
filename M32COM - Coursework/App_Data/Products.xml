@@ -81,7 +81,7 @@ Unsuitable for Vegans
 
 
 &lt;/p&gt;</Description>
-    <Image>~/Images/Birthday-Cakes/Grand Cru Chocolate Sachertorte.png</Image>
+    <Image>~/Images/Birthday-Cakes/Grand-Cru-Chocolate-Sachertorte.png</Image>
     <Category>Birthday-Cakes</Category>
   </Product>
   <Product>
@@ -106,7 +106,7 @@ Unsuitable for Vegans
 This product contains alcoholic ingredients and cannot be sold to anyone under the age of 16.
 
 &lt;/p&gt;</Description>
-    <Image>~/Images/Birthday-Cakes/Happy Birthday Cake in a Tin.png</Image>
+    <Image>~/Images/Birthday-Cakes/Happy-Birthday-Cake-in-a-Tin.png</Image>
     <Category>Birthday-Cakes</Category>
   </Product>
   <Product>
@@ -125,7 +125,431 @@ Our Lemon &amp; Lime Cake can only be delivered within the UK.
 Product code: 2000167
 
 Lemon and Lime Sponge Cake&lt;/p&gt;</Description>
-    <Image>~/Images/Birthday-Cakes/Lemon &amp; Lime Cake.png</Image>
+    <Image>~/Images/Birthday-Cakes/Lemon-Lime-Cake.png</Image>
     <Category>Birthday-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>8</ProductID>
+    <Name>Soft Iced Happy Birthday Cake</Name>
+    <Price>25.99</Price>
+    <Description>&lt;p&gt;Made with love, the finest ingredients and the steady-handed skills of our craft bakers, our Soft Iced Happy Birthday Cake makes the perfect centrepiece for any birthday celebration.
+
+Filled with plump vine fruits, once baked this deliciously rich and moist fruit cake is covered in marzipan and soft sugar icing, then hand-piped with dainty icing patterns and, for the finishing touch, a graceful 'Happy Birthday' message.
+
+16 x 7cm | 1.5kg
+
+Suitable for overseas delivery.
+
+Product code: 2000132
+
+
+Rich Fruit Cake with Soft Icing
+1500	g&lt;/p&gt;</Description>
+    <Image>~/Images/Birthday-Cakes/Soft-Iced-Happy-Birthday-Cake.png</Image>
+    <Category>Birthday-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>9</ProductID>
+    <Name>Victoria Sponge Cake</Name>
+    <Price>19.99</Price>
+    <Description>&lt;p&gt;A true teatime classic, this light butter sponge is filled with the perfect pairing of strawberry preserve and vanilla buttercream, and is daintily hand-decorated with fondant icing.
+
+Serves 4 - 6 | 13cm diameter | 440g
+
+Best enjoyed within 2 days of delivery or suitable for freezing.
+
+Our Victoria Sponge Cake can only be delivered within the UK.
+
+Product code: 2000178
+
+
+Butter Sponge Cake with Vanilla flavoured Buttercream &amp; Strawberry Jam
+440	g&lt;/p&gt;</Description>
+    <Image>~/Images/Birthday-Cakes/Victoria-Sponge-Cake.png</Image>
+    <Category>Birthday-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>10</ProductID>
+    <Name>Yorkshire Fruit Cake in a Tin</Name>
+    <Price>16.99</Price>
+    <Description>&lt;p&gt;Packed with sherry-soaked vine fruits and glac¨¦ cherries, this best selling fruit cake is decorated with cherries and nuts for a hearty, traditional look.
+
+A timeless classic for any occasion, made with love at Bettys Craft Bakery and presented in an octagonal Bettys tin based on an original design from our archive.
+
+13cm diameter | 810g
+
+Suitable for overseas delivery
+
+Product code: 2000182
+
+
+Yorkshire Fruit Cake
+810	g&lt;/p&gt;</Description>
+    <Image>~/Images/Birthday-Cakes/Yorkshire-Fruit-Cake-in-a-Tin.png</Image>
+    <Category>Birthday-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>11</ProductID>
+    <Name>Yorkshire Sloe Gin Fruit Cake in a Tin</Name>
+    <Price>15.00</Price>
+    <Description>&lt;p&gt;We infuse vine fruits, figs and Morello cherries in Yorkshire Sloe Gin to create this rich, dark fruit cake, presented in a Bettys keepsake tin.
+
+Editor's Choice, Woman &amp; Home Magazine, December 2015
+YWoman &amp; Home magazine
+
+13cm diameter | 800g
+
+Suitable for overseas delivery.
+
+Product code: 2000183
+
+
+Fruit Cake with Sloe Gin &amp; Morello Cherries
+800	g&lt;/p&gt;</Description>
+    <Image>~/Images/Birthday-Cakes/Yorkshire-Sloe-Gin-Fruit Cake-in-a-Tin.png</Image>
+    <Category>Birthday-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>12</ProductID>
+    <Name>Bettys Bear Cake</Name>
+    <Price>26.99</Price>
+    <Description>&lt;p&gt;Prices start from ΅κ64.60 (to include 1 bear). Cake pictured: ΅κ77.50 (featuring an 8 inch round Victoria or chocolate sponge with soft icing).
+
+Available in a choice of colours for piped decoration and ribbon, and a variety of cake bases: our classic rich fruit cake, Victoria sponge, or chocolate sponge, decorated with marzipan and a choice of either soft icing or royal icing. We recommend soft icing for sponge cakes, and either soft icing or royal icing for fruit cakes. Available in square or round in 6, 8 or 10 inches. Your bear can also be personalised with a bow, flower or initials.The ribbon may vary in design from the photograph. Please enquire when you call to place your order. Prices vary accordingly.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Celebration-Cakes/Bettys-Bear-Cake.png</Image>
+    <Category>Celebration-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>13</ProductID>
+    <Name>Chocolate Ruffle Party Cake</Name>
+    <Price>30.00</Price>
+    <Description>&lt;p&gt;The perfect choice for chocolate lovers, who will adore this spectacular cake. Made from all-butter chocolate sponge, layered with rich chocolate buttercream, it is then decorated with panels of Swiss milk chocolate and handmade chocolate ruffles.
+
+To make each chocolate ruffle, melted Swiss milk chocolate is delicately spread on a frozen piece of marble, where it can then be crafted into a beautiful fan shape. Each is then dusted with icing sugar for a frosted look.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Celebration-Cakes/Chocolate-Ruffle-Party-Cake.png</Image>
+    <Category>Celebration-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>14</ProductID>
+    <Name>Engagement Cake</Name>
+    <Price>29.99</Price>
+    <Description>&lt;p&gt;This beautifully finished cake is an ideal way to celebrate your engagement.
+
+Available in a choice of colours for piped decoration and ribbon, and a variety of cake bases: our classic rich fruit cake, Victoria sponge, or chocolate sponge, decorated with marzipan and a choice of either soft icing or royal icing. We recommend soft icing for sponge cakes, and either soft icing or royal icing for fruit cakes. Available as square or round in 6, 8 or 10 inches. The ribbon may vary in design from the photograph. Please enquire when you call to place your order. Prices vary accordingly.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Celebration-Cakes/Engagement-Cake.png</Image>
+    <Category>Celebration-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>15</ProductID>
+    <Name>Parcel Cake</Name>
+    <Price>26.99</Price>
+    <Description>&lt;p&gt;Iced with an intricate handpiped pattern and covered with marzipan and soft icing, the Parcel Cake is suitable for all sorts of special occasions from birthday parties to anniversaries. A handpiped tag can be personalised with a message of your choice.
+
+Available in a choice of colours for piped decoration, and a variety of cake bases: our classic rich fruit cake, Victoria sponge, or chocolate sponge, decorated with marzipan and a choice of either soft icing or royal icing. Available as square in 6, 8 or 10 inches. Please enquire when you call to place your order. Prices vary accordingly.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Celebration-Cakes/Parcel-Cake.png</Image>
+    <Category>Celebration-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>16</ProductID>
+    <Name>Personalised Birthday Cakes</Name>
+    <Price>30.99</Price>
+    <Description>&lt;p&gt;Cakes featured (Left to Right) 8" Orchid Birthday Cake ΅κ78.40, 10" Square Soft Iced Cake ΅κ79.90, 8" Round Royal Iced Cake ΅κ59.50, 8" Parcel Cake ΅κ83.50.
+
+What better way to celebrate a birthday than with this beautifully finished cake?
+
+Available in a choice of colours for piped decoration and ribbon, and a variety of cake bases: our classic rich fruit cake, Victoria sponge, or chocolate sponge, decorated with marzipan and a choice of either soft icing or royal icing. We recommend soft icing for sponge cakes, and either soft icing or royal icing for fruit cakes. Available as square or round in 6, 8 or 10 inches. The ribbon may vary in design from the photograph. Please enquire when you call to place your order. Prices vary accordingly.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Celebration-Cakes/Personalised-Birthday-Cakes.png</Image>
+    <Category>Celebration-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>17</ProductID>
+    <Name>Presents Cake</Name>
+    <Price>28.99</Price>
+    <Description>&lt;p&gt;
+Topped with pretty miniature parcels, each one crafted from sugar by hand and sporting a delicate bow on top, our Presents Cake is suitable for all sorts of special occasions from birthday parties to anniversaries. Choose from three or five parcels depending on the size of the cake.
+
+Available in a choice of colours for piped decoration and ribbon, and a variety of cake bases: our classic rich fruit cake, Victoria sponge, or chocolate sponge, decorated with marzipan and soft icing. Available as square or round in 6, 8 or 10 inches. The ribbon may vary in design from the photograph. Please enquire when you call to place your order. Prices vary accordingly.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Celebration-Cakes/Presents-Cake.png</Image>
+    <Category>Celebration-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>18</ProductID>
+    <Name>Almond and Raspberry Cake</Name>
+    <Price>26.00</Price>
+    <Description>&lt;p&gt;Made at our Craft Bakery with ground almonds and raspberry preserve, this light and delicate cake is prettily decorated with fondant icing and flaked almonds. Serving six to eight people, it΅―s ideal for spring teatimes and delighting guests.
+
+Perfect for serving 8 - 10 people.
+
+Best enjoyed within 2 days of delivery, or suitable for freezing.
+
+18cm diameter | 800g
+
+Our Raspberry &amp; Almond Cake can only be delivered within the UK.
+
+Product code: 2000200
+
+
+Almond Flavoured Sponge Cake with Raspberry Jam Filling &amp; Fondant Topping
+800	g&lt;/p&gt;</Description>
+    <Image>~/Images/Teatime-Cakes/Almond-Raspberry-Cake.png</Image>
+    <Category>Teatime-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>19</ProductID>
+    <Name>Bettys Burry Simnels</Name>
+    <Price>15.99</Price>
+    <Description>&lt;p&gt;Our famous Yorkshire Fat Rascal scones have been a year-round favourite for more than three decades. These special versions are just for Easter and are every bit as tempting.
+
+Made in our Craft Bakery with currants and seasonal spices and topped with flaked almonds, they΅―re perfect served warm with butter for Easter teatimes.
+
+Box of 4
+
+Best enjoyed on the day of delivery or freeze for up to one month.
+
+Our Bury Simnels can only be delivered within the UK.
+
+To enjoy for Mother΅―s Day please choose delivery on Friday 24th or Saturday 25th March, or freeze our Bury Simnels for up to one month to enjoy at a later date.
+
+
+4 Bettys Bury Simnels - Spiced Fruited Cakes&lt;/p&gt;</Description>
+    <Image>~/Images/Teatime-Cakes/Bettys-Bury-Simnel.png</Image>
+    <Category>Teatime-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>20</ProductID>
+    <Name>Chocolate Easter Nest Cake</Name>
+    <Price>24.99</Price>
+    <Description>&lt;p&gt;A dense, intensely rich chocolate cake with chocolate ganache and raspberry preserve, decorated with a nest of dark chocolate curls and colourful ganache-filled chocolate eggs.
+
+18cm diameter | 850g | Serves 8-10
+
+Best enjoyed within 4 days of delivery or suitable for freezing.
+
+Our Chocolate Easter Nest Cake can only be delivered within the UK.
+
+Selected by BBC Good Food Magazine as an ΅®extra special΅― celebration cake.
+
+
+Chocolate Sponge Cake with Chocolate Ganache, Raspberry Jam and Dark Chocolate Decoration
+850	g&lt;/p&gt;</Description>
+    <Image>~/Images/Teatime-Cakes/ChocolateEaster-Nest-Cake.png</Image>
+    <Category>Teatime-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>21</ProductID>
+    <Name>Large Chocolate and Orange Hot Cross Bun</Name>
+    <Price>19.00</Price>
+    <Description>&lt;p&gt;If you thought that hot cross buns were delicious enough, our craft bakers have a treat for you. Made using Yorkshire milled flour, this tempting twist on the Easter favourite is packed with pieces of dark chocolate and crystallised orange peel, and decorated with pretty crystallised orange slices. Slice, toast, butter and enjoy ¨C it΅―s almost too good to share.
+
+15cm diameter | 520g
+
+Best enjoyed within 2 days of delivery or suitable for freezing.
+
+Our Hot Cross Buns can only be delivered within the UK.
+
+"A giant hot cross bun that you can slice like bread. Generously large chunks of chocolate, paired with sweet and bitter candied orange. Very stylish." As featured in the best hot cross buns with a twist, telegraph.co.uk, March 2016
+
+
+
+Chocolate &amp; Orange Hot Cross Bun Loaf
+520	g&lt;/p&gt;</Description>
+    <Image>~/Images/Teatime-Cakes/Large-Chocolate-Orange-Hot-Cross-Bun.png</Image>
+    <Category>Teatime-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>22</ProductID>
+    <Name>Large Hot Cross Bun</Name>
+    <Price>17.99</Price>
+    <Description>&lt;p&gt;Ready to slice and share, our loaf-size version of a Hot Cross Bun is just perfect for Easter teatimes. Made at our Craft Bakery with Yorkshire milled flour, plump vine fruits and seasonal spices, it΅―s most delicious served toasted and buttered, or with a dab of one of our fruit preserves.
+
+15cm diameter | 500g
+
+Best enjoyed within 2 days of delivery or suitable for freezing.
+
+Our Hot Cross Buns can only be delivered within the UK.
+
+"This looks more like a panettone than a hot cross bun, but it tastes just as it should and there΅―s something particularly satisfying about this loaf version, the slices of which are much easier to fit into conventional toasters. Full of flavour, with a decent amount of fruit." As featured in 10 best hot cross buns, independent.co.uk, March 2016
+
+
+Spiced Fruited Hot Cross Bun Loaf
+500	g&lt;/p&gt;</Description>
+    <Image>~/Images/Teatime-Cakes/Large Hot Cross Bun.png</Image>
+    <Category>Teatime-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>23</ProductID>
+    <Name>Stem Ginger Cake</Name>
+    <Price>13.99</Price>
+    <Description>&lt;p&gt;We use pieces of stem ginger, ground almonds and a dash of ginger wine to create the rich, moreish flavour of this deliciously moist cake ¨C a real Bettys favourite and a classic teatime accompaniment.
+
+15 x 8 cm | 360g | Serves 6-8.
+
+Best enjoyed within 7 days of delivery or suitable for freezing.
+
+
+Ginger Sponge Cake with Ground Almonds, Crystallised Ginger &amp; Ginger Wine
+360g&lt;/p&gt;</Description>
+    <Image>~/Images/Teatime-Cakes/Stem-Ginger-Cake.png</Image>
+    <Category>Teatime-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>24</ProductID>
+    <Name>Yorkshire Fat Rascal Scones </Name>
+    <Price>17.00</Price>
+    <Description>&lt;p&gt;We've been making Fat Rascals for over 30 years and these plump, fruity scones are still a Bettys favourite. Best enjoyed warm and buttered, they΅―re made to our special recipe with butter, juicy currants and citrus peel, and hand decorated with glac¨¦ cherries and almonds to create the cheeky Fat Rascal face.
+
+Box of 4 | 24 x 12 x 8.5cm
+
+Our Fat Rascals can only be delivered within the UK.
+
+Best enjoyed on the day of delivery or freeze for up to one month.
+
+When you wish to serve them, defrost at room temperature for an hour and then reheat at 180C for 10-15 minutes (this may vary slightly depending on your oven).
+
+To enjoy for Mother΅―s Day please choose delivery on Friday 24th or Saturday 25th March, or freeze our Fat Rascal scones for up to one month to enjoy at a later date.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Teatime-Cakes/Yorkshire-Fat-Rascal-Scones.png</Image>
+    <Category>Teatime-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>25</ProductID>
+    <Name>Yorkshire Fruit Cake Portion</Name>
+    <Price>16.99</Price>
+    <Description>&lt;p&gt;Is there anything better than a rich, moist traditional fruit cake?
+
+To us, the secret is to ensure a generous quantity of fruit ¨C as you bite into our Yorkshire Fruit Cake Portion and taste the sticky sherry-soaked vine fruits and glace cherries, you΅―ll know just what we mean.
+
+Handmade at our Yorkshire Craft Bakery using our time-honoured recipe.
+
+15 x 5cm | 340g
+
+Suitable for overseas delivery
+
+
+Yorkshire Fruit Cake
+340	g&lt;/p&gt;</Description>
+    <Image>~/Images/Teatime-Cakes/Yorkshire-Fruit-Cake-Portion.png</Image>
+    <Category>Teatime-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>26</ProductID>
+    <Name>Fondant Fancy Wedding Cake</Name>
+    <Price>30.99</Price>
+    <Description>&lt;p&gt;This decidedly different cake is wonderfully unique - and far easier to divide into individual portions! The top tier is covered in sugar paste icing and edged with a handpiped ΅®swag΅― design, while a beautiful handmade rose on top adds a finishing touch. Below are layers of individual Fondant Fancies.
+
+Each Fondant Fancy is handmade from light Genoese sponge layered with finest quality marzipan, raspberry preserve and vanilla buttercream. After being coated in fondant icing they are then finished off with three handmade rosebuds to match the larger roses. Other sizes and designs are also available.
+
+To order, or for more details, including ingredients and allergens, please call our Customer Service team free on 0800 456 1919, or +44 (0) 1423 814008 if you are outside of the UK. More info...
+
+We will always do our utmost to accommodate your order; however, to provide you with the best service possible, we require sufficient time to fulfil your requirements and recommend 3 months lead time.
+
+View our Wedding Cake brochure.
+
+Product code: FONDANT PARTY WEDDING CAKE
+
+
+Our Personalised cakes are handcrafted to order, with a variety of different bases, mixtures, icing and decoration available.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Wedding-Cakes/Fondant-Fancy-Wedding-Cake.png</Image>
+    <Category>Wedding-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>27</ProductID>
+    <Name>Lily Cascade Cake</Name>
+    <Price>90.00</Price>
+    <Description>&lt;p&gt;
+The beautiful realistic lilies on this elegant cake add a dramatic finishing touch. Each tier is covered in soft icing then trimmed with narrow ribbon and delicate beadwork.
+
+To make the lilies look so life-like, each petal is individually cut and delicately textured before being hand-dusted with subtle colour.
+
+To order, or for more details, including ingredients and allergens, please call our Customer Service team free on 0800 456 1919, or +44 (0) 1423 814008 if you are outside of the UK. More info...
+
+We will always do our utmost to accommodate your order; however, to provide you with the best service possible, we require sufficient time to fulfil your requirements and recommend 3 months lead time.&lt;/p&gt;</Description>
+    <Image>~/Images/Wedding-Cakes/Lily-Cascade-Cake.png</Image>
+    <Category>Wedding-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>28</ProductID>
+    <Name>Orchid Cascade Cake</Name>
+    <Price>160.00</Price>
+    <Description>&lt;p&gt;An ideal choice if you΅―re looking for something a little more exotic, the beautiful orchids delicately draped around the cake add a stunning finish. Each elegant tier is covered in soft icing then trimmed with narrow ribbon and delicate beadwork.
+
+The orchid flowers are carefully moulded and shaped before being wired together, then dusted with a hint of colour to make them look almost real.
+
+To order, or for more details, including ingredients and allergens, please call our Customer Service team free on 0800 456 1919, or +44 (0) 1423 814008 if you are outside of the UK. More info...
+
+We will always do our utmost to accommodate your order; however, to provide you with the best service possible, we require sufficient time to fulfill your requirements and recommend 3 months lead time.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Wedding-Cakes/Orchid-Cascade-Cake.png</Image>
+    <Category>Wedding-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>29</ProductID>
+    <Name>Pink Rose Cascade Cake</Name>
+    <Price>169.99</Price>
+    <Description>&lt;p&gt;The handmade sugar roses turn this understated yet elegant cascade into a stunning wedding cake. Each rose consists of individual petals carefully hand-moulded from sugar paste ¨C a painstaking process that requires great skill, a steady hand and no small amount of patience.
+
+The flowers are carefully dusted with natural colour to look even more realistic. Each tier is covered in soft icing and trimmed with ribbon for a pretty finish.
+
+To order, or for more details, including ingredients and allergens, please call our Customer Service team free on 0800 456 1919, or +44 (0) 1423 814008 if you are outside of the UK.  More info...
+
+We will always do our utmost to accommodate your order; however, to provide you with the best service possible, we require sufficient time to fulfil your requirements and recommend 3 months lead time.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Wedding-Cakes/Pink-Rose-Cascade-Cake.png</Image>
+    <Category>Wedding-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>30</ProductID>
+    <Name>Rose Dot Cascade Cake</Name>
+    <Price>153.99</Price>
+    <Description>&lt;p&gt;The handmade sugar roses turn this understated yet elegant cascade into a stunning wedding cake. Each rose consists of individual petals carefully hand-moulded from sugar paste ¨C a painstaking process that requires great skill, a steady hand and no small amount of patience.
+
+The flowers are carefully dusted with natural colour to look even more realistic. Each tier is covered in soft icing and trimmed with ribbon for a pretty finish.
+
+We will always do our utmost to accommodate your order; however, to provide you with the best service possible, we require sufficient time to fulfil your requirements and recommend 3 months lead time.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Wedding-Cakes/Rose-Dot-Cascade-Cake.png</Image>
+    <Category>Wedding-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>31</ProductID>
+    <Name>Scroll Cascade Cake</Name>
+    <Price>157.00</Price>
+    <Description>&lt;p&gt;
+A simple but elegant design. Each tier is covered in soft icing then trimmed with delicate beadwork.
+
+Edged with ribbon above and below, the carefully handpiped scroll design that surrounds each tier has an understated beauty that ensure the cake has a timeless, classic style.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Wedding-Cakes/Scroll-Cascade-Cake.png</Image>
+    <Category>Wedding-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>32</ProductID>
+    <Name>Sweet Pea Cascade Cake</Name>
+    <Price>165.99</Price>
+    <Description>&lt;p&gt;
+This pretty cake is one of our most popular designs. Its classic style is inspired by 1920s photographs from the days of our founder, Frederick Belmont. Each tier is covered in soft icing then trimmed with narrow ribbon and delicate beadwork.
+
+The handmade sugar flowers are painstakingly moulded and shaped before being wired together, then carefully dusted with a hint of colour to make them look even more realistic..
+&lt;/p&gt;</Description>
+    <Image>~/Images/Wedding-Cakes/Sweet-Pea-Cascade-Cake.png</Image>
+    <Category>Wedding-Cakes</Category>
+  </Product>
+  <Product>
+    <ProductID>33</ProductID>
+    <Name>Vintage Cascade Cake</Name>
+    <Price>180.00</Price>
+    <Description>&lt;p&gt;As our family business was founded over 90 years ago, we΅―re uniquely placed to draw on a range of beautiful cake designs stretching back over three generations. We΅―ve taken inspiration from our archives to produce a distinctive cake that features several different styles ¨C from dots and beading to elaborate scrolls, swags and wonderfully elaborate piping.
+
+Each tier is covered in soft ivory icing, then trimmed with delicate beadwork.
+&lt;/p&gt;</Description>
+    <Image>~/Images/Wedding-Cakes/Vintage-Cascade-Cake.png</Image>
+    <Category>Wedding-Cakes</Category>
   </Product>
 </Database>
