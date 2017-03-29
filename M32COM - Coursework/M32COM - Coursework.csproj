@@ -34,7 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DeployEncryptKey>TestPassword</DeployEncryptKey>
+    <DeployEncryptKey>M32COMCoursework</DeployEncryptKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -174,7 +174,6 @@
     <Content Include="Files\fonts\dosis\dosis-regular-webfont.eot" />
     <Content Include="Files\fonts\dosis\dosis-regular-webfont.ttf" />
     <Content Include="Files\fonts\dosis\dosis-regular-webfont.woff" />
-    <None Include="Properties\PublishProfiles\M32COM-Coursework20170318033028 - Web Deploy.pubxml" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -241,6 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Files\Images\" />
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Widgets\" />
   </ItemGroup>
   <PropertyGroup>

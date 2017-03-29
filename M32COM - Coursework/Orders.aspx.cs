@@ -71,16 +71,20 @@ namespace M32COM___Coursework
                 Response.Write("<script>alert('Cart is Empty');</script>");
                 return;
             }
-                
+
+            var total = (string)Session["CurrentFormat"] + Convert.ToString(cartUtilities.GetTotal());
 
             if (!cartUtilities.OrderCart())
                 Response.Write("Order Failed");
+
             cartUtilities.EmptyCart();
 
-            lblTotalPrice.Text = (string)Session["CurrentFormat"] + Convert.ToString(cartUtilities.GetTotal());
+            lblTotalPrice.Text = (string)Session["CurrentFormat"] + Convert.ToString(cartUtilities.GetTotal()); ;
 
             rptCartItem.DataSource = null;
             rptCartItem.DataBind();
+
+            Response.Write("<script>alert('Order Successful. Total: " + total + "');</script>");
         }
 
         protected void rptCartItem_ItemCommand(object source, RepeaterCommandEventArgs e)

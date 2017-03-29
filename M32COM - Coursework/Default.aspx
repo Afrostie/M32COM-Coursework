@@ -38,6 +38,11 @@
                         <asp:TextBox ID="txtBoxPass" runat="server" CssClass="txtbox" ToolTip="Password" placeholder="Password" TextMode="Password"></asp:TextBox>
                     </div>
                     <div class="col-xs-12">
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Passwords Much Match" Text="*" ControlToCompare="txtBoxPass" ControlToValidate="txtBoxConfirmPassword" ToolTip="Passwords Much Match" ForeColor="Red"></asp:CompareValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtBoxConfirmPassword" ErrorMessage="Password is required" ToolTip="Password is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        <asp:TextBox ID="txtBoxConfirmPassword" runat="server" CssClass="txtbox" ToolTip="Confirm Password" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
+                    </div>
+                    <div class="col-xs-12">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtBoxAddress" ErrorMessage="Address is required" ToolTip="Address is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                         <asp:TextBox ID="txtBoxAddress" runat="server" CssClass="txtbox address" ToolTip="Delivery Address" placeholder="Address"></asp:TextBox>
                     </div>
