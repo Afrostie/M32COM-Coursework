@@ -4,6 +4,7 @@ using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Web;
+using System.Web.Compilation;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using M32COM___Coursework.App_Code;
@@ -28,12 +29,12 @@ namespace M32COM___Coursework
 
             if (IsPostBack) return;
 
-            if (userUtil.GetUserRole() == "Admin")
-                pnlAdmin.Visible = true;
-            
+        
             //Displays all cakes
             rptSingleCake.DataSource = productUtil.GetTable();
             rptSingleCake.DataBind();
+
+            ShowRemoveButton();
         }
 
         //Add a new product to the products xml
@@ -78,6 +79,13 @@ namespace M32COM___Coursework
                 cartUtilities.AddNewItemToCart(Convert.ToInt32(tmp), Convert.ToInt32(value));
                 Response.Redirect("Products.aspx");
             }
+            if (e.CommandName == "RemoveCake")
+            {
+                var tmp = e.CommandArgument.ToString();
+
+                productUtil.RemoveProduct(Convert.ToInt32(tmp));
+                Response.Redirect("Products.aspx");
+            }
         }
 
         protected void btnBirthdayCakes_Click(object sender, EventArgs e)
@@ -85,6 +93,8 @@ namespace M32COM___Coursework
             //Displays all cakes in a certain category
             rptSingleCake.DataSource = productUtil.GetTableByCategory("Birthday-Cakes");
             rptSingleCake.DataBind();
+
+            ShowRemoveButton();
         }
 
         protected void btnCelebrationCakes_Click(object sender, EventArgs e)
@@ -92,6 +102,8 @@ namespace M32COM___Coursework
             //Displays all cakes in a certain category
             rptSingleCake.DataSource = productUtil.GetTableByCategory("Celebration-Cakes");
             rptSingleCake.DataBind();
+
+            ShowRemoveButton();
         }
 
         protected void btnWeddingCakes_Click(object sender, EventArgs e)
@@ -99,6 +111,8 @@ namespace M32COM___Coursework
             //Displays all cakes in a certain category
             rptSingleCake.DataSource = productUtil.GetTableByCategory("Wedding-Cakes");
             rptSingleCake.DataBind();
+
+            ShowRemoveButton();
         }
 
         protected void btnTeaTimeCakes_Click(object sender, EventArgs e)
@@ -106,12 +120,30 @@ namespace M32COM___Coursework
             //Displays all cakes in a certain category
             rptSingleCake.DataSource = productUtil.GetTableByCategory("Teatime-Cakes");
             rptSingleCake.DataBind();
+
+            ShowRemoveButton();
         }
 
         protected void btnAllCakes_Click(object sender, EventArgs e)
         {
             rptSingleCake.DataSource = productUtil.GetTable();
             rptSingleCake.DataBind();
+
+            ShowRemoveButton();
+        }
+
+        private void ShowRemoveButton()
+        {
+            if (userUtil.GetUserRole() == "Admin")
+            {
+                pnlAdmin.Visible = true;
+
+                for (var i = 0; i < rptSingleCake.Items.Count; i++)
+                {
+                    var removeButton = (Button)rptSingleCake.Items[i].FindControl("btnRemoveItem");
+                    removeButton.Visible = true;
+                }
+            }
         }
     }
 }
