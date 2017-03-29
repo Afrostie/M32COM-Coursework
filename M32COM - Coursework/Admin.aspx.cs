@@ -58,14 +58,15 @@ namespace M32COM___Coursework
                         {
                             UserName = user.Name,
                             order.OrderID,
-                            product.Name,
+                            ProductName = product.Name,
                             product.Price,
-                            order.Quantity
+                            order.Quantity,
+                            order.DateOrdered
                         };
 
             //GridView1.Visible = true;
-            GridView1.DataSource = query;
-            GridView1.DataBind();
+            rptUserOrders.DataSource = query;
+            rptUserOrders.DataBind();
         }
     }
 }
